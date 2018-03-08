@@ -14,6 +14,7 @@
 		05DF6F8D20512A880010AC13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05DF6F8C20512A880010AC13 /* Assets.xcassets */; };
 		05DF6F9020512A880010AC13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05DF6F8E20512A880010AC13 /* LaunchScreen.storyboard */; };
 		05DF6F9320512A880010AC13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F9220512A880010AC13 /* main.m */; };
+		CE05545BFB0388E5D1585722 /* libPods-CXDTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		05DF6F8F20512A880010AC13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05DF6F9120512A880010AC13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05DF6F9220512A880010AC13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3509219F06C3F1CD719CD6FF /* Pods-CXDTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.debug.xcconfig"; sourceTree = "<group>"; };
+		812DAC7F557D61DAF2D5EBB3 /* Pods-CXDTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.release.xcconfig"; sourceTree = "<group>"; };
+		ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CXDTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE05545BFB0388E5D1585722 /* libPods-CXDTool.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				05DF6F7F20512A880010AC13 /* CXDTool */,
 				05DF6F7E20512A880010AC13 /* Products */,
+				324B092F0C077027D9646755 /* Pods */,
+				5BEEF97BC4528DDD6BBDA625 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +81,23 @@
 			path = CXDTool;
 			sourceTree = "<group>";
 		};
+		324B092F0C077027D9646755 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3509219F06C3F1CD719CD6FF /* Pods-CXDTool.debug.xcconfig */,
+				812DAC7F557D61DAF2D5EBB3 /* Pods-CXDTool.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5BEEF97BC4528DDD6BBDA625 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -81,9 +105,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05DF6F9620512A880010AC13 /* Build configuration list for PBXNativeTarget "CXDTool" */;
 			buildPhases = (
+				F589A6557382D0DB750E4349 /* [CP] Check Pods Manifest.lock */,
 				05DF6F7920512A880010AC13 /* Sources */,
 				05DF6F7A20512A880010AC13 /* Frameworks */,
 				05DF6F7B20512A880010AC13 /* Resources */,
+				E5CD8A69DDBF7DCAD934BA67 /* [CP] Embed Pods Frameworks */,
+				CA38E116B98B16D2E0F64EEF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,6 +166,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA38E116B98B16D2E0F64EEF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5CD8A69DDBF7DCAD934BA67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F589A6557382D0DB750E4349 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05DF6F7920512A880010AC13 /* Sources */ = {
@@ -280,6 +355,7 @@
 		};
 		05DF6F9720512A880010AC13 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3509219F06C3F1CD719CD6FF /* Pods-CXDTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,6 +370,7 @@
 		};
 		05DF6F9820512A880010AC13 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 812DAC7F557D61DAF2D5EBB3 /* Pods-CXDTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
