@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "BaseTabbarVC.h"
+#import "LoginVC.h"
+#import "MyTool.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self checkLogin];
+    
     return YES;
 }
 
@@ -49,6 +55,23 @@
     [self saveContext];
 }
 
+- (void)checkLogin {
+    if ([MyTool isLogin]) {
+        [self setupSystem];
+    } else {
+        [self gotoLogin];
+    }
+}
+
+- (void)gotoLogin {
+    self.window.rootViewController = [LoginVC new];
+    [self.window makeKeyAndVisible];
+}
+
+- (void)setupSystem {
+    self.window.rootViewController = [BaseTabbarVC new];
+    [self.window makeKeyAndVisible];
+}
 
 #pragma mark - Core Data stack
 
