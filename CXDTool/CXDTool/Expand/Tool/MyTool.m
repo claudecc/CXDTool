@@ -14,4 +14,11 @@
     return YES;
 }
 
++ (NSString *)getStringFromObj:(id)obj {
+    if ([obj isKindOfClass:[NSNull class]]) {
+        return @"";
+    }
+    return obj?[NSString stringWithFormat:@"%@",obj]:@"";
+}
+
 @end

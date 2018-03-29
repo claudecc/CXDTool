@@ -19,6 +19,8 @@
 		E6BBBB42206CD0360007130E /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB41206CD0360007130E /* HomeVC.m */; };
 		E6BBBB49206CD0950007130E /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB48206CD0950007130E /* LoginVC.m */; };
 		E6BBBB4C206CD0F00007130E /* MyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB4B206CD0F00007130E /* MyTool.m */; };
+		E6BBBB50206CD9AA0007130E /* UserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB4F206CD9AA0007130E /* UserAgent.m */; };
+		E6BBBB53206CD9D30007130E /* Interface.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB52206CD9D30007130E /* Interface.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,10 @@
 		E6BBBB48206CD0950007130E /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		E6BBBB4A206CD0F00007130E /* MyTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTool.h; sourceTree = "<group>"; };
 		E6BBBB4B206CD0F00007130E /* MyTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTool.m; sourceTree = "<group>"; };
+		E6BBBB4E206CD9AA0007130E /* UserAgent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserAgent.h; sourceTree = "<group>"; };
+		E6BBBB4F206CD9AA0007130E /* UserAgent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserAgent.m; sourceTree = "<group>"; };
+		E6BBBB51206CD9D30007130E /* Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
+		E6BBBB52206CD9D30007130E /* Interface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Interface.m; sourceTree = "<group>"; };
 		ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CXDTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,6 +153,7 @@
 		E6BBBB26206CCDD10007130E /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				E6BBBB4D206CD9870007130E /* NetWork */,
 				E6BBBB28206CCDE30007130E /* Category */,
 				E6BBBB27206CCDDA0007130E /* Tool */,
 			);
@@ -290,6 +297,17 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E6BBBB4D206CD9870007130E /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBBB4E206CD9AA0007130E /* UserAgent.h */,
+				E6BBBB4F206CD9AA0007130E /* UserAgent.m */,
+				E6BBBB51206CD9D30007130E /* Interface.h */,
+				E6BBBB52206CD9D30007130E /* Interface.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -413,6 +431,8 @@
 				05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */,
 				E6BBBB4C206CD0F00007130E /* MyTool.m in Sources */,
 				E6BBBB36206CCFDE0007130E /* BaseTabbarVC.m in Sources */,
+				E6BBBB53206CD9D30007130E /* Interface.m in Sources */,
+				E6BBBB50206CD9AA0007130E /* UserAgent.m in Sources */,
 				E6BBBB49206CD0950007130E /* LoginVC.m in Sources */,
 				05DF6F9320512A880010AC13 /* main.m in Sources */,
 				05DF6F8220512A880010AC13 /* AppDelegate.m in Sources */,

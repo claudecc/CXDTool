@@ -1,5 +1,5 @@
 //
-//  MyTool.h
+//  UserAgent.h
 //  CXDTool
 //
 //  Created by claudechoi on 2018/3/29.
@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MyTool : NSObject
+@interface UserAgent : NSObject
 
-+ (BOOL)isLogin;
++ (instancetype)shareInstance;
 
-+ (NSString *)getStringFromObj:(id)obj;
+- (NSString *)getUserAgent;
 
 @end
