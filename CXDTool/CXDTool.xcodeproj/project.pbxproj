@@ -76,11 +76,11 @@
 		05DF6F7F20512A880010AC13 /* CXDTool */ = {
 			isa = PBXGroup;
 			children = (
-				05DF6FA3205134AF0010AC13 /* Resource */,
-				05DF6FA2205134A30010AC13 /* Vender */,
-				05DF6FA1205134970010AC13 /* Expand */,
-				05DF6FA02051348D0010AC13 /* Classes */,
 				052BAF4020513740007BF893 /* Basis */,
+				05DF6FA02051348D0010AC13 /* Classes */,
+				E6BBBB26206CCDD10007130E /* Expand */,
+				E6BBBB25206CCDB40007130E /* Vender */,
+				05DF6FA3205134AF0010AC13 /* Resource */,
 				05DF6F8920512A880010AC13 /* CXDTool.xcdatamodeld */,
 			);
 			path = CXDTool;
@@ -97,22 +97,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		05DF6FA1205134970010AC13 /* Expand */ = {
-			isa = PBXGroup;
-			children = (
-				05DF6FA5205134CA0010AC13 /* Category */,
-				05DF6FA4205134C00010AC13 /* Tool */,
-			);
-			path = Expand;
-			sourceTree = "<group>";
-		};
-		05DF6FA2205134A30010AC13 /* Vender */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Vender;
-			sourceTree = "<group>";
-		};
 		05DF6FA3205134AF0010AC13 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,20 +105,6 @@
 				05DF6F8E20512A880010AC13 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		05DF6FA4205134C00010AC13 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
-		05DF6FA5205134CA0010AC13 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Category;
 			sourceTree = "<group>";
 		};
 		324B092F0C077027D9646755 /* Pods */ = {
@@ -152,6 +122,36 @@
 				ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6BBBB25206CCDB40007130E /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		E6BBBB26206CCDD10007130E /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBBB28206CCDE30007130E /* Category */,
+				E6BBBB27206CCDDA0007130E /* Tool */,
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		E6BBBB27206CCDDA0007130E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E6BBBB28206CCDE30007130E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
