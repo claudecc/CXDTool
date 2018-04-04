@@ -14,4 +14,14 @@
 
 + (NSString *)getStringFromObj:(id)obj;
 
++ (NSString *)filterHTML:(NSString *)html;
+
++ (NSRange)findKeyString:(NSString *)content;
+
+//时间戳转时间
++(NSString*)timestampSwitchTime:(NSString*)timestamp;
+
+/** 区间随机数 */
++ (float)randomBetween:(float)smallerNumber And:(float)largerNumber;
+
 @end

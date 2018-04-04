@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		052BAF3F2051370A007BF893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 052BAF3E2051370A007BF893 /* Assets.xcassets */; };
 		05DF6F8220512A880010AC13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F8120512A880010AC13 /* AppDelegate.m */; };
 		05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F8920512A880010AC13 /* CXDTool.xcdatamodeld */; };
 		05DF6F9320512A880010AC13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F9220512A880010AC13 /* main.m */; };
@@ -21,10 +20,17 @@
 		E6BBBB4C206CD0F00007130E /* MyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB4B206CD0F00007130E /* MyTool.m */; };
 		E6BBBB50206CD9AA0007130E /* UserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB4F206CD9AA0007130E /* UserAgent.m */; };
 		E6BBBB53206CD9D30007130E /* Interface.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB52206CD9D30007130E /* Interface.m */; };
+		E6D9E99420731ECB006D5057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6D9E99320731ECB006D5057 /* Assets.xcassets */; };
+		E6DF706120736D24006C7262 /* UITool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DF706020736D24006C7262 /* UITool.m */; };
+		E6DF706720737421006C7262 /* BannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DF706620737421006C7262 /* BannerVC.m */; };
+		E6DF706A20737430006C7262 /* SegmentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DF706920737430006C7262 /* SegmentVC.m */; };
+		E6DF706D2073743C006C7262 /* FlowLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DF706C2073743C006C7262 /* FlowLayoutVC.m */; };
+		E6DF707020737449006C7262 /* PhysicsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DF706F20737449006C7262 /* PhysicsVC.m */; };
+		E6DF707320737C49006C7262 /* UIView+Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DF707220737C49006C7262 /* UIView+Coordinate.m */; };
+		E6DF707620737E40006C7262 /* NSString+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DF707520737E40006C7262 /* NSString+Tool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		052BAF3E2051370A007BF893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05DF6F7D20512A880010AC13 /* CXDTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXDTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DF6F8020512A880010AC13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		05DF6F8120512A880010AC13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +57,22 @@
 		E6BBBB4F206CD9AA0007130E /* UserAgent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserAgent.m; sourceTree = "<group>"; };
 		E6BBBB51206CD9D30007130E /* Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
 		E6BBBB52206CD9D30007130E /* Interface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Interface.m; sourceTree = "<group>"; };
+		E6D9E99320731ECB006D5057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6DF705F20736D24006C7262 /* UITool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITool.h; sourceTree = "<group>"; };
+		E6DF706020736D24006C7262 /* UITool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITool.m; sourceTree = "<group>"; };
+		E6DF706420736DF9006C7262 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E6DF706520737421006C7262 /* BannerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerVC.h; sourceTree = "<group>"; };
+		E6DF706620737421006C7262 /* BannerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerVC.m; sourceTree = "<group>"; };
+		E6DF706820737430006C7262 /* SegmentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentVC.h; sourceTree = "<group>"; };
+		E6DF706920737430006C7262 /* SegmentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentVC.m; sourceTree = "<group>"; };
+		E6DF706B2073743C006C7262 /* FlowLayoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowLayoutVC.h; sourceTree = "<group>"; };
+		E6DF706C2073743C006C7262 /* FlowLayoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlowLayoutVC.m; sourceTree = "<group>"; };
+		E6DF706E20737449006C7262 /* PhysicsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhysicsVC.h; sourceTree = "<group>"; };
+		E6DF706F20737449006C7262 /* PhysicsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhysicsVC.m; sourceTree = "<group>"; };
+		E6DF707120737C49006C7262 /* UIView+Coordinate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Coordinate.h"; sourceTree = "<group>"; };
+		E6DF707220737C49006C7262 /* UIView+Coordinate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Coordinate.m"; sourceTree = "<group>"; };
+		E6DF707420737E40006C7262 /* NSString+Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Tool.h"; sourceTree = "<group>"; };
+		E6DF707520737E40006C7262 /* NSString+Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Tool.m"; sourceTree = "<group>"; };
 		ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CXDTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,6 +93,7 @@
 			children = (
 				05DF6F9120512A880010AC13 /* Info.plist */,
 				05DF6F9220512A880010AC13 /* main.m */,
+				E6DF706420736DF9006C7262 /* PrefixHeader.pch */,
 			);
 			path = Basis;
 			sourceTree = "<group>";
@@ -121,7 +144,7 @@
 		05DF6FA3205134AF0010AC13 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				052BAF3E2051370A007BF893 /* Assets.xcassets */,
+				E6D9E99320731ECB006D5057 /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -165,6 +188,8 @@
 			children = (
 				E6BBBB4A206CD0F00007130E /* MyTool.h */,
 				E6BBBB4B206CD0F00007130E /* MyTool.m */,
+				E6DF705F20736D24006C7262 /* UITool.h */,
+				E6DF706020736D24006C7262 /* UITool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -172,6 +197,10 @@
 		E6BBBB28206CCDE30007130E /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E6DF707120737C49006C7262 /* UIView+Coordinate.h */,
+				E6DF707220737C49006C7262 /* UIView+Coordinate.m */,
+				E6DF707420737E40006C7262 /* NSString+Tool.h */,
+				E6DF707520737E40006C7262 /* NSString+Tool.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -237,6 +266,14 @@
 			children = (
 				E6BBBB40206CD0360007130E /* HomeVC.h */,
 				E6BBBB41206CD0360007130E /* HomeVC.m */,
+				E6DF706520737421006C7262 /* BannerVC.h */,
+				E6DF706620737421006C7262 /* BannerVC.m */,
+				E6DF706820737430006C7262 /* SegmentVC.h */,
+				E6DF706920737430006C7262 /* SegmentVC.m */,
+				E6DF706B2073743C006C7262 /* FlowLayoutVC.h */,
+				E6DF706C2073743C006C7262 /* FlowLayoutVC.m */,
+				E6DF706E20737449006C7262 /* PhysicsVC.h */,
+				E6DF706F20737449006C7262 /* PhysicsVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -369,7 +406,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				052BAF3F2051370A007BF893 /* Assets.xcassets in Resources */,
+				E6D9E99420731ECB006D5057 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,15 +466,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */,
+				E6DF706120736D24006C7262 /* UITool.m in Sources */,
+				E6DF707320737C49006C7262 /* UIView+Coordinate.m in Sources */,
 				E6BBBB4C206CD0F00007130E /* MyTool.m in Sources */,
 				E6BBBB36206CCFDE0007130E /* BaseTabbarVC.m in Sources */,
 				E6BBBB53206CD9D30007130E /* Interface.m in Sources */,
+				E6DF706A20737430006C7262 /* SegmentVC.m in Sources */,
 				E6BBBB50206CD9AA0007130E /* UserAgent.m in Sources */,
 				E6BBBB49206CD0950007130E /* LoginVC.m in Sources */,
+				E6DF706D2073743C006C7262 /* FlowLayoutVC.m in Sources */,
 				05DF6F9320512A880010AC13 /* main.m in Sources */,
 				05DF6F8220512A880010AC13 /* AppDelegate.m in Sources */,
 				E6BBBB33206CCFC80007130E /* BaseNavVC.m in Sources */,
+				E6DF706720737421006C7262 /* BannerVC.m in Sources */,
+				E6DF707020737449006C7262 /* PhysicsVC.m in Sources */,
 				E6BBBB42206CD0360007130E /* HomeVC.m in Sources */,
+				E6DF707620737E40006C7262 /* NSString+Tool.m in Sources */,
 				E6BBBB30206CCF940007130E /* BaseVC.m in Sources */,
 				E6BBBB3F206CD0220007130E /* MeVC.m in Sources */,
 			);
@@ -484,6 +528,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CXDTool/Basis/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -537,6 +583,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CXDTool/Basis/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -555,8 +603,11 @@
 			baseConfigurationReference = 3509219F06C3F1CD719CD6FF /* Pods-CXDTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QZKDBZ56ET;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CXDTool/Basis/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CXDTool/Basis/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = claudechoi.CXDTool;
@@ -570,8 +621,11 @@
 			baseConfigurationReference = 812DAC7F557D61DAF2D5EBB3 /* Pods-CXDTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QZKDBZ56ET;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CXDTool/Basis/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CXDTool/Basis/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = claudechoi.CXDTool;

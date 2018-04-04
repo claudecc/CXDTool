@@ -8,7 +8,10 @@
 
 #import "HomeVC.h"
 
-@interface HomeVC ()
+@interface HomeVC ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic,strong) NSArray *listArray;
+@property (nonatomic,strong) UITableView *tableView;
 
 @end
 
@@ -17,21 +20,50 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self setupUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupUI {
+    UITableView *tableview = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    [self.view addSubview:tableview];
+    self.tableView = tableview;
+    tableview.delegate = self;
+    tableview.dataSource = self;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.listArray.count;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *cellId = @"home_cell_id";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    }
+    cell.textLabel.text = [self.listArray[indexPath.row] objectForKey:@"name"];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSString *vc = [self.listArray[indexPath.row] objectForKey:@"vc"];
+    NSString *vcName = [self.listArray[indexPath.row] objectForKey:@"name"];
+    Class class = NSClassFromString(vc);
+    if (class) {
+        BaseVC *vc = [[class alloc] init];
+        vc.title = vcName;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+- (NSArray *)listArray {
+    return @[@{@"name":@"banner",@"vc":@"BannerVC"},
+             @{@"name":@"segment",@"vc":@"SegmentVC"},
+             @{@"name":@"瀑布流",@"vc":@"FlowLayoutVC"},
+             @{@"name":@"物理动画",@"vc":@"PhysicsVC"}];
+}
 
 @end

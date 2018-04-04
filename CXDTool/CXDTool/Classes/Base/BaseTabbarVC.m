@@ -25,12 +25,18 @@
 }
 
 - (void)setupUI {
+    CGSize imageSize = CGSizeMake(24, 24);
+    
+    UIImage *homeImage = [UITool createImageWithSize:imageSize text:@"😆" attriDict:@{NSFontAttributeName:[UIFont systemFontOfSize:20]}];
     BaseVC *homeVC = [HomeVC new];
     homeVC.title = @"Home";
+    homeVC.tabBarItem.image = [homeImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     BaseNavVC *homeNav = [[BaseNavVC alloc] initWithRootViewController:homeVC];
     
+    UIImage *meImage = [UITool createImageWithSize:imageSize text:@"😤" attriDict:@{NSFontAttributeName:[UIFont systemFontOfSize:20]}];
     BaseVC *meVC = [MeVC new];
     meVC.title = @"Me";
+    meVC.tabBarItem.image = [meImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     BaseNavVC *meNav = [[BaseNavVC alloc] initWithRootViewController:meVC];
     
     self.viewControllers = @[homeNav,meNav];

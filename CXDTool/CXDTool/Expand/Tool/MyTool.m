@@ -7,6 +7,7 @@
 //
 
 #import "MyTool.h"
+#import <UIKit/UIKit.h>
 
 @implementation MyTool
 
@@ -20,5 +21,66 @@
     }
     return obj?[NSString stringWithFormat:@"%@",obj]:@"";
 }
+
+// 过滤HTML标签
++ (NSString *)filterHTML:(NSString *)html
+{
+    NSScanner * scanner = [NSScanner scannerWithString:html];
+    NSString * text = nil;
+    while([scanner isAtEnd]==NO)
+    {
+        [scanner scanUpToString:@"<" intoString:nil];
+        [scanner scanUpToString:@">" intoString:&text];
+        html = [html stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>",text] withString:@""];
+    }
+    return html;
+}
+
+// 找包含 元、单、% 数字的正则
++ (NSRange)findKeyString:(NSString *)content {
+    NSString *pattern = @"([0-9]+[0-9\\.]*)[\u5143]+";
+    
+    NSRegularExpression *expression = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:nil];
+    NSTextCheckingResult *result = [expression firstMatchInString:content options:0 range:NSMakeRange(0, content.length)];
+    NSString *value = [content substringWithRange:[result rangeAtIndex:1]];
+    NSRange range = [content rangeOfString:value options:NSBackwardsSearch];
+    return range;
+}
+
+//时间戳转时间
++(NSString*)timestampSwitchTime:(NSString*)timestamp
+
+{
+    NSDate *nd = [NSDate dateWithTimeIntervalSince1970:(NSTimeInterval)[timestamp integerValue]];
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    // [dateFormat setDateFormat:@"HH:mm:ss"];
+    [dateFormat setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+    NSString *dateString = [dateFormat stringFromDate:nd];
+    return dateString;
+}
+
+
+/** 区间随机数 */
++ (float)randomBetween:(float)smallerNumber And:(float)largerNumber
+{
+    //设置精确的位数
+    int precision = 100;
+    //先取得他们之间的差值
+    float subtraction = largerNumber - smallerNumber;
+    //取绝对值
+    subtraction = ABS(subtraction);
+    //乘以精度的位数
+    subtraction *= precision;
+    //在差值间随机
+    float randomNumber = arc4random() % ((int)subtraction+1);
+    //随机的结果除以精度的位数
+    randomNumber /= precision;
+    //将随机的值加到较小的值上
+    float result = MIN(smallerNumber, largerNumber) + randomNumber;
+    //返回结果
+    return result;
+}
+
 
 @end
