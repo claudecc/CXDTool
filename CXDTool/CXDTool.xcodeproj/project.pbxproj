@@ -20,6 +20,7 @@
 		E6BBBB4C206CD0F00007130E /* MyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB4B206CD0F00007130E /* MyTool.m */; };
 		E6BBBB50206CD9AA0007130E /* UserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB4F206CD9AA0007130E /* UserAgent.m */; };
 		E6BBBB53206CD9D30007130E /* Interface.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB52206CD9D30007130E /* Interface.m */; };
+		E6D417122080AF5200303490 /* MeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D417112080AF5200303490 /* MeHeaderView.m */; };
 		E6D9E99420731ECB006D5057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6D9E99320731ECB006D5057 /* Assets.xcassets */; };
 		E6DF706120736D24006C7262 /* UITool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DF706020736D24006C7262 /* UITool.m */; };
 		E6DF706720737421006C7262 /* BannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DF706620737421006C7262 /* BannerVC.m */; };
@@ -57,6 +58,8 @@
 		E6BBBB4F206CD9AA0007130E /* UserAgent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserAgent.m; sourceTree = "<group>"; };
 		E6BBBB51206CD9D30007130E /* Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
 		E6BBBB52206CD9D30007130E /* Interface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Interface.m; sourceTree = "<group>"; };
+		E6D417102080AF5200303490 /* MeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeHeaderView.h; sourceTree = "<group>"; };
+		E6D417112080AF5200303490 /* MeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeHeaderView.m; sourceTree = "<group>"; };
 		E6D9E99320731ECB006D5057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6DF705F20736D24006C7262 /* UITool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITool.h; sourceTree = "<group>"; };
 		E6DF706020736D24006C7262 /* UITool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITool.m; sourceTree = "<group>"; };
@@ -281,6 +284,8 @@
 		E6BBBB3A206CCFFC0007130E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E6D417102080AF5200303490 /* MeHeaderView.h */,
+				E6D417112080AF5200303490 /* MeHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -468,6 +473,7 @@
 				05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */,
 				E6DF706120736D24006C7262 /* UITool.m in Sources */,
 				E6DF707320737C49006C7262 /* UIView+Coordinate.m in Sources */,
+				E6D417122080AF5200303490 /* MeHeaderView.m in Sources */,
 				E6BBBB4C206CD0F00007130E /* MyTool.m in Sources */,
 				E6BBBB36206CCFDE0007130E /* BaseTabbarVC.m in Sources */,
 				E6BBBB53206CD9D30007130E /* Interface.m in Sources */,
