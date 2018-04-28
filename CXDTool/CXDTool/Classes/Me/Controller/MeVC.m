@@ -14,7 +14,6 @@
 @property (nonatomic,copy) NSArray *dataArray;
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) MeHeaderView *headerView;
-@property (nonatomic,assign) BOOL isAnimating;
 
 @end
 
@@ -26,7 +25,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    self.navBarBgAlpha = @"0";
 }
 
 - (void)viewDidLoad {
@@ -37,7 +37,7 @@
 }
 
 - (void)setupUI {
-    MeHeaderView *headerView = [[MeHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 400)];
+    MeHeaderView *headerView = [[MeHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 340)];
     self.headerView = headerView;
     [self.view addSubview:headerView];
     
@@ -48,9 +48,14 @@
     tableView.dataSource = self;
     tableView.contentInset = UIEdgeInsetsMake(headerView.height, 0, 0, 0);
     tableView.backgroundColor = [UIColor colorWithWhite:1 alpha:0];
-    UIView *transparentView = [[UIView alloc] initWithFrame:tableView.bounds];
-    transparentView.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    tableView.backgroundView = transparentView;
+    tableView.showsVerticalScrollIndicator = NO;
+    if (@available(iOS 11.0,*)) {
+        if ([self.tableView respondsToSelector:@selector(setContentInsetAdjustmentBehavior:)]) {
+            self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -62,32 +67,44 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     cell.textLabel.text = [NSString stringWithFormat:@"第%ld行",indexPath.row];
     return cell;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    [self.headerView scrollWithOffsetY:scrollView.contentOffset.y];
+    if (self.headerView.isAnimating) {
+        return;
+    }
+    CGFloat offsetY = scrollView.contentOffset.y+scrollView.contentInset.top;
+    if (offsetY <= -self.headerView.dropOffsetH) {
+        offsetY = -self.headerView.dropOffsetH;
+        scrollView.contentOffset = CGPointMake(0, offsetY-scrollView.contentInset.top);
+    }
+    [self.headerView scrollWithOffsetY:offsetY];
+    if (offsetY > 0) {
+        self.navBarBgAlpha = [NSString stringWithFormat:@"%.2f",offsetY/70.0];
+    } else {
+        self.navBarBgAlpha = @"0.0";
+    }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     // 判断往下滑
-    self.isAnimating = YES;
+    CGFloat offsetY = scrollView.contentOffset.y+scrollView.contentInset.top;
+    if (offsetY > 0) {
+        return;
+    }
+    if (self.headerView.isAnimating) {
+        return;
+    }
+    self.tableView.scrollEnabled = NO;
     MJWeakSelf
     // 做动画
     [self.headerView endingAnimateWithComplete:^{
-        weakSelf.isAnimating = NO;
+        weakSelf.tableView.scrollEnabled = YES;
     }];
-}
-
-- (void)setIsAnimating:(BOOL)isAnimating {
-    _isAnimating = isAnimating;
-    if (isAnimating) {
-        self.tableView.scrollEnabled = NO;
-    } else {
-        self.tableView.scrollEnabled = YES;
-    }
 }
 
 @end

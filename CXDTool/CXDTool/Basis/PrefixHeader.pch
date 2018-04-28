@@ -19,11 +19,10 @@
 #import "Interface.h"
 #import "UIView+Coordinate.h"
 #import "MJRefresh.h"
-
-#define SCREEN_HEIGHT       [UIScreen mainScreen].bounds.size.height
-#define SCREEN_WIDTH        [UIScreen mainScreen].bounds.size.width
-#define TARGET_IPHONE_X     (SCREEN_HEIGHT == 812)
-#define TAB_BAR_HEIGHT      (TARGET_IPHONE_X ? 83 : 49)
+#import "BasicMacro.h"
+#import "ColorMacro.h"
+#import "UINavigationController+Cloudox.h"
+#import "UIViewController+Cloudox.h"
 
 #endif
 

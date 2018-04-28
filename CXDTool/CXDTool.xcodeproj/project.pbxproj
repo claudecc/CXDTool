@@ -11,6 +11,8 @@
 		05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F8920512A880010AC13 /* CXDTool.xcdatamodeld */; };
 		05DF6F9320512A880010AC13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F9220512A880010AC13 /* main.m */; };
 		CE05545BFB0388E5D1585722 /* libPods-CXDTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */; };
+		E6277C4E20946AE700B75AB1 /* UIViewController+Cloudox.m in Sources */ = {isa = PBXBuildFile; fileRef = E6277C4C20946AE700B75AB1 /* UIViewController+Cloudox.m */; };
+		E6277C4F20946AE700B75AB1 /* UINavigationController+Cloudox.m in Sources */ = {isa = PBXBuildFile; fileRef = E6277C4D20946AE700B75AB1 /* UINavigationController+Cloudox.m */; };
 		E6BBBB30206CCF940007130E /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB2F206CCF940007130E /* BaseVC.m */; };
 		E6BBBB33206CCFC80007130E /* BaseNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB32206CCFC80007130E /* BaseNavVC.m */; };
 		E6BBBB36206CCFDE0007130E /* BaseTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB35206CCFDE0007130E /* BaseTabbarVC.m */; };
@@ -40,6 +42,12 @@
 		05DF6F9220512A880010AC13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3509219F06C3F1CD719CD6FF /* Pods-CXDTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.debug.xcconfig"; sourceTree = "<group>"; };
 		812DAC7F557D61DAF2D5EBB3 /* Pods-CXDTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.release.xcconfig"; sourceTree = "<group>"; };
+		E6277C48209451AE00B75AB1 /* BasicMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicMacro.h; sourceTree = "<group>"; };
+		E6277C49209451C100B75AB1 /* ColorMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorMacro.h; sourceTree = "<group>"; };
+		E6277C4A20946AE700B75AB1 /* UINavigationController+Cloudox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Cloudox.h"; sourceTree = "<group>"; };
+		E6277C4B20946AE700B75AB1 /* UIViewController+Cloudox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Cloudox.h"; sourceTree = "<group>"; };
+		E6277C4C20946AE700B75AB1 /* UIViewController+Cloudox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Cloudox.m"; sourceTree = "<group>"; };
+		E6277C4D20946AE700B75AB1 /* UINavigationController+Cloudox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Cloudox.m"; sourceTree = "<group>"; };
 		E6BBBB2E206CCF940007130E /* BaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
 		E6BBBB2F206CCF940007130E /* BaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		E6BBBB31206CCFC80007130E /* BaseNavVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavVC.h; sourceTree = "<group>"; };
@@ -97,6 +105,8 @@
 				05DF6F9120512A880010AC13 /* Info.plist */,
 				05DF6F9220512A880010AC13 /* main.m */,
 				E6DF706420736DF9006C7262 /* PrefixHeader.pch */,
+				E6277C48209451AE00B75AB1 /* BasicMacro.h */,
+				E6277C49209451C100B75AB1 /* ColorMacro.h */,
 			);
 			path = Basis;
 			sourceTree = "<group>";
@@ -204,6 +214,10 @@
 				E6DF707220737C49006C7262 /* UIView+Coordinate.m */,
 				E6DF707420737E40006C7262 /* NSString+Tool.h */,
 				E6DF707520737E40006C7262 /* NSString+Tool.m */,
+				E6277C4A20946AE700B75AB1 /* UINavigationController+Cloudox.h */,
+				E6277C4D20946AE700B75AB1 /* UINavigationController+Cloudox.m */,
+				E6277C4B20946AE700B75AB1 /* UIViewController+Cloudox.h */,
+				E6277C4C20946AE700B75AB1 /* UIViewController+Cloudox.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -478,6 +492,7 @@
 				E6BBBB36206CCFDE0007130E /* BaseTabbarVC.m in Sources */,
 				E6BBBB53206CD9D30007130E /* Interface.m in Sources */,
 				E6DF706A20737430006C7262 /* SegmentVC.m in Sources */,
+				E6277C4E20946AE700B75AB1 /* UIViewController+Cloudox.m in Sources */,
 				E6BBBB50206CD9AA0007130E /* UserAgent.m in Sources */,
 				E6BBBB49206CD0950007130E /* LoginVC.m in Sources */,
 				E6DF706D2073743C006C7262 /* FlowLayoutVC.m in Sources */,
@@ -485,6 +500,7 @@
 				05DF6F8220512A880010AC13 /* AppDelegate.m in Sources */,
 				E6BBBB33206CCFC80007130E /* BaseNavVC.m in Sources */,
 				E6DF706720737421006C7262 /* BannerVC.m in Sources */,
+				E6277C4F20946AE700B75AB1 /* UINavigationController+Cloudox.m in Sources */,
 				E6DF707020737449006C7262 /* PhysicsVC.m in Sources */,
 				E6BBBB42206CD0360007130E /* HomeVC.m in Sources */,
 				E6DF707620737E40006C7262 /* NSString+Tool.m in Sources */,

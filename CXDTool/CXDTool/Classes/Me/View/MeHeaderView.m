@@ -17,7 +17,10 @@
 @end
 
 @implementation MeHeaderView
-
+{
+    CGFloat _cardViewOriginY;
+    CGFloat _offsetY;
+}
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self setupUI];
@@ -28,7 +31,7 @@
 - (void)setupUI {
     self.backgroundColor = [UIColor whiteColor];
     
-    UIView *topBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, 200)];
+    UIView *topBgView = [[UIView alloc] initWithFrame:CGRectMake(0, -10, self.width, 200)];
     [self addSubview:topBgView];
     self.topBgView = topBgView;
     topBgView.backgroundColor = [UIColor redColor];
@@ -44,23 +47,49 @@
     
     UIView *cardView = [[UIView alloc] initWithFrame:bgView.frame];
     cardView.y += 30;
+    _cardViewOriginY = cardView.y;
     [self insertSubview:cardView belowSubview:bgView];
     self.cardView = cardView;
     cardView.backgroundColor = [UIColor blackColor];
     
 }
 
+- (CGFloat)dropOffsetH {
+    return self.cardView.height*0.5;
+}
+
 - (void)scrollWithOffsetY:(CGFloat)offsetY {
-    
+    _offsetY = offsetY;
+    if (offsetY >= 0) {
+        self.y = -offsetY;
+        self.topBgView.transform = CGAffineTransformMakeScale(1, 1);
+        if (self.cardView.y != _cardViewOriginY) {
+            self.cardView.y = _cardViewOriginY;
+        }
+    } else {
+        if (self.y != 0) {
+            self.y = 0;
+        }
+        self.cardView.y = _cardViewOriginY + fabs(offsetY);
+        self.topBgView.transform = CGAffineTransformMakeScale(1, 1+0.0005*fabs(offsetY));
+    }
 }
 
 - (void)endingAnimateWithComplete:(void (^)(void))complete {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if (complete) {
-            complete();
-        }
-        
-    });
+    if (_offsetY == 0) {
+        return;
+    }
+    self.isAnimating = YES;
+    /**
+     dampingRatio:0~1 ，越小效果越大
+     */
+    [UIView animateWithDuration:0.6 delay:0 usingSpringWithDamping:0.4 initialSpringVelocity:0.4 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.topBgView.transform = CGAffineTransformMakeScale(1, 1);
+        self.cardView.y = _cardViewOriginY;
+    } completion:^(BOOL finished) {
+        self.isAnimating = NO;
+        complete();
+    }];
 }
 
 @end

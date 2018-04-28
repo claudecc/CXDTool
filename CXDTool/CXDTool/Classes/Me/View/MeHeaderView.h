@@ -18,6 +18,10 @@ typedef NS_ENUM(NSUInteger, MeHeaderStyle) {
 
 @property (nonatomic, assign) MeHeaderStyle style;
 
+@property (nonatomic,assign) BOOL isAnimating;
+
+@property (nonatomic,assign) CGFloat dropOffsetH;
+
 /** 滚动偏移*/
 - (void)scrollWithOffsetY:(CGFloat)offsetY;
 
