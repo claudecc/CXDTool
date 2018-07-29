@@ -10,4 +10,7 @@
 
 @interface BaseVC : UIViewController
 
+-(void)setLeftButtonWithTitle:(NSString *)title Image:(NSString *)image SelectedImage:(NSString *)selectedImage Action:(void(^)(void))btnClickBlock;
+-(void)setRightButtonWithTitle:(NSString *)title Image:(NSString *)image SelectedImage:(NSString *)selectedImage Action:(void(^)(void))btnClickBlock;
+
 @end

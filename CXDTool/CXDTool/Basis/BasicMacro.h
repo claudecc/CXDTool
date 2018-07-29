@@ -24,8 +24,8 @@
 #define TAB_BAR_BOTTOM_MARGIN     (IS_IPHONE_X ? 34 : 0)
 
 // 比例
-#define ScaleX   kScreen.width/375
-#define ScaleY   kScreen.height/667
+#define ScaleX   SCREEN_WIDTH/375
+#define ScaleY   SCREEN_HEIGHT/667
 
 // 判断
 #define IS_IPHONE_X     (SCREEN_HEIGHT == 812)
@@ -53,6 +53,6 @@
 #define DEF_SCREEN_IS_6plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242,2208), [[UIScreen mainScreen] currentMode].size) : NO)
 
 
-#define XDWeakSelf (__weak typeof(&*self) weakSelf = self;)
+#define XDWeakSelf __weak typeof(&*self) weakSelf = self;
 
 #endif /* BasicMacro_h */

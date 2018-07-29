@@ -63,7 +63,8 @@
     return @[@{@"name":@"banner",@"vc":@"BannerVC"},
              @{@"name":@"segment",@"vc":@"SegmentVC"},
              @{@"name":@"瀑布流",@"vc":@"FlowLayoutVC"},
-             @{@"name":@"物理动画",@"vc":@"PhysicsVC"}];
+             @{@"name":@"物理动画",@"vc":@"PhysicsVC"},
+             @{@"name":@"图像处理",@"vc":@"ImageProcessingVC"}];
 }
 
 @end

@@ -31,6 +31,10 @@
 		E6DF707020737449006C7262 /* PhysicsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DF706F20737449006C7262 /* PhysicsVC.m */; };
 		E6DF707320737C49006C7262 /* UIView+Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DF707220737C49006C7262 /* UIView+Coordinate.m */; };
 		E6DF707620737E40006C7262 /* NSString+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DF707520737E40006C7262 /* NSString+Tool.m */; };
+		E6E0268F2105CE80000FDF48 /* ImageProcessingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E0268E2105CE80000FDF48 /* ImageProcessingVC.m */; };
+		E6E026932105DDCC000FDF48 /* CoreImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E026922105DDCC000FDF48 /* CoreImageVC.m */; };
+		E6E02696210702EC000FDF48 /* GPUImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E02695210702EC000FDF48 /* GPUImageVC.m */; };
+		E6E0269921070BCF000FDF48 /* AVFoundationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E0269821070BCF000FDF48 /* AVFoundationVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +88,14 @@
 		E6DF707220737C49006C7262 /* UIView+Coordinate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Coordinate.m"; sourceTree = "<group>"; };
 		E6DF707420737E40006C7262 /* NSString+Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Tool.h"; sourceTree = "<group>"; };
 		E6DF707520737E40006C7262 /* NSString+Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Tool.m"; sourceTree = "<group>"; };
+		E6E0268D2105CE80000FDF48 /* ImageProcessingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageProcessingVC.h; sourceTree = "<group>"; };
+		E6E0268E2105CE80000FDF48 /* ImageProcessingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageProcessingVC.m; sourceTree = "<group>"; };
+		E6E026912105DDCC000FDF48 /* CoreImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreImageVC.h; sourceTree = "<group>"; };
+		E6E026922105DDCC000FDF48 /* CoreImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreImageVC.m; sourceTree = "<group>"; };
+		E6E02694210702EC000FDF48 /* GPUImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageVC.h; sourceTree = "<group>"; };
+		E6E02695210702EC000FDF48 /* GPUImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageVC.m; sourceTree = "<group>"; };
+		E6E0269721070BCF000FDF48 /* AVFoundationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVFoundationVC.h; sourceTree = "<group>"; };
+		E6E0269821070BCF000FDF48 /* AVFoundationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVFoundationVC.m; sourceTree = "<group>"; };
 		ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CXDTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -291,6 +303,7 @@
 				E6DF706C2073743C006C7262 /* FlowLayoutVC.m */,
 				E6DF706E20737449006C7262 /* PhysicsVC.h */,
 				E6DF706F20737449006C7262 /* PhysicsVC.m */,
+				E6E026902105DD24000FDF48 /* ImageProcessing */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -362,6 +375,21 @@
 				E6BBBB52206CD9D30007130E /* Interface.m */,
 			);
 			path = NetWork;
+			sourceTree = "<group>";
+		};
+		E6E026902105DD24000FDF48 /* ImageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				E6E0268D2105CE80000FDF48 /* ImageProcessingVC.h */,
+				E6E0268E2105CE80000FDF48 /* ImageProcessingVC.m */,
+				E6E026912105DDCC000FDF48 /* CoreImageVC.h */,
+				E6E026922105DDCC000FDF48 /* CoreImageVC.m */,
+				E6E02694210702EC000FDF48 /* GPUImageVC.h */,
+				E6E02695210702EC000FDF48 /* GPUImageVC.m */,
+				E6E0269721070BCF000FDF48 /* AVFoundationVC.h */,
+				E6E0269821070BCF000FDF48 /* AVFoundationVC.m */,
+			);
+			path = ImageProcessing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,8 +525,11 @@
 				E6BBBB49206CD0950007130E /* LoginVC.m in Sources */,
 				E6DF706D2073743C006C7262 /* FlowLayoutVC.m in Sources */,
 				05DF6F9320512A880010AC13 /* main.m in Sources */,
+				E6E026932105DDCC000FDF48 /* CoreImageVC.m in Sources */,
 				05DF6F8220512A880010AC13 /* AppDelegate.m in Sources */,
 				E6BBBB33206CCFC80007130E /* BaseNavVC.m in Sources */,
+				E6E0269921070BCF000FDF48 /* AVFoundationVC.m in Sources */,
+				E6E0268F2105CE80000FDF48 /* ImageProcessingVC.m in Sources */,
 				E6DF706720737421006C7262 /* BannerVC.m in Sources */,
 				E6277C4F20946AE700B75AB1 /* UINavigationController+Cloudox.m in Sources */,
 				E6DF707020737449006C7262 /* PhysicsVC.m in Sources */,
@@ -506,6 +537,7 @@
 				E6DF707620737E40006C7262 /* NSString+Tool.m in Sources */,
 				E6BBBB30206CCF940007130E /* BaseVC.m in Sources */,
 				E6BBBB3F206CD0220007130E /* MeVC.m in Sources */,
+				E6E02696210702EC000FDF48 /* GPUImageVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
