@@ -13,6 +13,11 @@
 		CE05545BFB0388E5D1585722 /* libPods-CXDTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */; };
 		E6277C4E20946AE700B75AB1 /* UIViewController+Cloudox.m in Sources */ = {isa = PBXBuildFile; fileRef = E6277C4C20946AE700B75AB1 /* UIViewController+Cloudox.m */; };
 		E6277C4F20946AE700B75AB1 /* UINavigationController+Cloudox.m in Sources */ = {isa = PBXBuildFile; fileRef = E6277C4D20946AE700B75AB1 /* UINavigationController+Cloudox.m */; };
+		E63D3C42212FE1FB00A5DDFA /* HPVIDCompetitionVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E63D3C41212FE1FB00A5DDFA /* HPVIDCompetitionVideoCell.m */; };
+		E63D3C45212FF5ED00A5DDFA /* HMVIDCompetitionVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E63D3C44212FF5ED00A5DDFA /* HMVIDCompetitionVideoModel.m */; };
+		E63D3C48212FF63700A5DDFA /* HMVIDCompetitionAnchorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E63D3C47212FF63700A5DDFA /* HMVIDCompetitionAnchorModel.m */; };
+		E63D3C4B212FF66700A5DDFA /* HMVIDCompetitionInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E63D3C4A212FF66700A5DDFA /* HMVIDCompetitionInfoModel.m */; };
+		E63D3C4E2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = E63D3C4D2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.m */; };
 		E63DC02D212EB32B00EA4C76 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC02C212EB32B00EA4C76 /* TestVC.m */; };
 		E63DC030212EB34000EA4C76 /* CompetitionInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC02F212EB34000EA4C76 /* CompetitionInfoView.m */; };
 		E63DC033212EB34C00EA4C76 /* CompetitionCommentatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */; };
@@ -55,6 +60,16 @@
 		E6277C4B20946AE700B75AB1 /* UIViewController+Cloudox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Cloudox.h"; sourceTree = "<group>"; };
 		E6277C4C20946AE700B75AB1 /* UIViewController+Cloudox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Cloudox.m"; sourceTree = "<group>"; };
 		E6277C4D20946AE700B75AB1 /* UINavigationController+Cloudox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Cloudox.m"; sourceTree = "<group>"; };
+		E63D3C40212FE1FB00A5DDFA /* HPVIDCompetitionVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPVIDCompetitionVideoCell.h; sourceTree = "<group>"; };
+		E63D3C41212FE1FB00A5DDFA /* HPVIDCompetitionVideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPVIDCompetitionVideoCell.m; sourceTree = "<group>"; };
+		E63D3C43212FF5ED00A5DDFA /* HMVIDCompetitionVideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMVIDCompetitionVideoModel.h; sourceTree = "<group>"; };
+		E63D3C44212FF5ED00A5DDFA /* HMVIDCompetitionVideoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMVIDCompetitionVideoModel.m; sourceTree = "<group>"; };
+		E63D3C46212FF63700A5DDFA /* HMVIDCompetitionAnchorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMVIDCompetitionAnchorModel.h; sourceTree = "<group>"; };
+		E63D3C47212FF63700A5DDFA /* HMVIDCompetitionAnchorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMVIDCompetitionAnchorModel.m; sourceTree = "<group>"; };
+		E63D3C49212FF66700A5DDFA /* HMVIDCompetitionInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMVIDCompetitionInfoModel.h; sourceTree = "<group>"; };
+		E63D3C4A212FF66700A5DDFA /* HMVIDCompetitionInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMVIDCompetitionInfoModel.m; sourceTree = "<group>"; };
+		E63D3C4C2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutSubviewsCallback.h"; sourceTree = "<group>"; };
+		E63D3C4D2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutSubviewsCallback.m"; sourceTree = "<group>"; };
 		E63DC02B212EB32B00EA4C76 /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
 		E63DC02C212EB32B00EA4C76 /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		E63DC02E212EB34000EA4C76 /* CompetitionInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompetitionInfoView.h; sourceTree = "<group>"; };
@@ -203,6 +218,12 @@
 		E63DC029212EB2F900EA4C76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E63D3C43212FF5ED00A5DDFA /* HMVIDCompetitionVideoModel.h */,
+				E63D3C44212FF5ED00A5DDFA /* HMVIDCompetitionVideoModel.m */,
+				E63D3C46212FF63700A5DDFA /* HMVIDCompetitionAnchorModel.h */,
+				E63D3C47212FF63700A5DDFA /* HMVIDCompetitionAnchorModel.m */,
+				E63D3C49212FF66700A5DDFA /* HMVIDCompetitionInfoModel.h */,
+				E63D3C4A212FF66700A5DDFA /* HMVIDCompetitionInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +235,8 @@
 				E63DC02F212EB34000EA4C76 /* CompetitionInfoView.m */,
 				E63DC031212EB34C00EA4C76 /* CompetitionCommentatorView.h */,
 				E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */,
+				E63D3C40212FE1FB00A5DDFA /* HPVIDCompetitionVideoCell.h */,
+				E63D3C41212FE1FB00A5DDFA /* HPVIDCompetitionVideoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,6 +280,8 @@
 				E6277C4D20946AE700B75AB1 /* UINavigationController+Cloudox.m */,
 				E6277C4B20946AE700B75AB1 /* UIViewController+Cloudox.h */,
 				E6277C4C20946AE700B75AB1 /* UIViewController+Cloudox.m */,
+				E63D3C4C2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.h */,
+				E63D3C4D2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -532,18 +557,23 @@
 				E6DF707320737C49006C7262 /* UIView+Coordinate.m in Sources */,
 				E6D417122080AF5200303490 /* MeHeaderView.m in Sources */,
 				E6BBBB4C206CD0F00007130E /* MyTool.m in Sources */,
+				E63D3C45212FF5ED00A5DDFA /* HMVIDCompetitionVideoModel.m in Sources */,
 				E6BBBB36206CCFDE0007130E /* BaseTabbarVC.m in Sources */,
+				E63D3C48212FF63700A5DDFA /* HMVIDCompetitionAnchorModel.m in Sources */,
 				E6BBBB53206CD9D30007130E /* Interface.m in Sources */,
 				E63DC033212EB34C00EA4C76 /* CompetitionCommentatorView.m in Sources */,
 				E6DF706A20737430006C7262 /* SegmentVC.m in Sources */,
+				E63D3C42212FE1FB00A5DDFA /* HPVIDCompetitionVideoCell.m in Sources */,
 				E6277C4E20946AE700B75AB1 /* UIViewController+Cloudox.m in Sources */,
 				E6BBBB50206CD9AA0007130E /* UserAgent.m in Sources */,
 				E6BBBB49206CD0950007130E /* LoginVC.m in Sources */,
+				E63D3C4B212FF66700A5DDFA /* HMVIDCompetitionInfoModel.m in Sources */,
 				E6DF706D2073743C006C7262 /* FlowLayoutVC.m in Sources */,
 				05DF6F9320512A880010AC13 /* main.m in Sources */,
 				E6E026932105DDCC000FDF48 /* CoreImageVC.m in Sources */,
 				05DF6F8220512A880010AC13 /* AppDelegate.m in Sources */,
 				E6BBBB33206CCFC80007130E /* BaseNavVC.m in Sources */,
+				E63D3C4E2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.m in Sources */,
 				E6E0269921070BCF000FDF48 /* AVFoundationVC.m in Sources */,
 				E6E0268F2105CE80000FDF48 /* ImageProcessingVC.m in Sources */,
 				E6DF706720737421006C7262 /* BannerVC.m in Sources */,

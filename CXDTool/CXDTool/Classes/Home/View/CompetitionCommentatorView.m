@@ -27,8 +27,15 @@
     
     UIImageView *leftIcon = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 32, 64)];
     [self addSubview:leftIcon];
-    //    leftIcon.image
-    leftIcon.backgroundColor = UIColor.redColor;
+    leftIcon.image = [self createViewWithFrame:leftIcon.frame];
+//    UILabel *iconLabel = [[UILabel alloc] initWithFrame:leftIcon.bounds];
+//    [leftIcon addSubview:iconLabel];
+//    iconLabel.text = @"解\n说\n切\n换";
+//    iconLabel.font = [UITool mediumFontWithSize:10];
+//    iconLabel.textColor = UIColor.whiteColor;
+//    iconLabel.numberOfLines = 0;
+//    [iconLabel sizeToFit];
+//    iconLabel.center = CGPointMake(leftIcon.centerX - 2, leftIcon.centerY);
     
     CGFloat tableW = CGRectGetWidth(self.frame) - 46;
     
@@ -71,6 +78,60 @@
             button.selected = NO;
         }
     }
+}
+
+- (UIImage *)createViewWithFrame:(CGRect)frame {
+    CGFloat width = frame.size.width;
+    CGFloat height = frame.size.height;
+    
+    CGFloat triangleH = 4;
+    CGFloat triangleW = 10;
+    CGFloat radius = 2;
+    CGPoint topCenter = CGPointMake(width-triangleH - radius, radius);
+    CGPoint bottomCenter = CGPointMake(topCenter.x, height-radius);
+    CGFloat rightX = width - triangleH;
+    
+    // 获取图片上下文
+    UIGraphicsBeginImageContextWithOptions(frame.size, NO, 0);
+    // 绘图
+    UIBezierPath* bezier = [UIBezierPath bezierPath];
+    [bezier moveToPoint:CGPointZero];
+    [bezier addLineToPoint:CGPointMake(topCenter.x, 0)];
+    [bezier addArcWithCenter:topCenter radius:radius startAngle:-M_PI_2 endAngle:0 clockwise:YES];
+    [bezier addLineToPoint:CGPointMake(rightX, (height-triangleW)*0.5)];
+    [bezier addLineToPoint:CGPointMake(width, height*0.5)];
+    [bezier addLineToPoint:CGPointMake(rightX, (height-triangleW)*0.5+triangleW)];
+    [bezier addLineToPoint:CGPointMake(rightX, bottomCenter.y)];
+    [bezier addArcWithCenter:bottomCenter radius:radius startAngle:0 endAngle:M_PI_2 clockwise:YES];
+    [bezier addLineToPoint:CGPointMake(0, height)];
+    [bezier addLineToPoint:CGPointZero];
+    
+    [UIColorFromRGB(0xFC4C26) setFill];
+    [bezier fill];
+    
+    NSString *string = @"解说切换";
+    
+//    NSParagraphStyleAttributeName
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    style.maximumLineHeight = 0;
+    
+    
+    UIFont *font = [UITool mediumFontWithSize:12];
+    NSDictionary *dict  = @{NSFontAttributeName:font,
+                 NSForegroundColorAttributeName:UIColor.whiteColor,
+                  NSParagraphStyleAttributeName:style,
+                  NSBaselineOffsetAttributeName:@(1)
+                            };
+//    [string drawInRect:CGRectMake(0, 0, width, height)withFont:font lineBreakMode:NSLineBreakByCharWrapping alignment:NSTextAlignmentCenter];
+    
+    [string drawInRect:CGRectMake(0, 0, width, height) withAttributes:dict];
+    
+    // 从图片上下文中获取绘制的图片
+    UIImage* image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // 关闭图片上下文
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 @end
