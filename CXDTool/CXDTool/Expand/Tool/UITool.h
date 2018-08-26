@@ -30,4 +30,8 @@
 
 + (CGSize)getSizeWithStr:(NSString *)str andFont:(UIFont *)font andMaxW:(CGFloat)maxW;
 
++ (UIImage *)createHorizontalGradientImageWithSize:(CGSize)size leftColor:(UIColor *)leftColor rightColor:(UIColor *)rightColor;
+
++ (UIImage *)createBorderWithSize:(CGSize)size corners:(UIRectCorner)corners;
+
 @end

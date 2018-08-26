@@ -118,4 +118,50 @@
     return label.size;
 }
 
++ (UIImage *)createHorizontalGradientImageWithSize:(CGSize)size leftColor:(UIColor *)leftColor rightColor:(UIColor *)rightColor {
+    
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+    
+    CAGradientLayer *layer = [CAGradientLayer layer];
+    layer.frame = CGRectMake(0, 0, size.width, size.height);
+    layer.colors = @[(__bridge id)leftColor.CGColor,(__bridge id)rightColor.CGColor];
+    layer.locations = @[@(0),@(1)];
+    layer.startPoint = CGPointMake(0, 0);
+    layer.endPoint = CGPointMake(1, 0);
+    
+    [layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+    
+}
+
++ (UIImage *)createBorderWithSize:(CGSize)size corners:(UIRectCorner)corners {
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+    
+    UIBezierPath *bezier = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, size.width, size.height) byRoundingCorners:corners cornerRadii:CGSizeMake(size.height*0.5, size.height*0.5)];
+    
+//    bezier.lineWidth = 1;
+    [UIColorFromRGB(0xFF4029) set];
+    [bezier stroke];
+    
+    [bezier setLineJoinStyle:kCGLineJoinRound];
+    [bezier setLineCapStyle:kCGLineCapRound];
+    
+    CAShapeLayer *layer = [CAShapeLayer layer];
+    layer.frame = CGRectMake(0, 0, size.width, size.height);
+    layer.path = bezier.CGPath;
+    layer.fillColor = UIColor.clearColor.CGColor;
+//    layer.borderWidth = 1;
+//    layer.borderColor = UIColorFromRGB(0xFF4029).CGColor;
+//    layer.fillColor = UIColor.clearColor.CGColor;
+    
+    [layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 @end

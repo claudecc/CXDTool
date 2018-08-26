@@ -20,8 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    CompetitionCommentatorView *view = [[CompetitionCommentatorView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, 200)];
-    [self.view addSubview:view];
+//    CompetitionCommentatorView *view = [[CompetitionCommentatorView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, 200)];
+//    [self.view addSubview:view];
     
 //    UITableView *tab = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
 //    [self.view addSubview:tab];
@@ -30,6 +30,13 @@
 //    tab.rowHeight = 136;
 //    tab.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
 //    [tab reloadData];
+    
+    UIImageView *view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, 80, 32)];
+    [self.view addSubview:view];
+    UIImage *image = [UITool createHorizontalGradientImageWithSize:view.size leftColor:UIColorFromRGB(0xFE834E) rightColor:UIColorFromRGB(0xFC4C26)];
+    image = [UITool createBorderWithSize:view.size corners:UIRectCornerTopRight|UIRectCornerBottomRight];
+    view.image = image;
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

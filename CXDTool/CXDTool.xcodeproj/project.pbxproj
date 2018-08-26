@@ -11,6 +11,7 @@
 		05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F8920512A880010AC13 /* CXDTool.xcdatamodeld */; };
 		05DF6F9320512A880010AC13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F9220512A880010AC13 /* main.m */; };
 		CE05545BFB0388E5D1585722 /* libPods-CXDTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */; };
+		E61F30AC213296E800AF13F1 /* GradientSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = E61F30AB213296E800AF13F1 /* GradientSegment.m */; };
 		E6277C4E20946AE700B75AB1 /* UIViewController+Cloudox.m in Sources */ = {isa = PBXBuildFile; fileRef = E6277C4C20946AE700B75AB1 /* UIViewController+Cloudox.m */; };
 		E6277C4F20946AE700B75AB1 /* UINavigationController+Cloudox.m in Sources */ = {isa = PBXBuildFile; fileRef = E6277C4D20946AE700B75AB1 /* UINavigationController+Cloudox.m */; };
 		E63D3C42212FE1FB00A5DDFA /* HPVIDCompetitionVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E63D3C41212FE1FB00A5DDFA /* HPVIDCompetitionVideoCell.m */; };
@@ -54,6 +55,8 @@
 		05DF6F9220512A880010AC13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3509219F06C3F1CD719CD6FF /* Pods-CXDTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.debug.xcconfig"; sourceTree = "<group>"; };
 		812DAC7F557D61DAF2D5EBB3 /* Pods-CXDTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.release.xcconfig"; sourceTree = "<group>"; };
+		E61F30AA213296E800AF13F1 /* GradientSegment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientSegment.h; sourceTree = "<group>"; };
+		E61F30AB213296E800AF13F1 /* GradientSegment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientSegment.m; sourceTree = "<group>"; };
 		E6277C48209451AE00B75AB1 /* BasicMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicMacro.h; sourceTree = "<group>"; };
 		E6277C49209451C100B75AB1 /* ColorMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorMacro.h; sourceTree = "<group>"; };
 		E6277C4A20946AE700B75AB1 /* UINavigationController+Cloudox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Cloudox.h"; sourceTree = "<group>"; };
@@ -237,6 +240,8 @@
 				E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */,
 				E63D3C40212FE1FB00A5DDFA /* HPVIDCompetitionVideoCell.h */,
 				E63D3C41212FE1FB00A5DDFA /* HPVIDCompetitionVideoCell.m */,
+				E61F30AA213296E800AF13F1 /* GradientSegment.h */,
+				E61F30AB213296E800AF13F1 /* GradientSegment.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -578,6 +583,7 @@
 				E6E0268F2105CE80000FDF48 /* ImageProcessingVC.m in Sources */,
 				E6DF706720737421006C7262 /* BannerVC.m in Sources */,
 				E6277C4F20946AE700B75AB1 /* UINavigationController+Cloudox.m in Sources */,
+				E61F30AC213296E800AF13F1 /* GradientSegment.m in Sources */,
 				E6DF707020737449006C7262 /* PhysicsVC.m in Sources */,
 				E63DC02D212EB32B00EA4C76 /* TestVC.m in Sources */,
 				E63DC030212EB34000EA4C76 /* CompetitionInfoView.m in Sources */,
