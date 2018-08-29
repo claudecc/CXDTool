@@ -55,4 +55,6 @@
 
 #define XDWeakSelf __weak typeof(&*self) weakSelf = self;
 
+#define WINDOW [UIApplication sharedApplication].keyWindow
+
 #endif /* BasicMacro_h */

@@ -21,5 +21,8 @@ colorWithRed:((float)((_rgbValue_ & 0xFF0000) >> 16))/255.0 \
 green:((float)((_rgbValue_ & 0xFF00) >> 8))/255.0 \
 blue:((float)(_rgbValue_ & 0xFF))/255.0 alpha:_alpha_]
 
+// random color
+#define randomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.f]
+
 
 #endif /* ColorMacro_h */
