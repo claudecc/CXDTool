@@ -7,7 +7,6 @@
 //
 
 #import "MyTool.h"
-#import <UIKit/UIKit.h>
 
 @implementation MyTool
 
@@ -82,5 +81,11 @@
     return result;
 }
 
+CGSize GetTextSize(NSString *text, UIFont *font, CGFloat width)
+{
+    NSDictionary *attribute = @{NSFontAttributeName:font};
+    CGSize size = [text boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
+    return size;
+}
 
 @end

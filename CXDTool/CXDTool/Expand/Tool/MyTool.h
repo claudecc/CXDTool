@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface MyTool : NSObject
 
@@ -23,5 +24,7 @@
 
 /** 区间随机数 */
 + (float)randomBetween:(float)smallerNumber And:(float)largerNumber;
+
+CGSize GetTextSize(NSString *text, UIFont *font, CGFloat width);
 
 @end
