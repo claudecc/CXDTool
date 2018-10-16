@@ -23,6 +23,7 @@
 #import "ColorMacro.h"
 #import "UINavigationController+Cloudox.h"
 #import "UIViewController+Cloudox.h"
+#import "HMConsoleView.h"
 
 #endif
 

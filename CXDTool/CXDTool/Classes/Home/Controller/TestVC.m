@@ -7,11 +7,9 @@
 //
 
 #import "TestVC.h"
-#import "HPVIDCompetitionVideoCell.h"
-#import "CompetitionCommentatorView.h"
 #import "MoreTaskView.h"
 
-@interface TestVC ()<UITableViewDelegate,UITableViewDataSource>
+@interface TestVC ()
 
 @end
 
@@ -21,57 +19,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    CompetitionCommentatorView *view = [[CompetitionCommentatorView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, 200)];
-//    [self.view addSubview:view];
-    
-//    UITableView *tab = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-//    [self.view addSubview:tab];
-//    tab.delegate = self;
-//    tab.dataSource = self;
-//    tab.rowHeight = 136;
-//    tab.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-//    [tab reloadData];
-    
-//    UIImageView *view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, 80, 32)];
-//    [self.view addSubview:view];
-//    UIImage *image = [UITool createHorizontalGradientImageWithSize:view.size leftColor:UIColorFromRGB(0xFE834E) rightColor:UIColorFromRGB(0xFC4C26)];
-//    image = [UITool createBorderWithSize:view.size corners:UIRectCornerTopRight|UIRectCornerBottomRight];
-//    view.image = image;
-    
-    MoreTaskView *view = [[MoreTaskView alloc] init];
-    [view show];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"控制台" style:UIBarButtonItemStylePlain target:self action:@selector(showConsoleView)];
+    self.navigationItem.rightBarButtonItem = item;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+- (void)showConsoleView {
+    for (NSInteger i = 0; i < 100; i++) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((i+0.5) * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [HMConsoleView insertText:[NSString stringWithFormat:@"收到了开放接口数据管理考试结果两节课--%ld--",i]];
+        });
+    }
 }
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 40;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *view = [[UIView alloc] init];
-    view.backgroundColor = [UIColor whiteColor];
-    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(15 , 8  , 64 , 16)];
-    titleLabel.text = @"视频推荐";
-    titleLabel.font = [UIFont systemFontOfSize:16.f];
-    titleLabel.textColor = UIColorFromRGB(0x333333);
-    titleLabel.adjustsFontSizeToFitWidth = YES;
-    [view addSubview:titleLabel];
-    return view;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HPVIDCompetitionVideoCell *cell = [HPVIDCompetitionVideoCell cellWithTableView:tableView];
-    cell.listArray = @[@1,@2,@3,@4,@5,@6,@7,@8,@9,@10];
-    return cell;
-}
-
 
 
 @end

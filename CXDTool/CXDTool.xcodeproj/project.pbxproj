@@ -23,6 +23,7 @@
 		E63DC02D212EB32B00EA4C76 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC02C212EB32B00EA4C76 /* TestVC.m */; };
 		E63DC030212EB34000EA4C76 /* CompetitionInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC02F212EB34000EA4C76 /* CompetitionInfoView.m */; };
 		E63DC033212EB34C00EA4C76 /* CompetitionCommentatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */; };
+		E65F7C31214B4BB500392D04 /* HMConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E65F7C30214B4BB500392D04 /* HMConsoleView.m */; };
 		E6BBBB30206CCF940007130E /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB2F206CCF940007130E /* BaseVC.m */; };
 		E6BBBB33206CCFC80007130E /* BaseNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB32206CCFC80007130E /* BaseNavVC.m */; };
 		E6BBBB36206CCFDE0007130E /* BaseTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB35206CCFDE0007130E /* BaseTabbarVC.m */; };
@@ -82,6 +83,8 @@
 		E63DC02F212EB34000EA4C76 /* CompetitionInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompetitionInfoView.m; sourceTree = "<group>"; };
 		E63DC031212EB34C00EA4C76 /* CompetitionCommentatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompetitionCommentatorView.h; sourceTree = "<group>"; };
 		E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompetitionCommentatorView.m; sourceTree = "<group>"; };
+		E65F7C2F214B4BB500392D04 /* HMConsoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMConsoleView.h; sourceTree = "<group>"; };
+		E65F7C30214B4BB500392D04 /* HMConsoleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMConsoleView.m; sourceTree = "<group>"; };
 		E6BBBB2E206CCF940007130E /* BaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
 		E6BBBB2F206CCF940007130E /* BaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		E6BBBB31206CCFC80007130E /* BaseNavVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavVC.h; sourceTree = "<group>"; };
@@ -271,6 +274,8 @@
 		E6BBBB27206CCDDA0007130E /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				E65F7C2F214B4BB500392D04 /* HMConsoleView.h */,
+				E65F7C30214B4BB500392D04 /* HMConsoleView.m */,
 				E6BBBB4A206CD0F00007130E /* MyTool.h */,
 				E6BBBB4B206CD0F00007130E /* MyTool.m */,
 				E6DF705F20736D24006C7262 /* UITool.h */,
@@ -566,6 +571,7 @@
 				E6DF706120736D24006C7262 /* UITool.m in Sources */,
 				E6DF707320737C49006C7262 /* UIView+Coordinate.m in Sources */,
 				E6D417122080AF5200303490 /* MeHeaderView.m in Sources */,
+				E65F7C31214B4BB500392D04 /* HMConsoleView.m in Sources */,
 				E6BBBB4C206CD0F00007130E /* MyTool.m in Sources */,
 				E63D3C45212FF5ED00A5DDFA /* HMVIDCompetitionVideoModel.m in Sources */,
 				E61F30AF21370AC600AF13F1 /* MoreTaskView.m in Sources */,
