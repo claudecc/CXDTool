@@ -14,6 +14,10 @@
 #define SCREEN_WIDTH        [UIScreen mainScreen].bounds.size.width
 #define StatusHeight [UIApplication sharedApplication].statusBarFrame.size.height
 
+#define ABWidth    ((([UIScreen mainScreen].bounds.size.width)>([UIScreen mainScreen].bounds.size.height))?([UIScreen mainScreen].bounds.size.height):([UIScreen mainScreen].bounds.size.width))
+#define ABHeight   ((([UIScreen mainScreen].bounds.size.width)>([UIScreen mainScreen].bounds.size.height))?([UIScreen mainScreen].bounds.size.width):([UIScreen mainScreen].bounds.size.height))
+
+
 #define NAV_BAR_HEIGHT            (IS_IPHONE_X ? 88 : 64)
 #define STATUS_BAR_HEIGHT         (IS_IPHONE_X ? 44 : 20)
 #define STATUS_BAR_TOP_MARGIN     (IS_IPHONE_X ? 24 : 0)
@@ -23,12 +27,22 @@
 #define TAB_BAR_HEIGHT            (IS_IPHONE_X ? 83 : 49)
 #define TAB_BAR_BOTTOM_MARGIN     (IS_IPHONE_X ? 34 : 0)
 
+// 一像素线的高
+#define OnePXLineH (1.f/[UIScreen mainScreen].scale)
+
 // 比例
 #define ScaleX   SCREEN_WIDTH/375
 #define ScaleY   SCREEN_HEIGHT/667
 
-// 判断
+// 机型
+#define iPhone4      (HMHeight == 480.f)
+#define iPhone5      (HMHeight == 568.f)
+#define iPhone6      (HMHeight == 667.f)
+#define iPhone6Plus  (HMHeight == 736.f)
 #define IS_IPHONE_X     (SCREEN_HEIGHT == 812)
+#define iPhoneXR ([UIScreen mainScreen].scale == 2.0f && HMHeight == 896.f && HMWidth == 414.f)
+#define iPhoneXMax ([UIScreen mainScreen].scale == 3.0f && HMHeight == 896.f && HMWidth == 414.f)
+
 /**
  *  判断屏幕尺寸是否为640*1136 5s,5
  *
@@ -54,6 +68,7 @@
 
 
 #define XDWeakSelf __weak typeof(&*self) weakSelf = self;
+#define XDStrongSelf(_ref) __strong typeof(&*self) strongSelf = _ref;
 
 #define WINDOW [UIApplication sharedApplication].keyWindow
 
