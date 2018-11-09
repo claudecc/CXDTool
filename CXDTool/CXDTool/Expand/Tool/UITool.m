@@ -164,4 +164,12 @@
     return image;
 }
 
+NSString *SafeString(NSString *string)
+{
+    if (string == nil || string == NULL || ![string isKindOfClass:[NSString class]] || ([string isEqual:@""]) || ([string isEqual:@"(null)"]) || ([string isEqual:@"null"]) || ([string isEqual:@" "]) || ([string isKindOfClass:[NSNull class]])) {
+        return @"";
+    }
+    return [NSString stringWithFormat:@"%@",string];
+}
+
 @end

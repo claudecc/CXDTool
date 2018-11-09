@@ -11,6 +11,7 @@
 		05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F8920512A880010AC13 /* CXDTool.xcdatamodeld */; };
 		05DF6F9320512A880010AC13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F9220512A880010AC13 /* main.m */; };
 		CE05545BFB0388E5D1585722 /* libPods-CXDTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */; };
+		E61C48CA219533AA00A5E284 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61C48C9219533AA00A5E284 /* GradientView.m */; };
 		E61F30AC213296E800AF13F1 /* GradientSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = E61F30AB213296E800AF13F1 /* GradientSegment.m */; };
 		E61F30AF21370AC600AF13F1 /* MoreTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61F30AE21370AC600AF13F1 /* MoreTaskView.m */; };
 		E6277C4E20946AE700B75AB1 /* UIViewController+Cloudox.m in Sources */ = {isa = PBXBuildFile; fileRef = E6277C4C20946AE700B75AB1 /* UIViewController+Cloudox.m */; };
@@ -24,6 +25,7 @@
 		E63DC030212EB34000EA4C76 /* CompetitionInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC02F212EB34000EA4C76 /* CompetitionInfoView.m */; };
 		E63DC033212EB34C00EA4C76 /* CompetitionCommentatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */; };
 		E65F7C31214B4BB500392D04 /* HMConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E65F7C30214B4BB500392D04 /* HMConsoleView.m */; };
+		E690AABE2195849900251220 /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AABD2195849900251220 /* UIFont+Extension.m */; };
 		E6BBBB30206CCF940007130E /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB2F206CCF940007130E /* BaseVC.m */; };
 		E6BBBB33206CCFC80007130E /* BaseNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB32206CCFC80007130E /* BaseNavVC.m */; };
 		E6BBBB36206CCFDE0007130E /* BaseTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB35206CCFDE0007130E /* BaseTabbarVC.m */; };
@@ -57,6 +59,8 @@
 		05DF6F9220512A880010AC13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3509219F06C3F1CD719CD6FF /* Pods-CXDTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.debug.xcconfig"; sourceTree = "<group>"; };
 		812DAC7F557D61DAF2D5EBB3 /* Pods-CXDTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.release.xcconfig"; sourceTree = "<group>"; };
+		E61C48C8219533AA00A5E284 /* GradientView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		E61C48C9219533AA00A5E284 /* GradientView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		E61F30AA213296E800AF13F1 /* GradientSegment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientSegment.h; sourceTree = "<group>"; };
 		E61F30AB213296E800AF13F1 /* GradientSegment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientSegment.m; sourceTree = "<group>"; };
 		E61F30AD21370AC600AF13F1 /* MoreTaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreTaskView.h; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 		E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompetitionCommentatorView.m; sourceTree = "<group>"; };
 		E65F7C2F214B4BB500392D04 /* HMConsoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMConsoleView.h; sourceTree = "<group>"; };
 		E65F7C30214B4BB500392D04 /* HMConsoleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMConsoleView.m; sourceTree = "<group>"; };
+		E690AABC2195849900251220 /* UIFont+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extension.h"; sourceTree = "<group>"; };
+		E690AABD2195849900251220 /* UIFont+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extension.m"; sourceTree = "<group>"; };
 		E6BBBB2E206CCF940007130E /* BaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
 		E6BBBB2F206CCF940007130E /* BaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		E6BBBB31206CCFC80007130E /* BaseNavVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavVC.h; sourceTree = "<group>"; };
@@ -190,6 +196,7 @@
 		05DF6FA02051348D0010AC13 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E61C48C62195330100A5E284 /* General */,
 				E6BBBB2D206CCF210007130E /* Other */,
 				E6BBBB2C206CCEE40007130E /* Base */,
 				E6BBBB2A206CCE880007130E /* Home */,
@@ -222,6 +229,23 @@
 				ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E61C48C62195330100A5E284 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				E61C48C72195337900A5E284 /* Custom */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		E61C48C72195337900A5E284 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				E61C48C8219533AA00A5E284 /* GradientView.h */,
+				E61C48C9219533AA00A5E284 /* GradientView.m */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		E63DC029212EB2F900EA4C76 /* Model */ = {
@@ -297,6 +321,8 @@
 				E6277C4C20946AE700B75AB1 /* UIViewController+Cloudox.m */,
 				E63D3C4C2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.h */,
 				E63D3C4D2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.m */,
+				E690AABC2195849900251220 /* UIFont+Extension.h */,
+				E690AABD2195849900251220 /* UIFont+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -590,6 +616,7 @@
 				E6E026932105DDCC000FDF48 /* CoreImageVC.m in Sources */,
 				05DF6F8220512A880010AC13 /* AppDelegate.m in Sources */,
 				E6BBBB33206CCFC80007130E /* BaseNavVC.m in Sources */,
+				E690AABE2195849900251220 /* UIFont+Extension.m in Sources */,
 				E63D3C4E2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.m in Sources */,
 				E6E0269921070BCF000FDF48 /* AVFoundationVC.m in Sources */,
 				E6E0268F2105CE80000FDF48 /* ImageProcessingVC.m in Sources */,
@@ -599,6 +626,7 @@
 				E6DF707020737449006C7262 /* PhysicsVC.m in Sources */,
 				E63DC02D212EB32B00EA4C76 /* TestVC.m in Sources */,
 				E63DC030212EB34000EA4C76 /* CompetitionInfoView.m in Sources */,
+				E61C48CA219533AA00A5E284 /* GradientView.m in Sources */,
 				E6BBBB42206CD0360007130E /* HomeVC.m in Sources */,
 				E6DF707620737E40006C7262 /* NSString+Tool.m in Sources */,
 				E6BBBB30206CCF940007130E /* BaseVC.m in Sources */,

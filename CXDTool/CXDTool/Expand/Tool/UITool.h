@@ -34,4 +34,6 @@
 
 + (UIImage *)createBorderWithSize:(CGSize)size corners:(UIRectCorner)corners;
 
+NSString *SafeString(NSString *string);
+
 @end

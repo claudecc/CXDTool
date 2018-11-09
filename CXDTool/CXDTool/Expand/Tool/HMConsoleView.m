@@ -8,15 +8,17 @@
 
 #import "HMConsoleView.h"
 
-@interface HMConsoleView()<UIGestureRecognizerDelegate>
+static NSString *cellId = @"HMConsoleViewCellId";
 
-@property (nonatomic, strong) UITextView *textView;
+@interface HMConsoleView()<UIGestureRecognizerDelegate,UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, assign) BOOL isTextViewMoving;
+@property (nonatomic, assign) BOOL isTableViewMoving;
 
 @property (nonatomic, assign) CGPoint startTouchPoint;
 
-@property (nonatomic, assign) NSInteger lineCount;
+@property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, strong) NSMutableArray *dataArray;
 
 @end
 
@@ -32,46 +34,62 @@
 }
 
 + (void)insertText:(NSString *)text {
-    HMConsoleView *view = [HMConsoleView shareInstance];
-    [view insertText:text];
-    [view show];
+    [[HMConsoleView shareInstance] insertText:text];
 }
 
 - (instancetype)init {
     if (self = [super init]) {
         [self setupUI];
-        self.lineCount = 1;
+        [self layoutConfig];
     }
     return self;
 }
 
 - (void)setupUI {
-    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 200, 400)];
-    [self addSubview:textView];
-    self.textView = textView;
-    textView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
-    textView.textColor = [UIColor whiteColor];
-    textView.editable = NO;
+    self.alpha = 0;
+    [WINDOW addSubview:self];
+    
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    [self addSubview:tableView];
+    self.tableView = tableView;
+    tableView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hide)];
     tap.delegate = self;
-    [textView addGestureRecognizer:tap];
+    [tableView addGestureRecognizer:tap];
     
 }
 
+- (void)layoutConfig {
+    [self mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(WINDOW);
+    }];
+    
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.equalTo(self);
+        make.width.mas_equalTo(200);
+        make.height.mas_equalTo(300);
+    }];
+}
+
 - (void)insertText:(NSString *)text {
-    if (self.lineCount == 1) {
-        self.textView.text = [NSString stringWithFormat:@"1 : %@",text];
-    } else {
-        self.textView.text = [NSString stringWithFormat:@"%@\n%ld : %@",self.textView.text,self.lineCount,text];
+    
+    [self.dataArray addObject:SafeString(text)];
+    
+    [self.tableView reloadData];
+    
+    if (self.dataArray.count > 0) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.dataArray.count-1 inSection:0];
+        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     }
-//    CGSize contentSize = GetTextSize(self.textView.text, self.textView.font, self.textView.width);
-    [self.textView setContentOffset:CGPointMake(0, self.textView.contentSize.height-self.textView.height) animated:YES];
-    self.lineCount++;
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    if (CGRectContainsPoint(self.textView.frame, [touch locationInView:self])) { return NO; }
+    if (CGRectContainsPoint(self.tableView.frame, [touch locationInView:self])) { return NO; }
     return YES;
 }
 
@@ -80,8 +98,8 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     UITouch *touch = touches.anyObject;
     CGPoint point = [touch locationInView:self];
-    if (CGRectContainsPoint(self.textView.frame, point)) {
-        self.isTextViewMoving = YES;
+    if (CGRectContainsPoint(self.tableView.frame, point)) {
+        self.isTableViewMoving = YES;
         self.startTouchPoint = point;
     }
 }
@@ -89,34 +107,69 @@
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     UITouch *touch = touches.anyObject;
     CGPoint point = [touch locationInView:self];
-    if (self.isTextViewMoving) {
+    if (self.isTableViewMoving) {
         CGFloat offsetX = point.x - self.startTouchPoint.x;
         CGFloat offsetY = point.y - self.startTouchPoint.y;
-        self.textView.frame = CGRectMake(offsetX, offsetY, self.textView.width, self.textView.height);
+        self.tableView.frame = CGRectMake(offsetX, offsetY, self.tableView.width, self.tableView.height);
     }
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    self.isTextViewMoving = NO;
-    CGFloat textViewMaxX = self.textView.maxX;
-    CGFloat textViewMaxY = self.textView.maxY;
-    CGFloat textViewX = (self.textView.x >= 0) ? ((textViewMaxX <= SCREEN_WIDTH) ? :  (SCREEN_WIDTH - self.textView.width)) : 0;
-    CGFloat textViewY = (self.textView.y >= 0) ? ((textViewMaxY <= SCREEN_HEIGHT) ? :  (SCREEN_HEIGHT - self.textView.height)) : 0;
+    self.isTableViewMoving = NO;
+    CGFloat tableViewMaxX = self.tableView.maxX;
+    CGFloat tableViewMaxY = self.tableView.maxY;
+    CGFloat tableViewX = (self.tableView.x >= 0) ? ((tableViewMaxX <= SCREEN_WIDTH) ? :  (SCREEN_WIDTH - self.tableView.width)) : 0;
+    CGFloat tableViewY = (self.tableView.y >= 0) ? ((tableViewMaxY <= SCREEN_HEIGHT) ? :  (SCREEN_HEIGHT - self.tableView.height)) : 0;
     [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        self.textView.frame = CGRectMake(textViewX, textViewY, self.textView.width, self.textView.height);
+        self.tableView.frame = CGRectMake(tableViewX, tableViewY, self.tableView.width, self.tableView.height);
     } completion:^(BOOL finished) {
         
     }];
     
 }
 
-- (void)show {
-    [WINDOW addSubview:self];
+#pragma mark - tableView delegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    }
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    cell.textLabel.text = SafeString(self.dataArray[indexPath.row]);
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont pingFangRegularFontWithSize:14];
     
+    return cell;
+}
+
+- (void)show {
+    [WINDOW bringSubviewToFront:self];
+    
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.alpha = 1;
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 - (void)hide {
-    [self removeFromSuperview];
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.alpha = 0;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+- (NSMutableArray *)dataArray {
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
 }
 
 @end
