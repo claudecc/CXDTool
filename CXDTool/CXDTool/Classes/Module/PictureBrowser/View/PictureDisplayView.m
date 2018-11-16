@@ -7,7 +7,40 @@
 //
 
 #import "PictureDisplayView.h"
+#import "PictureDisplayViewCell.h"
 
 @implementation PictureDisplayView
+
+- (instancetype)init {
+    if (self = [super init]) {
+        [self setup];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self setup];
+    }
+    return self;
+}
+
+- (void)setup {
+    self.backgroundColor = UIColor.lightGrayColor;
+    
+}
+
+- (void)setSinglePictureUI {
+    
+}
+
+
+
+#pragma mark - event
+
+- (void)tapPictureAction:(UITapGestureRecognizer *)tap {
+    PictureDisplayViewCell *picture = (PictureDisplayViewCell *)tap.view;
+    
+}
 
 @end

@@ -6,11 +6,30 @@
 //  Copyright © 2018 claudechoi. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+/**
+ Five types:
+ 
+ Single picture(max width,max height)
+ Three pictures(two,three)
+ Four pictures
+ Six pictures(five,six)
+ nine pictures(seven,eight,nine)
+ 
+ */
+
+#import <UIKit/UIKit.h>
+
+typedef NS_ENUM(NSUInteger, PictureDisplayViewType) {
+    PictureDisplayViewTypeSingle,
+    PictureDisplayViewTypeThree, // include(2/3)
+    PictureDisplayViewTypeFour,
+    PictureDisplayViewTypeSix,   // include(5/6)
+    PictureDisplayViewTypeNine,  // include(7/8/9)
+};
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PictureDisplayView : NSObject
+@interface PictureDisplayView : UIView
 
 @end
 
