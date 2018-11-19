@@ -30,11 +30,86 @@
     
 }
 
+- (void)setPictureArray:(NSArray *)pictureArray {
+    _pictureArray = pictureArray;
+    
+    for (UIView *subview in self.subviews) {
+        [subview removeFromSuperview];
+    }
+    
+    if (IsArrEmpty(pictureArray)) {
+        return;
+    }
+    
+    switch (pictureArray.count) {
+        case 1:
+        {
+            [self setSinglePictureUI];
+        }
+            break;
+        case 2:
+        case 3:
+        {
+            [self setThreePicturesUI];
+        }
+            break;
+        case 4:
+        {
+            [self setFourPicturesUI];
+        }
+            break;
+        case 5:
+        case 6:
+        {
+            [self setSixPicturesUI];
+        }
+            break;
+        case 7:
+        case 8:
+        case 9:
+        {
+            [self setNinePicturesUI];
+        }
+            break;
+        default:
+        {
+            if (pictureArray.count > 9) {
+                [self setNinePicturesUI];
+            }
+        }
+            break;
+    }
+}
+/**
+ note:
+ 最大宽高受限父视图
+ 
+ */
+
+// 1
 - (void)setSinglePictureUI {
     
+    // max width
+    
+    // max height
+    
 }
-
-
+// 2~3
+- (void)setThreePicturesUI {
+    
+}
+// 4
+- (void)setFourPicturesUI {
+    
+}
+// 5~6
+- (void)setSixPicturesUI {
+    
+}
+// 7~9
+- (void)setNinePicturesUI {
+    
+}
 
 #pragma mark - event
 

@@ -151,6 +151,7 @@
 		E6E02695210702EC000FDF48 /* GPUImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageVC.m; sourceTree = "<group>"; };
 		E6E0269721070BCF000FDF48 /* AVFoundationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVFoundationVC.h; sourceTree = "<group>"; };
 		E6E0269821070BCF000FDF48 /* AVFoundationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVFoundationVC.m; sourceTree = "<group>"; };
+		E6F34EFF21A2627E00611669 /* NSToolMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSToolMacro.h; sourceTree = "<group>"; };
 		ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CXDTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -174,6 +175,7 @@
 				E6DF706420736DF9006C7262 /* PrefixHeader.pch */,
 				E6277C48209451AE00B75AB1 /* BasicMacro.h */,
 				E6277C49209451C100B75AB1 /* ColorMacro.h */,
+				E6F34EFF21A2627E00611669 /* NSToolMacro.h */,
 			);
 			path = Basis;
 			sourceTree = "<group>";
@@ -218,6 +220,7 @@
 				E6BBBB2C206CCEE40007130E /* Base */,
 				E6BBBB2A206CCE880007130E /* Home */,
 				E6BBBB29206CCE760007130E /* Me */,
+				E6F34F0021A26AFE00611669 /* Community */,
 				E6BBBB43206CD04B0007130E /* Login */,
 			);
 			path = Classes;
@@ -530,6 +533,13 @@
 				E6E0269821070BCF000FDF48 /* AVFoundationVC.m */,
 			);
 			path = ImageProcessing;
+			sourceTree = "<group>";
+		};
+		E6F34F0021A26AFE00611669 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Community;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
