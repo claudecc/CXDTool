@@ -9,6 +9,12 @@
 #import "PictureDisplayView.h"
 #import "PictureDisplayViewCell.h"
 
+@interface PictureDisplayView ()
+
+@property (nonatomic, assign) CGFloat picturePadding;
+
+@end
+
 @implementation PictureDisplayView
 
 - (instancetype)init {
@@ -27,7 +33,7 @@
 
 - (void)setup {
     self.backgroundColor = UIColor.lightGrayColor;
-    
+    self.picturePadding = 10;
 }
 
 - (void)setPictureArray:(NSArray *)pictureArray {
@@ -80,22 +86,72 @@
             break;
     }
 }
-/**
- note:
- 最大宽高受限父视图
- 
- */
 
 // 1
 - (void)setSinglePictureUI {
     
-    // max width
-    
-    // max height
-    
+    // It should update layout when image downloaded.
+    NSString *imageUrl = SafeString(self.pictureArray.firstObject);
+    NSURL *url = [NSURL URLWithString:imageUrl];
+    [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:url options:SDWebImageDownloaderLowPriority progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+        if (image) {
+            PictureDisplayViewCell *picture = [[PictureDisplayViewCell alloc] init];
+            [self addSubview:picture];
+            picture.image = image;
+            
+            CGFloat imageW = image.size.width;
+            CGFloat imageH = image.size.height;
+            CGFloat scale = imageW * 1.f / imageH;
+            CGFloat maxWHScale = 0.7;
+            if (imageW == imageH) { // square, max width height
+                [picture mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.left.bottom.equalTo(self);
+                    make.width.height.mas_equalTo(self.mas_width).multipliedBy(maxWHScale);
+                }];
+            } else if (imageW > imageH) { // max width
+                [picture mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.left.bottom.equalTo(self);
+                    make.width.mas_equalTo(self.mas_width).multipliedBy(maxWHScale);
+                    make.height.mas_equalTo(self.mas_width).multipliedBy(maxWHScale / scale);
+                }];
+            } else { // max height
+                [picture mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.left.bottom.equalTo(self);
+                    make.width.mas_equalTo(self.mas_width).multipliedBy(maxWHScale * scale);
+                    make.height.mas_equalTo(self.mas_width).multipliedBy(maxWHScale);
+                }];
+            }
+            
+            [self updateLayout];
+        }
+    }];
 }
 // 2~3
 - (void)setThreePicturesUI {
+    
+    PictureDisplayViewCell *lastPicture = nil;
+    for (NSString *imageUrl in self.pictureArray) {
+        PictureDisplayViewCell *picture = [[PictureDisplayViewCell alloc] init];
+        [self addSubview:picture];
+        
+        [picture mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.bottom.equalTo(self);
+            make.width.height.equalTo(self.mas_width).offset(-2*self.picturePadding).multipliedBy(1/3.0);
+            if (lastPicture) {
+                make.left.equalTo(lastPicture.mas_right).offset(self.picturePadding);
+            } else {
+                make.left.equalTo(self);
+            }
+        }];
+        
+        NSURL *url = [NSURL URLWithString:SafeString(imageUrl)];
+        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:url options:SDWebImageDownloaderLowPriority progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+            if (image) {
+                picture.image = image;
+            }
+        }];
+    }
+    [self updateLayout];
     
 }
 // 4
@@ -108,6 +164,10 @@
 }
 // 7~9
 - (void)setNinePicturesUI {
+    
+}
+
+- (void)updateLayout {
     
 }
 

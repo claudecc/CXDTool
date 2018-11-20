@@ -8,14 +8,47 @@
 
 #import "PictureDisplayViewCell.h"
 
+@interface PictureDisplayViewCell ()
+
+@property (nonatomic, strong) UIImageView *imageView;
+
+@property (nonatomic, strong) CAShapeLayer *maskLayer;
+
+@end
+
 @implementation PictureDisplayViewCell
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)init {
+    if (self = [super init]) {
+        [self setupUI];
+    }
+    return self;
 }
-*/
+
+- (void)setupUI {
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    self.layer.mask = maskLayer;
+    self.maskLayer = maskLayer;
+    
+    UIImageView *imageView = [[UIImageView alloc] init];
+    [self addSubview:imageView];
+    self.imageView = imageView;
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self);
+    }];
+}
+
+- (void)setImage:(UIImage *)image {
+    _image = image;
+    self.imageView.image = image;
+}
+
+- (void)drawRect:(CGRect)rect {
+    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRect:CGRectMake(CGRectGetMinX(rect), CGRectGetMinY(rect), CGRectGetWidth(rect), CGRectGetHeight(rect))];
+    self.maskLayer.frame = rect;
+    self.maskLayer.path = bezierPath.CGPath;
+}
 
 @end

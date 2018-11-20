@@ -38,6 +38,7 @@
 // Vender
 #import "Masonry.h"
 #import "MJRefresh.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #endif
 

@@ -30,7 +30,7 @@
 #ifndef PictureBrowserHeader_h
 #define PictureBrowserHeader_h
 
-#define PictureDisplayView.h
-#define PictureBrowser.h
+#import "PictureBrowser.h"
+#import "PictureDisplayView.h"
 
 #endif /* PictureBrowserHeader_h */

@@ -7,8 +7,8 @@
 //
 
 #import "TestVC.h"
-#import "MoreTaskView.h"
-#import "GradientView.h"
+#import "PictureBrowserHeader.h"
+
 
 @interface TestVC ()
 
@@ -23,7 +23,25 @@
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"控制台" style:UIBarButtonItemStylePlain target:self action:@selector(showConsoleView)];
     self.navigationItem.rightBarButtonItem = item;
     
+    UIView *bgView = [[UIView alloc] init];
+    [self.view addSubview:bgView];
+    bgView.backgroundColor = UIColor.orangeColor;
     
+    [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.centerY.equalTo(self.view);
+    }];
+    
+    PictureDisplayView *pictureDisplayView = [[PictureDisplayView alloc] init];
+    [bgView addSubview:pictureDisplayView];
+    pictureDisplayView.backgroundColor = UIColor.lightGrayColor;
+    
+    [pictureDisplayView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(bgView).offset(30);
+        make.left.equalTo(bgView).offset(60);
+        make.right.equalTo(bgView).offset(-60);
+        make.bottom.equalTo(bgView).offset(-30);
+    }];
 }
 
 - (void)showConsoleView {
