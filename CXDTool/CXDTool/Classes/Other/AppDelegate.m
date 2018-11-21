@@ -23,6 +23,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self checkLogin];
     
+    [[UIButton appearance] setExclusiveTouch:YES];
+    NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
+    
     return YES;
 }
 
@@ -72,6 +75,18 @@
     self.window.rootViewController = [BaseTabbarVC new];
     [self.window makeKeyAndVisible];
 }
+
+void UncaughtExceptionHandler(NSException *exception) {
+    /**
+     *  获取异常崩溃信息
+     */
+    NSArray *arr = [exception callStackSymbols];//得到当前调用栈信息
+    NSString *reason = [exception reason];//非常重要，就是崩溃的原因
+    NSString *name = [exception name];//异常类型
+    NSString *content = [NSString stringWithFormat:@"========异常错误报告========\nname:%@\nreason:\n%@\ncallStackSymbols:\n%@",name,reason,[arr componentsJoinedByString:@"\n"]];
+    NSLog(@"%@",content);
+}
+
 
 #pragma mark - Core Data stack
 

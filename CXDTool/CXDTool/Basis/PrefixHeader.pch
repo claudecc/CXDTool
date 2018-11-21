@@ -25,6 +25,7 @@
 
 // Manager
 #import "Interface.h"
+#import "VCManager.h"
 
 // category
 #import "UIFont+Extension.h"

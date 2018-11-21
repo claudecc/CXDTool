@@ -30,6 +30,8 @@
 		E63DC030212EB34000EA4C76 /* CompetitionInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC02F212EB34000EA4C76 /* CompetitionInfoView.m */; };
 		E63DC033212EB34C00EA4C76 /* CompetitionCommentatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */; };
 		E65F7C31214B4BB500392D04 /* HMConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E65F7C30214B4BB500392D04 /* HMConsoleView.m */; };
+		E6747E2F21A55DDD0058B8BB /* NSObject+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = E6747E2E21A55DDD0058B8BB /* NSObject+Crash.m */; };
+		E6747E3321A55E980058B8BB /* VCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6747E3221A55E980058B8BB /* VCManager.m */; };
 		E690AABE2195849900251220 /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AABD2195849900251220 /* UIFont+Extension.m */; };
 		E6BBBB30206CCF940007130E /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB2F206CCF940007130E /* BaseVC.m */; };
 		E6BBBB33206CCFC80007130E /* BaseNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB32206CCFC80007130E /* BaseNavVC.m */; };
@@ -106,6 +108,10 @@
 		E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompetitionCommentatorView.m; sourceTree = "<group>"; };
 		E65F7C2F214B4BB500392D04 /* HMConsoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMConsoleView.h; sourceTree = "<group>"; };
 		E65F7C30214B4BB500392D04 /* HMConsoleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMConsoleView.m; sourceTree = "<group>"; };
+		E6747E2D21A55DDD0058B8BB /* NSObject+Crash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Crash.h"; sourceTree = "<group>"; };
+		E6747E2E21A55DDD0058B8BB /* NSObject+Crash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Crash.m"; sourceTree = "<group>"; };
+		E6747E3121A55E980058B8BB /* VCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCManager.h; sourceTree = "<group>"; };
+		E6747E3221A55E980058B8BB /* VCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCManager.m; sourceTree = "<group>"; };
 		E690AABC2195849900251220 /* UIFont+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extension.h"; sourceTree = "<group>"; };
 		E690AABD2195849900251220 /* UIFont+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extension.m"; sourceTree = "<group>"; };
 		E6BBBB2E206CCF940007130E /* BaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
@@ -343,6 +349,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E6747E3021A55E520058B8BB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E6747E3121A55E980058B8BB /* VCManager.h */,
+				E6747E3221A55E980058B8BB /* VCManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		E6BBBB25206CCDB40007130E /* Vender */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +368,7 @@
 		E6BBBB26206CCDD10007130E /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				E6747E3021A55E520058B8BB /* Manager */,
 				E6BBBB4D206CD9870007130E /* NetWork */,
 				E6BBBB28206CCDE30007130E /* Category */,
 				E6BBBB27206CCDDA0007130E /* Tool */,
@@ -376,6 +392,8 @@
 		E6BBBB28206CCDE30007130E /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E6747E2D21A55DDD0058B8BB /* NSObject+Crash.h */,
+				E6747E2E21A55DDD0058B8BB /* NSObject+Crash.m */,
 				E6DF707120737C49006C7262 /* UIView+Coordinate.h */,
 				E6DF707220737C49006C7262 /* UIView+Coordinate.m */,
 				E6DF707420737E40006C7262 /* NSString+Tool.h */,
@@ -667,6 +685,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6747E3321A55E980058B8BB /* VCManager.m in Sources */,
 				05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */,
 				E6DF706120736D24006C7262 /* UITool.m in Sources */,
 				E6DF707320737C49006C7262 /* UIView+Coordinate.m in Sources */,
@@ -678,6 +697,7 @@
 				E6BBBB36206CCFDE0007130E /* BaseTabbarVC.m in Sources */,
 				E63D3C48212FF63700A5DDFA /* HMVIDCompetitionAnchorModel.m in Sources */,
 				E6BBBB53206CD9D30007130E /* Interface.m in Sources */,
+				E6747E2F21A55DDD0058B8BB /* NSObject+Crash.m in Sources */,
 				E63DC033212EB34C00EA4C76 /* CompetitionCommentatorView.m in Sources */,
 				E6DF706A20737430006C7262 /* SegmentVC.m in Sources */,
 				E63D3C42212FE1FB00A5DDFA /* HPVIDCompetitionVideoCell.m in Sources */,

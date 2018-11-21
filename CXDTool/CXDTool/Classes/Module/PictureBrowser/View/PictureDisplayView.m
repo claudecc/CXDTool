@@ -150,24 +150,157 @@
                 picture.image = image;
             }
         }];
+        
+        lastPicture = picture;
     }
+    
     [self updateLayout];
     
 }
 // 4
 - (void)setFourPicturesUI {
     
+    PictureDisplayViewCell *lastPicture = nil;
+    for (NSInteger i = 0;i < self.pictureArray.count ;i++) {
+        NSString *imageUrl = self.pictureArray[i];
+        BOOL isLine1 = i < 2;
+        BOOL isList1 = i%2 == 0;
+        BOOL isLast = i == 3;
+        
+        PictureDisplayViewCell *picture = [[PictureDisplayViewCell alloc] init];
+        [self addSubview:picture];
+        
+        [picture mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.height.equalTo(self.mas_width).offset(-2*self.picturePadding).multipliedBy(1/3.0);
+            if (isLine1) {
+                make.top.equalTo(self);
+            } else {
+                if (isList1) {
+                    make.top.equalTo(lastPicture.mas_bottom).offset(self.picturePadding);
+                } else {
+                    make.top.equalTo(lastPicture);
+                }
+            }
+            if (isList1) {
+                make.left.equalTo(self);
+            } else {
+                make.left.equalTo(lastPicture.mas_right).offset(self.picturePadding);
+            }
+            if (isLast) {
+                make.bottom.equalTo(self);
+            }
+        }];
+        
+        NSURL *url = [NSURL URLWithString:SafeString(imageUrl)];
+        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:url options:SDWebImageDownloaderLowPriority progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+            if (image) {
+                picture.image = image;
+            }
+        }];
+        
+        lastPicture = picture;
+    }
+    
+    [self updateLayout];
+    
 }
 // 5~6
 - (void)setSixPicturesUI {
+    
+    PictureDisplayViewCell *lastPicture = nil;
+    for (NSInteger i = 0;i < self.pictureArray.count ;i++) {
+        NSString *imageUrl = self.pictureArray[i];
+        BOOL isLine1 = i < 3;
+        BOOL isList1 = i%3 == 0;
+        BOOL isLast = (i == (self.pictureArray.count - 1));
+        
+        PictureDisplayViewCell *picture = [[PictureDisplayViewCell alloc] init];
+        [self addSubview:picture];
+        
+        [picture mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.height.equalTo(self.mas_width).offset(-2*self.picturePadding).multipliedBy(1/3.0);
+            if (isLine1) {
+                make.top.equalTo(self);
+            } else {
+                if (isList1) {
+                    make.top.equalTo(lastPicture.mas_bottom).offset(self.picturePadding);
+                } else {
+                    make.top.equalTo(lastPicture);
+                }
+            }
+            if (isList1) {
+                make.left.equalTo(self);
+            } else {
+                make.left.equalTo(lastPicture.mas_right).offset(self.picturePadding);
+            }
+            if (isLast) {
+                make.bottom.equalTo(self);
+            }
+        }];
+        
+        NSURL *url = [NSURL URLWithString:SafeString(imageUrl)];
+        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:url options:SDWebImageDownloaderLowPriority progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+            if (image) {
+                picture.image = image;
+            }
+        }];
+        
+        lastPicture = picture;
+    }
+    
+    [self updateLayout];
     
 }
 // 7~9
 - (void)setNinePicturesUI {
     
+    PictureDisplayViewCell *lastPicture = nil;
+    for (NSInteger i = 0;i < self.pictureArray.count ;i++) {
+        NSString *imageUrl = self.pictureArray[i];
+        BOOL isLine1 = i < 3;
+        BOOL isList1 = i%3 == 0;
+        BOOL isLast = (i == (self.pictureArray.count - 1));
+        
+        PictureDisplayViewCell *picture = [[PictureDisplayViewCell alloc] init];
+        [self addSubview:picture];
+        
+        [picture mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.height.equalTo(self.mas_width).offset(-2*self.picturePadding).multipliedBy(1/3.0);
+            if (isLine1) {
+                make.top.equalTo(self);
+            } else {
+                if (isList1) {
+                    make.top.equalTo(lastPicture.mas_bottom).offset(self.picturePadding);
+                } else {
+                    make.top.equalTo(lastPicture);
+                }
+            }
+            if (isList1) {
+                make.left.equalTo(self);
+            } else {
+                make.left.equalTo(lastPicture.mas_right).offset(self.picturePadding);
+            }
+            if (isLast) {
+                make.bottom.equalTo(self);
+            }
+        }];
+        
+        NSURL *url = [NSURL URLWithString:SafeString(imageUrl)];
+        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:url options:SDWebImageDownloaderLowPriority progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+            if (image) {
+                picture.image = image;
+            }
+        }];
+        
+        lastPicture = picture;
+    }
+    
+    [self updateLayout];
+    
 }
 
 - (void)updateLayout {
+    // supview should re layout
     
 }
 
