@@ -136,6 +136,7 @@
         
         [picture mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.bottom.equalTo(self);
+            // width incorrect
             make.width.height.equalTo(self.mas_width).offset(-2*self.picturePadding).multipliedBy(1/3.0);
             if (lastPicture) {
                 make.left.equalTo(lastPicture.mas_right).offset(self.picturePadding);

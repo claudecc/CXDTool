@@ -36,19 +36,20 @@
     [bgView addSubview:pictureDisplayView];
     pictureDisplayView.backgroundColor = UIColor.lightGrayColor;
     
-    NSString *pictureUrl = @"https://cn.bing.com/az/hprichbg/rb/PoniesWales_ZH-CN11520520997_1920x1080.jpg";
-    NSMutableArray *pictureArray = [NSMutableArray array];
-    for (NSInteger i = 0; i < 1; i++) {
-        [pictureArray addObject:pictureUrl];
-    }
-    pictureDisplayView.pictureArray = pictureArray;
-    
     [pictureDisplayView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(bgView).offset(30);
         make.left.equalTo(bgView).offset(60);
         make.right.equalTo(bgView).offset(-60);
         make.bottom.equalTo(bgView).offset(-30);
     }];
+    
+    NSString *pictureUrl = @"https://cn.bing.com/az/hprichbg/rb/PoniesWales_ZH-CN11520520997_1920x1080.jpg";
+    NSMutableArray *pictureArray = [NSMutableArray array];
+    for (NSInteger i = 0; i < 3; i++) {
+        [pictureArray addObject:pictureUrl];
+    }
+    pictureDisplayView.pictureArray = pictureArray;
+    
 }
 
 - (void)showConsoleView {
