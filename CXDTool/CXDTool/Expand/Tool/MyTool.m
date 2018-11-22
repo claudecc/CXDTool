@@ -7,6 +7,8 @@
 //
 
 #import "MyTool.h"
+#import "AppDelegate.h"
+#import "BaseTabbarVC.h"
 
 @implementation MyTool
 
@@ -86,6 +88,38 @@ CGSize GetTextSize(NSString *text, UIFont *font, CGFloat width)
     NSDictionary *attribute = @{NSFontAttributeName:font};
     CGSize size = [text boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
     return size;
+}
+
+NSInteger GetTabbarCurrentIndex(void) {
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    BaseTabbarVC *tabbarVC = (BaseTabbarVC *)appDelegate.window.rootViewController;
+    if ([tabbarVC isKindOfClass:[BaseTabbarVC class]]) {
+        return tabbarVC.selectedIndex;
+    }
+    return 0;
+}
+
+NSInteger GetTabbarIndexWithVC(UIViewController *vc) {
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    BaseTabbarVC *tabbarVC = (BaseTabbarVC *)appDelegate.window.rootViewController;
+    if ([tabbarVC isKindOfClass:[BaseTabbarVC class]]) {
+        for (NSInteger i = 0; i < tabbarVC.viewControllers.count; i++) {
+            UIViewController *childVC = tabbarVC.viewControllers[i];
+            if ([childVC isEqual:vc]) {
+                return i;
+            }
+        }
+    }
+    return 0;
+}
+
+NSInteger GetTabbarCount(void) {
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    BaseTabbarVC *tabbarVC = (BaseTabbarVC *)appDelegate.window.rootViewController;
+    if ([tabbarVC isKindOfClass:[BaseTabbarVC class]]) {
+        return tabbarVC.viewControllers.count;
+    }
+    return 0;
 }
 
 @end

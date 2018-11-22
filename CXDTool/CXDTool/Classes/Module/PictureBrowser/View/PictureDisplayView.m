@@ -307,7 +307,7 @@
 #pragma mark - event
 
 - (void)tapPictureAction:(UITapGestureRecognizer *)tap {
-    PictureDisplayViewCell *picture = (PictureDisplayViewCell *)tap.view;
+//    PictureDisplayViewCell *picture = (PictureDisplayViewCell *)tap.view;
     
 }
 

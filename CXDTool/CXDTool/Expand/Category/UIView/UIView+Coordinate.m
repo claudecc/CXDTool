@@ -166,15 +166,15 @@
     self.y = maxY - self.height;
 }
 
-+ (instancetype)viewWithBgColor:(UIColor *)bgColor frame:(CGRect)frame {
-    UIView * view = [[UIView alloc] initWithFrame:frame];
-    if (!bgColor) {
-        view.backgroundColor = [UIColor clearColor];
-    } else {
-        view.backgroundColor = bgColor;
-    }
-    return view;
-}
+//+ (instancetype)viewWithBgColor:(UIColor *)bgColor frame:(CGRect)frame {
+//    UIView * view = [[UIView alloc] initWithFrame:frame];
+//    if (!bgColor) {
+//        view.backgroundColor = [UIColor clearColor];
+//    } else {
+//        view.backgroundColor = bgColor;
+//    }
+//    return view;
+//}
 + (instancetype)creatView { return nil; }
 ///  从xib中加载和类名一样的xib
 + (instancetype)creatViewFromNib {

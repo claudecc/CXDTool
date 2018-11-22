@@ -20,11 +20,17 @@
 + (NSRange)findKeyString:(NSString *)content;
 
 //时间戳转时间
-+(NSString*)timestampSwitchTime:(NSString*)timestamp;
++ (NSString*)timestampSwitchTime:(NSString*)timestamp;
 
 /** 区间随机数 */
 + (float)randomBetween:(float)smallerNumber And:(float)largerNumber;
 
 CGSize GetTextSize(NSString *text, UIFont *font, CGFloat width);
+
+NSInteger GetTabbarCurrentIndex(void);
+
+NSInteger GetTabbarIndexWithVC(UIViewController *vc);
+
+NSInteger GetTabbarCount(void);
 
 @end

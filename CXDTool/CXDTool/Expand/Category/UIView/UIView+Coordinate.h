@@ -30,15 +30,15 @@
 /** 最大 Y */
 @property (nonatomic, assign) CGFloat maxY;
 
-- (void)setBorderWidth:(CGFloat)bWidth
-           borderColor:(UIColor *)bColor;
+//- (void)setBorderWidth:(CGFloat)bWidth
+//           borderColor:(UIColor *)bColor;
+//
+//- (void)setCornerRadius:(CGFloat)cornerRadius
+//            borderWidth:(CGFloat)bWidth
+//            borderColor:(UIColor *)bColor;
 
-- (void)setCornerRadius:(CGFloat)cornerRadius
-            borderWidth:(CGFloat)bWidth
-            borderColor:(UIColor *)bColor;
-
-+ (instancetype)viewWithBgColor:(UIColor *)bgColor
-                          frame:(CGRect)frame;
+//+ (instancetype)viewWithBgColor:(UIColor *)bgColor
+//                          frame:(CGRect)frame;
 
 ///  由子控件获取cell，只是cell的子控件才能调用
 - (UITableViewCell *)getTableViewCellIfExsited;

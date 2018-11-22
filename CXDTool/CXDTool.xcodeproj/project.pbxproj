@@ -30,6 +30,7 @@
 		E63DC030212EB34000EA4C76 /* CompetitionInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC02F212EB34000EA4C76 /* CompetitionInfoView.m */; };
 		E63DC033212EB34C00EA4C76 /* CompetitionCommentatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */; };
 		E65F7C31214B4BB500392D04 /* HMConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E65F7C30214B4BB500392D04 /* HMConsoleView.m */; };
+		E66BA0CF21A655CC00694B77 /* TabbarControllerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E66BA0CE21A655CC00694B77 /* TabbarControllerAnimation.m */; };
 		E6747E2F21A55DDD0058B8BB /* NSObject+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = E6747E2E21A55DDD0058B8BB /* NSObject+Crash.m */; };
 		E6747E3321A55E980058B8BB /* VCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6747E3221A55E980058B8BB /* VCManager.m */; };
 		E690AABE2195849900251220 /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AABD2195849900251220 /* UIFont+Extension.m */; };
@@ -108,6 +109,8 @@
 		E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompetitionCommentatorView.m; sourceTree = "<group>"; };
 		E65F7C2F214B4BB500392D04 /* HMConsoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMConsoleView.h; sourceTree = "<group>"; };
 		E65F7C30214B4BB500392D04 /* HMConsoleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMConsoleView.m; sourceTree = "<group>"; };
+		E66BA0CD21A655CC00694B77 /* TabbarControllerAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarControllerAnimation.h; sourceTree = "<group>"; };
+		E66BA0CE21A655CC00694B77 /* TabbarControllerAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabbarControllerAnimation.m; sourceTree = "<group>"; };
 		E6747E2D21A55DDD0058B8BB /* NSObject+Crash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Crash.h"; sourceTree = "<group>"; };
 		E6747E2E21A55DDD0058B8BB /* NSObject+Crash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Crash.m"; sourceTree = "<group>"; };
 		E6747E3121A55E980058B8BB /* VCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCManager.h; sourceTree = "<group>"; };
@@ -263,6 +266,7 @@
 		E61261F8219E624800B80CA8 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				E66BA0CB21A654BB00694B77 /* Test */,
 				E61261F9219E625A00B80CA8 /* PictureBrowser */,
 			);
 			path = Module;
@@ -349,6 +353,82 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E66BA0C521A6508000694B77 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				E6747E2D21A55DDD0058B8BB /* NSObject+Crash.h */,
+				E6747E2E21A55DDD0058B8BB /* NSObject+Crash.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		E66BA0C621A6509100694B77 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E6277C4B20946AE700B75AB1 /* UIViewController+Cloudox.h */,
+				E6277C4C20946AE700B75AB1 /* UIViewController+Cloudox.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		E66BA0C721A650E400694B77 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				E6277C4A20946AE700B75AB1 /* UINavigationController+Cloudox.h */,
+				E6277C4D20946AE700B75AB1 /* UINavigationController+Cloudox.m */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		E66BA0C821A650F000694B77 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				E6DF707120737C49006C7262 /* UIView+Coordinate.h */,
+				E6DF707220737C49006C7262 /* UIView+Coordinate.m */,
+				E63D3C4C2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.h */,
+				E63D3C4D2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.m */,
+				E6EF4C0B21A3EE9900B02AA3 /* UIView+ExtendTouchRect.h */,
+				E6EF4C0C21A3EE9900B02AA3 /* UIView+ExtendTouchRect.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		E66BA0C921A6511200694B77 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				E6DF707420737E40006C7262 /* NSString+Tool.h */,
+				E6DF707520737E40006C7262 /* NSString+Tool.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		E66BA0CA21A6511E00694B77 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				E690AABC2195849900251220 /* UIFont+Extension.h */,
+				E690AABD2195849900251220 /* UIFont+Extension.m */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
+		E66BA0CB21A654BB00694B77 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				E63DC02B212EB32B00EA4C76 /* TestVC.h */,
+				E63DC02C212EB32B00EA4C76 /* TestVC.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		E66BA0CC21A6554800694B77 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				E66BA0CD21A655CC00694B77 /* TabbarControllerAnimation.h */,
+				E66BA0CE21A655CC00694B77 /* TabbarControllerAnimation.m */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		E6747E3021A55E520058B8BB /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +448,7 @@
 		E6BBBB26206CCDD10007130E /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				E66BA0CC21A6554800694B77 /* Animation */,
 				E6747E3021A55E520058B8BB /* Manager */,
 				E6BBBB4D206CD9870007130E /* NetWork */,
 				E6BBBB28206CCDE30007130E /* Category */,
@@ -392,22 +473,12 @@
 		E6BBBB28206CCDE30007130E /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				E6747E2D21A55DDD0058B8BB /* NSObject+Crash.h */,
-				E6747E2E21A55DDD0058B8BB /* NSObject+Crash.m */,
-				E6DF707120737C49006C7262 /* UIView+Coordinate.h */,
-				E6DF707220737C49006C7262 /* UIView+Coordinate.m */,
-				E6DF707420737E40006C7262 /* NSString+Tool.h */,
-				E6DF707520737E40006C7262 /* NSString+Tool.m */,
-				E6277C4A20946AE700B75AB1 /* UINavigationController+Cloudox.h */,
-				E6277C4D20946AE700B75AB1 /* UINavigationController+Cloudox.m */,
-				E6277C4B20946AE700B75AB1 /* UIViewController+Cloudox.h */,
-				E6277C4C20946AE700B75AB1 /* UIViewController+Cloudox.m */,
-				E63D3C4C2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.h */,
-				E63D3C4D2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.m */,
-				E690AABC2195849900251220 /* UIFont+Extension.h */,
-				E690AABD2195849900251220 /* UIFont+Extension.m */,
-				E6EF4C0B21A3EE9900B02AA3 /* UIView+ExtendTouchRect.h */,
-				E6EF4C0C21A3EE9900B02AA3 /* UIView+ExtendTouchRect.m */,
+				E66BA0CA21A6511E00694B77 /* UIFont */,
+				E66BA0C921A6511200694B77 /* NSString */,
+				E66BA0C821A650F000694B77 /* UIView */,
+				E66BA0C721A650E400694B77 /* UINavigationController */,
+				E66BA0C621A6509100694B77 /* UIViewController */,
+				E66BA0C521A6508000694B77 /* NSObject */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -467,8 +538,6 @@
 				E6DF706C2073743C006C7262 /* FlowLayoutVC.m */,
 				E6DF706E20737449006C7262 /* PhysicsVC.h */,
 				E6DF706F20737449006C7262 /* PhysicsVC.m */,
-				E63DC02B212EB32B00EA4C76 /* TestVC.h */,
-				E63DC02C212EB32B00EA4C76 /* TestVC.m */,
 				E6E026902105DD24000FDF48 /* ImageProcessing */,
 			);
 			path = Controller;
@@ -594,7 +663,7 @@
 		05DF6F7520512A880010AC13 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = claudechoi;
 				TargetAttributes = {
 					05DF6F7C20512A880010AC13 = {
@@ -691,6 +760,7 @@
 				E6DF707320737C49006C7262 /* UIView+Coordinate.m in Sources */,
 				E6D417122080AF5200303490 /* MeHeaderView.m in Sources */,
 				E65F7C31214B4BB500392D04 /* HMConsoleView.m in Sources */,
+				E66BA0CF21A655CC00694B77 /* TabbarControllerAnimation.m in Sources */,
 				E6BBBB4C206CD0F00007130E /* MyTool.m in Sources */,
 				E63D3C45212FF5ED00A5DDFA /* HMVIDCompetitionVideoModel.m in Sources */,
 				E61F30AF21370AC600AF13F1 /* MoreTaskView.m in Sources */,
@@ -752,6 +822,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -759,6 +830,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -809,6 +881,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -816,6 +889,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
