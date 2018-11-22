@@ -27,6 +27,8 @@
 }
 
 - (void)setupUI {
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     CGSize imageSize = CGSizeMake(24, 24);
     
     UIImage *homeImage = [UITool createImageWithSize:imageSize text:@"😆" attriDict:@{NSFontAttributeName:[UIFont systemFontOfSize:20]}];

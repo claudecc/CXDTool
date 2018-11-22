@@ -14,7 +14,7 @@ static UIView *presentingView;
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     
-    return 0.1;
+    return 0.2;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
@@ -52,9 +52,13 @@ static UIView *presentingView;
     [containView addSubview:fromView];
     [containView addSubview:toView];
     
+    fromView.alpha = 1;
+    toView.alpha = 0;
     [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
         fromView.transform = CGAffineTransformTranslate(fromView.transform, x, 0);
+        fromView.alpha = 0;
         toView.transform = CGAffineTransformTranslate(toView.transform, x, 0);
+        toView.alpha = 1;
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:YES];
     }];
