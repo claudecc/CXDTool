@@ -122,4 +122,19 @@ NSInteger GetTabbarCount(void) {
     return 0;
 }
 
+BOOL isFirstLunch(void) {
+    
+    BOOL isFirst = YES;
+    NSString *lastVersionKey = @"lastVersionKey";
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *lastVersion = [defaults objectForKey:lastVersionKey];
+    if (IsStrEmpty(lastVersion) || ![lastVersionKey isEqualToString:APP_VERSION]) {
+        [defaults setObject:APP_VERSION forKey:lastVersionKey];
+    } else {
+        isFirst = NO;
+    }
+    
+    return isFirst;
+}
+
 @end

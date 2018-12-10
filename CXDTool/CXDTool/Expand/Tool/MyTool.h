@@ -33,4 +33,7 @@ NSInteger GetTabbarIndexWithVC(UIViewController *vc);
 
 NSInteger GetTabbarCount(void);
 
+/** 是否第一次进入（包括更新） */
+BOOL isFirstLunch(void);
+
 @end

@@ -9,6 +9,9 @@
 #ifndef NSToolMacro_h
 #define NSToolMacro_h
 
+#define APP_NAME [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
+#define APP_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define APP_BUILD [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
 
 /** 数组是否为空 */
 #define IsArrEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) || ![_ref isKindOfClass:[NSArray class]] || ([(_ref) count] == 0))
