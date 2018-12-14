@@ -21,6 +21,7 @@ void dynamicMethodIMP(id self,SEL _cmd){
 {
     [self swizzled_methodInstanceSelector:@selector(methodSignatureForSelector:) swizzleSelector:@selector(swizzled_methodSignatureForSelector:)];
     [self swizzled_methodInstanceSelector:@selector(forwardInvocation:) swizzleSelector:@selector(swizzled_forwardInvocation:)];
+    [self swizzled_methodInstanceSelector:@selector(removeObserver:forKeyPath:) swizzleSelector:@selector(swizzled_removeObserver:forKeyPath:)];
 }
 
 
@@ -78,6 +79,16 @@ void dynamicMethodIMP(id self,SEL _cmd){
         [anInvocation invokeWithTarget:self];
     }else{
         [self swizzled_forwardInvocation:anInvocation];
+    }
+}
+
+- (void)swizzled_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath {
+    @try {
+        [self swizzled_removeObserver:observer forKeyPath:keyPath];
+    } @catch (NSException *exception) {
+        NSLog(@"removeObserver crash, object:%@ , observer:%@",self,observer); // 可能是由于观察者未注册，或已经被移除了
+    } @finally {
+        
     }
 }
 
