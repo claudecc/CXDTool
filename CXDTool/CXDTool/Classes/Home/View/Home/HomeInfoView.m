@@ -26,7 +26,7 @@
 
 - (void)tapAction {
 //    [UITool showToast:@"点击"];
-    [HomeDelegate actionView:self event:HomeInfoViewEventClick message:@"点击了"];
+    [HomeDelegate actionObj:self type:HomeDelegateObjTypeHomeInfoView event:HomeInfoViewEventClick message:@"点击了"];
 }
 
 @end

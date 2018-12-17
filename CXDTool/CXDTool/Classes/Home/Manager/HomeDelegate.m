@@ -28,27 +28,29 @@ static dispatch_once_t _onceToken;
     _delegate = nil;
 }
 
-+ (void)actionView:(UIView *)view type:(HomeDelegateViewType)type event:(NSUInteger)event message:(id)message {
-    [[HomeDelegate shareDelegate] actionView:view type:type event:event message:message];
++ (void)actionObj:(NSObject *)obj type:(HomeDelegateObjType)type event:(NSUInteger)event message:(id)message {
+    [[HomeDelegate shareDelegate] actionObj:obj type:type event:event message:message];
 }
 
-- (void)actionView:(UIView *)view type:(HomeDelegateViewType)type event:(NSUInteger)event message:(id)message {
+- (void)actionObj:(NSObject *)obj type:(HomeDelegateObjType)type event:(NSUInteger)event message:(id)message {
     switch (type) {
-        case HomeDelegateViewTypeHomeInfoView:
+        case HomeDelegateObjTypeHomeInfoView:
         {
-            [self homeInfoView:(HomeInfoView *)view event:event message:message];
+            if ([obj isKindOfClass:[HomeInfoView class]]) {
+                [self homeInfoView:(HomeInfoView *)obj event:event message:message];
+            }
         }
             break;
         default:
         {
-            [self view:view event:event message:message];
+            [self obj:obj event:event message:message];
         }
             break;
     }
 }
 
 #pragma mark - Default delegate
-- (void)view:(UIView *)view event:(NSUInteger)event message:(id)message {
+- (void)obj:(NSObject *)obj event:(NSUInteger)event message:(id)message {
     HomeDelegateEvent delegateEvent = (HomeDelegateEvent)event;
     switch (delegateEvent) {
         case HomeDelegateEventNone:
@@ -61,7 +63,8 @@ static dispatch_once_t _onceToken;
     }
 }
 
-#pragma mark - HomeInfo Delegate
+#pragma mark - homeView delegate
+// HomeInfo Delegate
 - (void)homeInfoView:(HomeInfoView *)view event:(NSUInteger)event message:(id)message {
     HomeInfoViewEvent infoEvent = (HomeInfoViewEvent)event;
     switch (infoEvent) {
