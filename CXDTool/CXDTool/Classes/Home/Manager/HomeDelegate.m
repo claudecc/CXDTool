@@ -28,16 +28,22 @@ static dispatch_once_t _onceToken;
     _delegate = nil;
 }
 
-+ (void)actionView:(UIView *)view event:(NSUInteger)event message:(id)message {
-    [[HomeDelegate shareDelegate] actionView:view event:event message:message];
++ (void)actionView:(UIView *)view type:(HomeDelegateViewType)type event:(NSUInteger)event message:(id)message {
+    [[HomeDelegate shareDelegate] actionView:view type:type event:event message:message];
 }
 
-- (void)actionView:(UIView *)view event:(NSUInteger)event message:(id)message {
-    if ([view isKindOfClass:[HomeInfoView class]]) {
-        [self homeInfoView:(HomeInfoView *)view event:event message:message];
-    }
-    else {
-        [self view:view event:event message:message];
+- (void)actionView:(UIView *)view type:(HomeDelegateViewType)type event:(NSUInteger)event message:(id)message {
+    switch (type) {
+        case HomeDelegateViewTypeHomeInfoView:
+        {
+            [self homeInfoView:(HomeInfoView *)view event:event message:message];
+        }
+            break;
+        default:
+        {
+            [self view:view event:event message:message];
+        }
+            break;
     }
 }
 
