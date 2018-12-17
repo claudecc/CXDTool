@@ -16,6 +16,7 @@
 
 // Macro
 #import "BasicMacro.h"
+#import "SizeMacro.h"
 #import "ColorMacro.h"
 #import "NSToolMacro.h"
 

@@ -68,6 +68,7 @@
 		05DF6F9220512A880010AC13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3509219F06C3F1CD719CD6FF /* Pods-CXDTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.debug.xcconfig"; sourceTree = "<group>"; };
 		812DAC7F557D61DAF2D5EBB3 /* Pods-CXDTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.release.xcconfig"; sourceTree = "<group>"; };
+		E606BBF521C74B790066EB72 /* SizeMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SizeMacro.h; sourceTree = "<group>"; };
 		E61261FD219E655A00B80CA8 /* PictureBrowserHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureBrowserHeader.h; sourceTree = "<group>"; };
 		E61261FE219E657400B80CA8 /* PictureBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureBrowser.h; sourceTree = "<group>"; };
 		E61261FF219E657400B80CA8 /* PictureBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureBrowser.m; sourceTree = "<group>"; };
@@ -186,6 +187,7 @@
 				05DF6F9220512A880010AC13 /* main.m */,
 				E6DF706420736DF9006C7262 /* PrefixHeader.pch */,
 				E6277C48209451AE00B75AB1 /* BasicMacro.h */,
+				E606BBF521C74B790066EB72 /* SizeMacro.h */,
 				E6277C49209451C100B75AB1 /* ColorMacro.h */,
 				E6F34EFF21A2627E00611669 /* NSToolMacro.h */,
 			);

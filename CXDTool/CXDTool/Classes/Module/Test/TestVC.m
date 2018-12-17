@@ -50,6 +50,7 @@
     }
     pictureDisplayView.pictureArray = pictureArray;
     
+    MJWeakSelf
 }
 
 - (void)showConsoleView {
