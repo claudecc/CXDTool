@@ -58,9 +58,14 @@ static NSString *cellId = @"HMConsoleViewCellId";
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
     
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longSelector:)];
+    longPress.delegate = self;
+    longPress.minimumPressDuration = 1;
+    [tableView addGestureRecognizer:longPress];
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hide)];
     tap.delegate = self;
-    [tableView addGestureRecognizer:tap];
+    [self addGestureRecognizer:tap];
     
 }
 
@@ -88,44 +93,46 @@ static NSString *cellId = @"HMConsoleViewCellId";
     }
 }
 
+- (void)longSelector:(UILongPressGestureRecognizer *)press {
+    switch (press.state) {
+        case UIGestureRecognizerStateBegan:
+        {
+            self.isTableViewMoving = YES;
+            self.startTouchPoint = [press locationInView:self];
+        }
+            break;
+        case UIGestureRecognizerStateChanged:
+        {
+            CGPoint point = [press locationInView:self];
+            CGFloat offsetX = point.x - self.startTouchPoint.x;
+            CGFloat offsetY = point.y - self.startTouchPoint.y;
+            self.tableView.frame = CGRectMake(offsetX, offsetY, self.tableView.width, self.tableView.height);
+        }
+            break;
+        case UIGestureRecognizerStateEnded:
+        {
+            self.isTableViewMoving = NO;
+            CGFloat tableViewMaxX = self.tableView.maxX;
+            CGFloat tableViewMaxY = self.tableView.maxY;
+            CGFloat tableViewX = (self.tableView.x >= 0) ? ((tableViewMaxX <= SCREEN_WIDTH) ? self.tableView.x :  (SCREEN_WIDTH - self.tableView.width)) : 0;
+            CGFloat tableViewY = (self.tableView.y >= 0) ? ((tableViewMaxY <= SCREEN_HEIGHT) ? self.tableView.y :  (SCREEN_HEIGHT - self.tableView.height)) : 0;
+            [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                self.tableView.frame = CGRectMake(tableViewX, tableViewY, self.tableView.width, self.tableView.height);
+            } completion:^(BOOL finished) {
+                
+            }];
+        }
+            break;
+        default:
+            break;
+    }
+}
+
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    if (CGRectContainsPoint(self.tableView.frame, [touch locationInView:self])) { return NO; }
+    if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]) {
+        if (CGRectContainsPoint(self.tableView.frame, [touch locationInView:self])) { return NO; }
+    }
     return YES;
-}
-
-
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = touches.anyObject;
-    CGPoint point = [touch locationInView:self];
-    if (CGRectContainsPoint(self.tableView.frame, point)) {
-        self.isTableViewMoving = YES;
-        self.startTouchPoint = point;
-    }
-}
-
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = touches.anyObject;
-    CGPoint point = [touch locationInView:self];
-    if (self.isTableViewMoving) {
-        CGFloat offsetX = point.x - self.startTouchPoint.x;
-        CGFloat offsetY = point.y - self.startTouchPoint.y;
-        self.tableView.frame = CGRectMake(offsetX, offsetY, self.tableView.width, self.tableView.height);
-    }
-}
-
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    self.isTableViewMoving = NO;
-    CGFloat tableViewMaxX = self.tableView.maxX;
-    CGFloat tableViewMaxY = self.tableView.maxY;
-    CGFloat tableViewX = (self.tableView.x >= 0) ? ((tableViewMaxX <= SCREEN_WIDTH) ? :  (SCREEN_WIDTH - self.tableView.width)) : 0;
-    CGFloat tableViewY = (self.tableView.y >= 0) ? ((tableViewMaxY <= SCREEN_HEIGHT) ? :  (SCREEN_HEIGHT - self.tableView.height)) : 0;
-    [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        self.tableView.frame = CGRectMake(tableViewX, tableViewY, self.tableView.width, self.tableView.height);
-    } completion:^(BOOL finished) {
-        
-    }];
-    
 }
 
 #pragma mark - tableView delegate
@@ -143,6 +150,7 @@ static NSString *cellId = @"HMConsoleViewCellId";
     cell.textLabel.text = SafeString(self.dataArray[indexPath.row]);
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.font = [UIFont pingFangRegularFontWithSize:14];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }

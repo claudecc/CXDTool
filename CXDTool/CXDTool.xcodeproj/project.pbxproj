@@ -11,6 +11,7 @@
 		05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F8920512A880010AC13 /* CXDTool.xcdatamodeld */; };
 		05DF6F9320512A880010AC13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F9220512A880010AC13 /* main.m */; };
 		CE05545BFB0388E5D1585722 /* libPods-CXDTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */; };
+		E606BBFB21C76FF40066EB72 /* UIScrollView+Touch.m in Sources */ = {isa = PBXBuildFile; fileRef = E606BBFA21C76FF40066EB72 /* UIScrollView+Touch.m */; };
 		E6126200219E657400B80CA8 /* PictureBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E61261FF219E657400B80CA8 /* PictureBrowser.m */; };
 		E6126206219E6AA900B80CA8 /* PictureBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6126205219E6AA900B80CA8 /* PictureBrowserCell.m */; };
 		E6126209219E6D2F00B80CA8 /* PictureBrowserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6126208219E6D2F00B80CA8 /* PictureBrowserModel.m */; };
@@ -69,6 +70,8 @@
 		3509219F06C3F1CD719CD6FF /* Pods-CXDTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.debug.xcconfig"; sourceTree = "<group>"; };
 		812DAC7F557D61DAF2D5EBB3 /* Pods-CXDTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.release.xcconfig"; sourceTree = "<group>"; };
 		E606BBF521C74B790066EB72 /* SizeMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SizeMacro.h; sourceTree = "<group>"; };
+		E606BBF921C76FF40066EB72 /* UIScrollView+Touch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Touch.h"; sourceTree = "<group>"; };
+		E606BBFA21C76FF40066EB72 /* UIScrollView+Touch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Touch.m"; sourceTree = "<group>"; };
 		E61261FD219E655A00B80CA8 /* PictureBrowserHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureBrowserHeader.h; sourceTree = "<group>"; };
 		E61261FE219E657400B80CA8 /* PictureBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureBrowser.h; sourceTree = "<group>"; };
 		E61261FF219E657400B80CA8 /* PictureBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureBrowser.m; sourceTree = "<group>"; };
@@ -265,6 +268,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E606BBF621C7545D0066EB72 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E63DC02B212EB32B00EA4C76 /* TestVC.h */,
+				E63DC02C212EB32B00EA4C76 /* TestVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E606BBF721C7547C0066EB72 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E65F7C2F214B4BB500392D04 /* HMConsoleView.h */,
+				E65F7C30214B4BB500392D04 /* HMConsoleView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E606BBF821C76F9E0066EB72 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				E606BBF921C76FF40066EB72 /* UIScrollView+Touch.h */,
+				E606BBFA21C76FF40066EB72 /* UIScrollView+Touch.m */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
 		E61261F8219E624800B80CA8 /* Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,8 +446,8 @@
 		E66BA0CB21A654BB00694B77 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				E63DC02B212EB32B00EA4C76 /* TestVC.h */,
-				E63DC02C212EB32B00EA4C76 /* TestVC.m */,
+				E606BBF621C7545D0066EB72 /* Controller */,
+				E606BBF721C7547C0066EB72 /* View */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -462,8 +492,6 @@
 		E6BBBB27206CCDDA0007130E /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				E65F7C2F214B4BB500392D04 /* HMConsoleView.h */,
-				E65F7C30214B4BB500392D04 /* HMConsoleView.m */,
 				E6BBBB4A206CD0F00007130E /* MyTool.h */,
 				E6BBBB4B206CD0F00007130E /* MyTool.m */,
 				E6DF705F20736D24006C7262 /* UITool.h */,
@@ -475,6 +503,7 @@
 		E6BBBB28206CCDE30007130E /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E606BBF821C76F9E0066EB72 /* UIScrollView */,
 				E66BA0CA21A6511E00694B77 /* UIFont */,
 				E66BA0C921A6511200694B77 /* NSString */,
 				E66BA0C821A650F000694B77 /* UIView */,
@@ -763,6 +792,7 @@
 				E6D417122080AF5200303490 /* MeHeaderView.m in Sources */,
 				E65F7C31214B4BB500392D04 /* HMConsoleView.m in Sources */,
 				E66BA0CF21A655CC00694B77 /* TabbarControllerAnimation.m in Sources */,
+				E606BBFB21C76FF40066EB72 /* UIScrollView+Touch.m in Sources */,
 				E6BBBB4C206CD0F00007130E /* MyTool.m in Sources */,
 				E63D3C45212FF5ED00A5DDFA /* HMVIDCompetitionVideoModel.m in Sources */,
 				E61F30AF21370AC600AF13F1 /* MoreTaskView.m in Sources */,
