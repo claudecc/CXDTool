@@ -20,6 +20,9 @@
 #define XDWeakSelf __weak typeof(&*self) weakSelf = self;
 #define XDStrongSelf(_ref) __strong typeof(&*self) strongSelf = _ref;
 
+#define WeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
+//#define WeakObj(o) try{}@finally{} __weak typeof(o) o##Weak = o;
+
 #define WINDOW [UIApplication sharedApplication].keyWindow
 
 #endif /* BasicMacro_h */

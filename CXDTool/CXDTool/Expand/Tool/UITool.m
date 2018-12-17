@@ -172,4 +172,36 @@ NSString *SafeString(NSString *string)
     return [NSString stringWithFormat:@"%@",string];
 }
 
++ (void)showToast:(NSString *)text {
+    if (!text || SafeString(text).length <= 0) {
+        return;
+    }
+    static NSInteger showtoast_view_tag = 189111554;
+    UIView *preView = [WINDOW viewWithTag:showtoast_view_tag];
+    if (preView) {
+        [preView removeFromSuperview];
+    }
+    
+    UIFont *font = [UIFont pingFangRegularFontWithSize:16];
+    CGFloat width = SCREEN_WIDTH*0.8;
+    CGSize size = GetTextSize(text, font, width);
+    
+    UILabel *toastView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, size.width + 10, size.height + 10)];
+    toastView.tag = showtoast_view_tag;
+    toastView.text = text;
+    toastView.font = font;
+    toastView.textColor = [UIColor whiteColor];
+    toastView.textAlignment = NSTextAlignmentCenter;
+    toastView.numberOfLines = 0;
+    toastView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.6];
+    toastView.layer.cornerRadius = 5;
+    toastView.layer.masksToBounds = YES;
+    toastView.center = CGPointMake(SCREEN_WIDTH*0.5, SCREEN_HEIGHT*0.5);
+    [WINDOW addSubview:toastView];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [toastView removeFromSuperview];
+    });
+}
+
 @end

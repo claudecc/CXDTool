@@ -36,4 +36,6 @@
 
 NSString *SafeString(NSString *string);
 
++ (void)showToast:(NSString *)text;
+
 @end

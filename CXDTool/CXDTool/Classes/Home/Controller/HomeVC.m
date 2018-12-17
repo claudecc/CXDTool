@@ -7,6 +7,8 @@
 //
 
 #import "HomeVC.h"
+#import "HomeView.h"
+#import "HomeDelegate.h"
 
 @interface HomeVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -22,15 +24,29 @@
     // Do any additional setup after loading the view.
     
     [self setupUI];
+    
+    [HomeDelegate shareDelegate].controller = self;
 }
 
 - (void)setupUI {
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"HomeView" style:UIBarButtonItemStylePlain target:self action:@selector(showHomeView)];
+    self.navigationItem.rightBarButtonItem = item;
+    
     UITableView *tableview = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.view addSubview:tableview];
     self.tableView = tableview;
     tableview.delegate = self;
     tableview.dataSource = self;
 }
+
+#pragma mark - private
+
+- (void)showHomeView {
+    HomeView *view = [[HomeView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:view];
+}
+
+#pragma mark - tableView delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.listArray.count;
@@ -66,6 +82,11 @@
              @{@"name":@"物理动画",@"vc":@"PhysicsVC"},
              @{@"name":@"图像处理",@"vc":@"ImageProcessingVC"},
              @{@"name":@"测试",@"vc":@"TestVC"}];
+}
+
+- (void)dealloc {
+    [HomeDelegate removeDelegate];
+    DLog(@"");
 }
 
 @end
