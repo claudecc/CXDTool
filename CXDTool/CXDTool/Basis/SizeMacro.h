@@ -35,6 +35,7 @@
 #define ScaleY   SCREEN_HEIGHT/667.f
 
 // iPhone机型
+#define iPhone       [[UIDevice currentDevice].model isEqualToString:@"iPhone"]
 #define iPhone4      (ABHeight == 480.f) // 320*480  640*960    @2x
 #define iPhone5      (ABHeight == 568.f) // 320*568  640*1136   @2x
 #define iPhone6      (ABHeight == 667.f) // 375*667  750*1334   @2x
@@ -45,11 +46,13 @@
 #define iPhoneXMore (iPhoneX || iPhoneXR || iPhoneXMax)
 
 // iPad机型 mini2及之后:@2x 宽高比：除Pro11都是 0.75    pixel = point * scale
-#define iPadMini   (ABHeight == 1024.f) // 7.9    1024*768  pt 2048*1536 px  (mini2及之后) 326
-#define iPad       (ABHeight == 1024.f) // 9.7    1024*768  pt 2048*1536 px  (iPad Air、iPad Pro 9.7) 264
-#define iPadPro105 (ABHeight == 1112.f) // 10.5   1112*834  pt 2224*1668 px
-#define iPadPro11  (ABHeight == 1194.f) // 11     1194*834  pt 2388*1668 px
-#define iPadPro129 (ABHeight == 1366.f) // 12.9   1366*1024 pt 2732*2048 px
+#define iPad          [[UIDevice currentDevice].model isEqualToString:@"iPad"]
+//#define iPadMini      (ABHeight == 1024.f) // 7.9    1024*768  pt 2048*1536 px  (mini2及之后) 326
+//#define iPad97        (ABHeight == 1024.f) // 9.7    1024*768  pt 2048*1536 px  (iPad Air、iPad Pro 9.7) 264
+#define iPadDefault   (ABHeight == 1024.f)
+#define iPadPro105    (ABHeight == 1112.f) // 10.5   1112*834  pt 2224*1668 px
+#define iPadPro11     (ABHeight == 1194.f) // 11     1194*834  pt 2388*1668 px
+#define iPadPro129    (ABHeight == 1366.f) // 12.9   1366*1024 pt 2732*2048 px
 
 
 #endif /* SizeMacro_h */

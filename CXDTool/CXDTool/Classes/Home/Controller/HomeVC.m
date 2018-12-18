@@ -14,7 +14,7 @@
 
 @property (nonatomic,strong) NSArray *listArray;
 @property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic, strong) HomeView *homeView;
+@property (nonatomic, weak) HomeView *homeView;
 
 @end
 
@@ -30,7 +30,10 @@
 }
 
 - (void)setupUI {
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"test" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemAction)];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"left" style:UIBarButtonItemStylePlain target:self action:@selector(leftItemAction)];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"right" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemAction)];
     self.navigationItem.rightBarButtonItem = item;
     
     UITableView *tableview = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -39,7 +42,6 @@
     tableview.delegate = self;
     tableview.dataSource = self;
     
-//    [self showHomeView];
 }
 
 #pragma mark - public
@@ -70,8 +72,12 @@
     self.homeView = view;
 }
 
+- (void)leftItemAction {
+    [self showHomeView];
+}
+
 - (void)rightItemAction {
-    [HomeEventManager targetModuleType:HomeEventModuleTypeHomeView vcEvent:HomeEventVcEventNone message:@"vc 传值给 view"];
+    [HomeEventManager targetModuleType:HomeEventModuleTypeHomeView vcEvent:HomeEventVcEventNone message:@"vc -> view"];
 }
 
 #pragma mark - tableView delegate
