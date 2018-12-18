@@ -37,14 +37,14 @@
 }
 
 - (void)testSelector {
-    [HomeEventManager actionObj:self.infoView moduleType:HomeDelegateModuleTypeHomeView objEvent:HomeInfoViewEventClick message:@"info点击"];
+    [HomeEventManager actionObj:self.infoView moduleType:HomeEventModuleTypeHomeView objEvent:HomeInfoViewEventClick message:@"info点击"];
 }
 
 - (void)hide {
     [self removeFromSuperview];
 }
 
-- (void)controller:(HomeVC *)controller vcEvent:(HomeDelegateVcEvent)vcEvent message:(id)message {
+- (void)controller:(HomeVC *)controller vcEvent:(HomeEventVcEvent)vcEvent message:(id)message {
     NSString *text = (NSString *)message;
     [UITool showToast:SafeString(text)];
 

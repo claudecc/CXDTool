@@ -34,18 +34,18 @@ static dispatch_once_t _onceToken;
 #pragma mark - view -> vc
 
 + (void)actionObj:(NSObject *)obj
-       moduleType:(HomeDelegateModuleType)moduleType
+       moduleType:(HomeEventModuleType)moduleType
          objEvent:(NSUInteger)objEvent
           message:(id)message {
     [[HomeEventManager shareManager] actionObj:obj moduleType:moduleType objEvent:objEvent message:message];
 }
 
 - (void)actionObj:(NSObject *)obj
-       moduleType:(HomeDelegateModuleType)moduleType
+       moduleType:(HomeEventModuleType)moduleType
          objEvent:(NSUInteger)objEvent
           message:(id)message {
     switch (moduleType) {
-        case HomeDelegateModuleTypeHomeView:
+        case HomeEventModuleTypeHomeView:
         {
             if ([obj isKindOfClass:[HomeInfoView class]]) {
                 [self homeInfoView:(HomeInfoView *)obj event:objEvent message:message];
@@ -63,9 +63,9 @@ static dispatch_once_t _onceToken;
 
 #pragma mark - Default delegate
 - (void)obj:(NSObject *)obj objEvent:(NSUInteger)objEvent message:(id)message {
-    HomeDelegateObjEvent delegateEvent = (HomeDelegateObjEvent)objEvent;
+    HomeEventObjEvent delegateEvent = (HomeEventObjEvent)objEvent;
     switch (delegateEvent) {
-        case HomeDelegateObjEventNone:
+        case HomeEventObjEventNone:
         {
             [UITool showToast:@"Home Delegate 默认方法"];
         }
@@ -92,17 +92,17 @@ static dispatch_once_t _onceToken;
 
 #pragma mark -
 #pragma mark - vc -> view
-+ (void)targetModuleType:(HomeDelegateModuleType)moduleType
-                 vcEvent:(HomeDelegateVcEvent)vcEvent
++ (void)targetModuleType:(HomeEventModuleType)moduleType
+                 vcEvent:(HomeEventVcEvent)vcEvent
                  message:(id)message {
     [[HomeEventManager shareManager] targetModuleType:moduleType vcEvent:vcEvent message:message];
 }
 
-- (void)targetModuleType:(HomeDelegateModuleType)moduleType
-                 vcEvent:(HomeDelegateVcEvent)vcEvent
+- (void)targetModuleType:(HomeEventModuleType)moduleType
+                 vcEvent:(HomeEventVcEvent)vcEvent
                  message:(id)message {
     switch (moduleType) {
-        case HomeDelegateModuleTypeHomeView:
+        case HomeEventModuleTypeHomeView:
         {
             HomeBaseView *view = [self.controller getModuleViewWithModuleType:moduleType];
             if (view && view->_delegateRespondsTo.homePublicDelegate) {

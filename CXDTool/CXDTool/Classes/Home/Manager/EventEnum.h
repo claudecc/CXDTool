@@ -10,26 +10,26 @@
 #define EventEnum_h
 
 @class HomeVC;
-// 模块类型（粒度未定）应该定义一个base delegate类，把模块类型ENUM放在里面，其他代理类继承base
-typedef NS_ENUM(NSUInteger, HomeDelegateModuleType) {
-    HomeDelegateModuleTypeNone,
-    HomeDelegateModuleTypeHomeView,
+// 模块类型（粒度未定）
+typedef NS_ENUM(NSUInteger, HomeEventModuleType) {
+    HomeEventModuleTypeNone,
+    HomeEventModuleTypeHomeView,
 };
 
 // objEvent: view -> vc 事件
-typedef NS_ENUM(NSUInteger, HomeDelegateObjEvent) {
-    HomeDelegateObjEventNone,
+typedef NS_ENUM(NSUInteger, HomeEventObjEvent) {
+    HomeEventObjEventNone,
 };
 
 // vcEvent: vc -> view 事件
-typedef NS_ENUM(NSUInteger, HomeDelegateVcEvent) {
-    HomeDelegateVcEventNone,
+typedef NS_ENUM(NSUInteger, HomeEventVcEvent) {
+    HomeEventVcEventNone,
 };
 
 @protocol HomeEventVCToViewDelegate <NSObject>
 
 @optional
-- (void)controller:(HomeVC *)controller vcEvent:(HomeDelegateVcEvent)vcEvent message:(id)message;
+- (void)controller:(HomeVC *)controller vcEvent:(HomeEventVcEvent)vcEvent message:(id)message;
 
 @end
 

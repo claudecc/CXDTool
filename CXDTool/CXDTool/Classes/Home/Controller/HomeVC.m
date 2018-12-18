@@ -44,10 +44,10 @@
 
 #pragma mark - public
 
-- (HomeBaseView *)getModuleViewWithModuleType:(HomeDelegateModuleType)moduleType {
+- (HomeBaseView *)getModuleViewWithModuleType:(HomeEventModuleType)moduleType {
     HomeBaseView *view = nil;
     switch (moduleType) {
-        case HomeDelegateModuleTypeHomeView:
+        case HomeEventModuleTypeHomeView:
         {
             view = self.homeView;
         }
@@ -71,7 +71,7 @@
 }
 
 - (void)rightItemAction {
-    [HomeEventManager targetModuleType:HomeDelegateModuleTypeHomeView vcEvent:HomeDelegateVcEventNone message:@"vc 传值给 view"];
+    [HomeEventManager targetModuleType:HomeEventModuleTypeHomeView vcEvent:HomeEventVcEventNone message:@"vc 传值给 view"];
 }
 
 #pragma mark - tableView delegate

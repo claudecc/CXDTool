@@ -11,7 +11,7 @@
 
 @interface HomeVC : BaseVC
 
-- (HomeBaseView *)getModuleViewWithModuleType:(HomeDelegateModuleType)moduleType;
+- (HomeBaseView *)getModuleViewWithModuleType:(HomeEventModuleType)moduleType;
 
 - (void)showText:(NSString *)text;
 

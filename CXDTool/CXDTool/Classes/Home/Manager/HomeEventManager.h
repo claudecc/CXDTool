@@ -30,7 +30,7 @@
  @param message 数据
  */
 + (void)actionObj:(NSObject *)obj
-       moduleType:(HomeDelegateModuleType)moduleType
+       moduleType:(HomeEventModuleType)moduleType
          objEvent:(NSUInteger)objEvent
           message:(id)message;
 
@@ -41,8 +41,8 @@
  @param vcEvent 事件
  @param message 数据
  */
-+ (void)targetModuleType:(HomeDelegateModuleType)moduleType
-                 vcEvent:(HomeDelegateVcEvent)vcEvent
++ (void)targetModuleType:(HomeEventModuleType)moduleType
+                 vcEvent:(HomeEventVcEvent)vcEvent
                  message:(id)message;
 
 @end
