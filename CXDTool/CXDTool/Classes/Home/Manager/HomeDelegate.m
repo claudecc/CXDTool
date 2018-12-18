@@ -7,6 +7,7 @@
 //
 
 #import "HomeDelegate.h"
+#import "HomeView.h"
 #import "HomeInfoView.h"
 
 @implementation HomeDelegate
@@ -28,13 +29,19 @@ static dispatch_once_t _onceToken;
     _delegate = nil;
 }
 
-+ (void)actionObj:(NSObject *)obj type:(HomeDelegateObjType)type event:(NSUInteger)event message:(id)message {
-    [[HomeDelegate shareDelegate] actionObj:obj type:type event:event message:message];
++ (void)actionObj:(NSObject *)obj
+       moduleType:(HomeDelegateModuleType)moduleType
+            event:(NSUInteger)event
+          message:(id)message {
+    [[HomeDelegate shareDelegate] actionObj:obj moduleType:moduleType event:event message:message];
 }
 
-- (void)actionObj:(NSObject *)obj type:(HomeDelegateObjType)type event:(NSUInteger)event message:(id)message {
-    switch (type) {
-        case HomeDelegateObjTypeHomeInfoView:
+- (void)actionObj:(NSObject *)obj
+       moduleType:(HomeDelegateModuleType)moduleType
+            event:(NSUInteger)event
+          message:(id)message {
+    switch (moduleType) {
+        case HomeDelegateModuleTypeHomeView:
         {
             if ([obj isKindOfClass:[HomeInfoView class]]) {
                 [self homeInfoView:(HomeInfoView *)obj event:event message:message];
@@ -47,6 +54,7 @@ static dispatch_once_t _onceToken;
         }
             break;
     }
+    
 }
 
 #pragma mark - Default delegate
@@ -55,7 +63,7 @@ static dispatch_once_t _onceToken;
     switch (delegateEvent) {
         case HomeDelegateEventNone:
         {
-            
+            [UITool showToast:@"Home Delegate 默认方法"];
         }
             break;
         default:

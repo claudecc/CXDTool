@@ -8,6 +8,15 @@
 
 #import "HomeInfoView.h"
 
+@interface HomeInfoView ()
+{
+    struct {
+        unsigned int didRespondsToTest : 1; // 占用1个二进制位,可以表示0或1这两个值
+    } _delegateState;
+    
+}
+@end
+
 @implementation HomeInfoView
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -24,9 +33,16 @@
     [self addGestureRecognizer:tap];
 }
 
+- (void)setDelegate:(id<HomeInfoViewDelegate>)delegate {
+    _delegate = delegate;
+    _delegateState.didRespondsToTest = [delegate respondsToSelector:@selector(testSelector)];
+}
+
 - (void)tapAction {
 //    [UITool showToast:@"点击"];
-    [HomeDelegate actionObj:self type:HomeDelegateObjTypeHomeInfoView event:HomeInfoViewEventClick message:@"点击了"];
+    if (_delegateState.didRespondsToTest) {
+        [self.delegate testSelector];
+    }
 }
 
 @end

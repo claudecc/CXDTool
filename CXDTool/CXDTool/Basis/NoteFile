@@ -1,0 +1,14 @@
+struct {
+unsigned int fieldA : 8;
+unsigned int fieldB : 4;
+unsigned int fieldC : 2;
+unsigned int fieldD : 1;
+};
+在结构体中，fieldA位段将占用8个二进制位，fieldB占用4个，fieldC占用2个，fieldD占用1个。于是，fielA可以表示0-255之前的值，而fieldD则可以表示0或1这两个值。我们可以像fieldD这样，把委托对象是否实现了协议中的相关方法这一信息缓存起来。如果创建的结构体中只有大小为1的位段，那么就能把许多 Boolean 值塞入一小块数据里面了。
+
+作者：高浩浩浩浩浩浩
+链接：https://www.jianshu.com/p/dd84eaaff115
+來源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+
+

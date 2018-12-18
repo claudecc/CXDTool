@@ -13,8 +13,15 @@ typedef NS_ENUM(NSUInteger, HomeInfoViewEvent) {
     HomeInfoViewEventClick,
 };
 
-
+@protocol HomeInfoViewDelegate;
 @interface HomeInfoView : UIView
+
+@property (nonatomic, weak) id<HomeInfoViewDelegate> delegate;
 
 @end
 
+@protocol HomeInfoViewDelegate <NSObject>
+
+- (void)testSelector;
+
+@end

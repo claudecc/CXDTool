@@ -11,6 +11,7 @@
 		05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F8920512A880010AC13 /* CXDTool.xcdatamodeld */; };
 		05DF6F9320512A880010AC13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F9220512A880010AC13 /* main.m */; };
 		CE05545BFB0388E5D1585722 /* libPods-CXDTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */; };
+		E6030E1121C89D5E002F036D /* NoteFile in Resources */ = {isa = PBXBuildFile; fileRef = E6030E1021C89D5E002F036D /* NoteFile */; };
 		E606BBFB21C76FF40066EB72 /* UIScrollView+Touch.m in Sources */ = {isa = PBXBuildFile; fileRef = E606BBFA21C76FF40066EB72 /* UIScrollView+Touch.m */; };
 		E606BBFF21C79B930066EB72 /* HomeDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E606BBFE21C79B930066EB72 /* HomeDelegate.m */; };
 		E606BC0321C79C450066EB72 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E606BC0221C79C450066EB72 /* HomeView.m */; };
@@ -73,6 +74,7 @@
 		05DF6F9220512A880010AC13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3509219F06C3F1CD719CD6FF /* Pods-CXDTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.debug.xcconfig"; sourceTree = "<group>"; };
 		812DAC7F557D61DAF2D5EBB3 /* Pods-CXDTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.release.xcconfig"; sourceTree = "<group>"; };
+		E6030E1021C89D5E002F036D /* NoteFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = NoteFile; sourceTree = "<group>"; };
 		E606BBF521C74B790066EB72 /* SizeMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SizeMacro.h; sourceTree = "<group>"; };
 		E606BBF921C76FF40066EB72 /* UIScrollView+Touch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Touch.h"; sourceTree = "<group>"; };
 		E606BBFA21C76FF40066EB72 /* UIScrollView+Touch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Touch.m"; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				E606BBF521C74B790066EB72 /* SizeMacro.h */,
 				E6277C49209451C100B75AB1 /* ColorMacro.h */,
 				E6F34EFF21A2627E00611669 /* NSToolMacro.h */,
+				E6030E1021C89D5E002F036D /* NoteFile */,
 			);
 			path = Basis;
 			sourceTree = "<group>";
@@ -761,6 +764,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6030E1121C89D5E002F036D /* NoteFile in Resources */,
 				E6D9E99420731ECB006D5057 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
