@@ -39,7 +39,7 @@
     tableview.delegate = self;
     tableview.dataSource = self;
     
-    [self showHomeView];
+//    [self showHomeView];
 }
 
 #pragma mark - public
