@@ -6,15 +6,14 @@
 //  Copyright © 2018 claudechoi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "HomeDelegate.h"
+#import "HomeBaseView.h"
 
 typedef NS_ENUM(NSUInteger, HomeInfoViewEvent) {
     HomeInfoViewEventClick,
 };
 
 @protocol HomeInfoViewDelegate;
-@interface HomeInfoView : UIView
+@interface HomeInfoView : HomeBaseView
 
 @property (nonatomic, weak) id<HomeInfoViewDelegate> delegate;
 

@@ -41,6 +41,7 @@
 
 // custom
 #import "HMConsoleView.h"
+#import "EventEnum.h"
 
 // Vender
 #import "Masonry.h"

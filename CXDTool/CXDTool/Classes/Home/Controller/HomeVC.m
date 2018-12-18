@@ -7,13 +7,14 @@
 //
 
 #import "HomeVC.h"
+#import "HomeEventManager.h"
 #import "HomeView.h"
-#import "HomeDelegate.h"
 
 @interface HomeVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) NSArray *listArray;
 @property (nonatomic,strong) UITableView *tableView;
+@property (nonatomic, strong) HomeView *homeView;
 
 @end
 
@@ -25,11 +26,11 @@
     
     [self setupUI];
     
-    [HomeDelegate shareDelegate].controller = self;
+    [HomeEventManager shareManager].controller = self;
 }
 
 - (void)setupUI {
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"HomeView" style:UIBarButtonItemStylePlain target:self action:@selector(showHomeView)];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"test" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemAction)];
     self.navigationItem.rightBarButtonItem = item;
     
     UITableView *tableview = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -37,6 +38,28 @@
     self.tableView = tableview;
     tableview.delegate = self;
     tableview.dataSource = self;
+    
+    [self showHomeView];
+}
+
+#pragma mark - public
+
+- (HomeBaseView *)getModuleViewWithModuleType:(HomeDelegateModuleType)moduleType {
+    HomeBaseView *view = nil;
+    switch (moduleType) {
+        case HomeDelegateModuleTypeHomeView:
+        {
+            view = self.homeView;
+        }
+            break;
+        default:
+            break;
+    }
+    return view;
+}
+
+- (void)showText:(NSString *)text {
+    [UITool showToast:text];
 }
 
 #pragma mark - private
@@ -44,6 +67,11 @@
 - (void)showHomeView {
     HomeView *view = [[HomeView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:view];
+    self.homeView = view;
+}
+
+- (void)rightItemAction {
+    [HomeEventManager targetModuleType:HomeDelegateModuleTypeHomeView vcEvent:HomeDelegateVcEventNone message:@"vc 传值给 view"];
 }
 
 #pragma mark - tableView delegate
@@ -85,7 +113,7 @@
 }
 
 - (void)dealloc {
-    [HomeDelegate removeDelegate];
+    [HomeEventManager removeManager];
     DLog(@"");
 }
 

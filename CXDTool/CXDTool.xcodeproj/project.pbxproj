@@ -12,8 +12,9 @@
 		05DF6F9320512A880010AC13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F9220512A880010AC13 /* main.m */; };
 		CE05545BFB0388E5D1585722 /* libPods-CXDTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */; };
 		E6030E1121C89D5E002F036D /* NoteFile in Resources */ = {isa = PBXBuildFile; fileRef = E6030E1021C89D5E002F036D /* NoteFile */; };
+		E6030E1421C8D6DB002F036D /* HomeBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6030E1321C8D6DB002F036D /* HomeBaseView.m */; };
+		E6030E1821C8EAB0002F036D /* HomeEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6030E1721C8EAB0002F036D /* HomeEventManager.m */; };
 		E606BBFB21C76FF40066EB72 /* UIScrollView+Touch.m in Sources */ = {isa = PBXBuildFile; fileRef = E606BBFA21C76FF40066EB72 /* UIScrollView+Touch.m */; };
-		E606BBFF21C79B930066EB72 /* HomeDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E606BBFE21C79B930066EB72 /* HomeDelegate.m */; };
 		E606BC0321C79C450066EB72 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E606BC0221C79C450066EB72 /* HomeView.m */; };
 		E606BC0621C79C740066EB72 /* HomeInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E606BC0521C79C740066EB72 /* HomeInfoView.m */; };
 		E606BC0921C7A24E0066EB72 /* UIViewController+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = E606BC0821C7A24E0066EB72 /* UIViewController+Extention.m */; };
@@ -75,11 +76,14 @@
 		3509219F06C3F1CD719CD6FF /* Pods-CXDTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.debug.xcconfig"; sourceTree = "<group>"; };
 		812DAC7F557D61DAF2D5EBB3 /* Pods-CXDTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.release.xcconfig"; sourceTree = "<group>"; };
 		E6030E1021C89D5E002F036D /* NoteFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = NoteFile; sourceTree = "<group>"; };
+		E6030E1221C8D6DB002F036D /* HomeBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeBaseView.h; sourceTree = "<group>"; };
+		E6030E1321C8D6DB002F036D /* HomeBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeBaseView.m; sourceTree = "<group>"; };
+		E6030E1521C8DBD5002F036D /* EventEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventEnum.h; sourceTree = "<group>"; };
+		E6030E1621C8EAB0002F036D /* HomeEventManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeEventManager.h; sourceTree = "<group>"; };
+		E6030E1721C8EAB0002F036D /* HomeEventManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeEventManager.m; sourceTree = "<group>"; };
 		E606BBF521C74B790066EB72 /* SizeMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SizeMacro.h; sourceTree = "<group>"; };
 		E606BBF921C76FF40066EB72 /* UIScrollView+Touch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Touch.h"; sourceTree = "<group>"; };
 		E606BBFA21C76FF40066EB72 /* UIScrollView+Touch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Touch.m"; sourceTree = "<group>"; };
-		E606BBFD21C79B930066EB72 /* HomeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeDelegate.h; sourceTree = "<group>"; };
-		E606BBFE21C79B930066EB72 /* HomeDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeDelegate.m; sourceTree = "<group>"; };
 		E606BC0121C79C450066EB72 /* HomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeView.h; sourceTree = "<group>"; };
 		E606BC0221C79C450066EB72 /* HomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeView.m; sourceTree = "<group>"; };
 		E606BC0421C79C740066EB72 /* HomeInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeInfoView.h; sourceTree = "<group>"; };
@@ -313,8 +317,9 @@
 		E606BBFC21C79B710066EB72 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				E606BBFD21C79B930066EB72 /* HomeDelegate.h */,
-				E606BBFE21C79B930066EB72 /* HomeDelegate.m */,
+				E6030E1621C8EAB0002F036D /* HomeEventManager.h */,
+				E6030E1721C8EAB0002F036D /* HomeEventManager.m */,
+				E6030E1521C8DBD5002F036D /* EventEnum.h */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -326,6 +331,8 @@
 				E606BC0221C79C450066EB72 /* HomeView.m */,
 				E606BC0421C79C740066EB72 /* HomeInfoView.h */,
 				E606BC0521C79C740066EB72 /* HomeInfoView.m */,
+				E6030E1221C8D6DB002F036D /* HomeBaseView.h */,
+				E6030E1321C8D6DB002F036D /* HomeBaseView.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -831,7 +838,9 @@
 				E6DF707320737C49006C7262 /* UIView+Coordinate.m in Sources */,
 				E6D417122080AF5200303490 /* MeHeaderView.m in Sources */,
 				E65F7C31214B4BB500392D04 /* HMConsoleView.m in Sources */,
+				E6030E1421C8D6DB002F036D /* HomeBaseView.m in Sources */,
 				E66BA0CF21A655CC00694B77 /* TabbarControllerAnimation.m in Sources */,
+				E6030E1821C8EAB0002F036D /* HomeEventManager.m in Sources */,
 				E606BBFB21C76FF40066EB72 /* UIScrollView+Touch.m in Sources */,
 				E6BBBB4C206CD0F00007130E /* MyTool.m in Sources */,
 				E63D3C45212FF5ED00A5DDFA /* HMVIDCompetitionVideoModel.m in Sources */,
@@ -869,7 +878,6 @@
 				E63DC030212EB34000EA4C76 /* CompetitionInfoView.m in Sources */,
 				E61C48CA219533AA00A5E284 /* GradientView.m in Sources */,
 				E6BBBB42206CD0360007130E /* HomeVC.m in Sources */,
-				E606BBFF21C79B930066EB72 /* HomeDelegate.m in Sources */,
 				E6126200219E657400B80CA8 /* PictureBrowser.m in Sources */,
 				E6DF707620737E40006C7262 /* NSString+Tool.m in Sources */,
 				E6BBBB30206CCF940007130E /* BaseVC.m in Sources */,

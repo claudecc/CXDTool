@@ -8,8 +8,9 @@
 
 #import "HomeView.h"
 #import "HomeInfoView.h"
+#import "HomeEventManager.h"
 
-@interface HomeView ()<UIGestureRecognizerDelegate>
+@interface HomeView ()<UIGestureRecognizerDelegate,HomeInfoViewDelegate>
 
 @property (nonatomic, strong) HomeInfoView *infoView;
 
@@ -32,16 +33,21 @@
     HomeInfoView *view = [[HomeInfoView alloc] initWithFrame:CGRectMake(40, 40, 200, 200)];
     [self addSubview:view];
     self.infoView = view;
+    view.delegate = self;
 }
 
-//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-//    CGPoint touchLocation = [touch locationInView:self];
-//    if (CGRectContainsPoint(self.infoView.frame, touchLocation)) return NO;
-//    return YES;
-//}
+- (void)testSelector {
+    [HomeEventManager actionObj:self.infoView moduleType:HomeDelegateModuleTypeHomeView objEvent:HomeInfoViewEventClick message:@"info点击"];
+}
 
 - (void)hide {
     [self removeFromSuperview];
+}
+
+- (void)controller:(HomeVC *)controller vcEvent:(HomeDelegateVcEvent)vcEvent message:(id)message {
+    NSString *text = (NSString *)message;
+    [UITool showToast:SafeString(text)];
+
 }
 
 @end

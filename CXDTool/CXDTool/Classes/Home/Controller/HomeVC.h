@@ -7,7 +7,12 @@
 //
 
 #import "BaseVC.h"
+#import "HomeBaseView.h"
 
 @interface HomeVC : BaseVC
+
+- (HomeBaseView *)getModuleViewWithModuleType:(HomeDelegateModuleType)moduleType;
+
+- (void)showText:(NSString *)text;
 
 @end

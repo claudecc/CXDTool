@@ -6,12 +6,10 @@
 //  Copyright © 2018 claudechoi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "HomeBaseView.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface HomeView : UIView
+@interface HomeView : HomeBaseView
 
 @end
 
-NS_ASSUME_NONNULL_END
+
