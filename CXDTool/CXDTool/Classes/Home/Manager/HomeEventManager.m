@@ -30,6 +30,16 @@ static dispatch_once_t _onceToken;
     _onceToken = 0;
 }
 
+- (HomeVC *)controller {
+    if (!_controller) {
+        UIViewController *currentVC = [[VCManager shareVCManager] getTopViewController];
+        if ([currentVC isKindOfClass:[HomeVC class]]) {
+            _controller = (HomeVC *)currentVC;
+        }
+    }
+    return _controller;
+}
+
 #pragma mark -
 #pragma mark - view -> vc
 
