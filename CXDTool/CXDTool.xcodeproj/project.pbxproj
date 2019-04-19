@@ -18,6 +18,10 @@
 		E606BC0321C79C450066EB72 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E606BC0221C79C450066EB72 /* HomeView.m */; };
 		E606BC0621C79C740066EB72 /* HomeInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E606BC0521C79C740066EB72 /* HomeInfoView.m */; };
 		E606BC0921C7A24E0066EB72 /* UIViewController+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = E606BC0821C7A24E0066EB72 /* UIViewController+Extention.m */; };
+		E60AD5912269776D0024DB13 /* NSObject+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AD5902269776D0024DB13 /* NSObject+Router.m */; };
+		E60AD594226977970024DB13 /* NSObject+HMEventForwarder.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AD593226977970024DB13 /* NSObject+HMEventForwarder.m */; };
+		E60AD59722699A3D0024DB13 /* UIViewController+PopView.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AD59622699A3D0024DB13 /* UIViewController+PopView.m */; };
+		E60AD59A22699AE30024DB13 /* PopFatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AD59922699AE30024DB13 /* PopFatherView.m */; };
 		E6126200219E657400B80CA8 /* PictureBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E61261FF219E657400B80CA8 /* PictureBrowser.m */; };
 		E6126206219E6AA900B80CA8 /* PictureBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6126205219E6AA900B80CA8 /* PictureBrowserCell.m */; };
 		E6126209219E6D2F00B80CA8 /* PictureBrowserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6126208219E6D2F00B80CA8 /* PictureBrowserModel.m */; };
@@ -90,6 +94,14 @@
 		E606BC0521C79C740066EB72 /* HomeInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeInfoView.m; sourceTree = "<group>"; };
 		E606BC0721C7A24E0066EB72 /* UIViewController+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extention.h"; sourceTree = "<group>"; };
 		E606BC0821C7A24E0066EB72 /* UIViewController+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extention.m"; sourceTree = "<group>"; };
+		E60AD58F2269776D0024DB13 /* NSObject+Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Router.h"; sourceTree = "<group>"; };
+		E60AD5902269776D0024DB13 /* NSObject+Router.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Router.m"; sourceTree = "<group>"; };
+		E60AD592226977970024DB13 /* NSObject+HMEventForwarder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HMEventForwarder.h"; sourceTree = "<group>"; };
+		E60AD593226977970024DB13 /* NSObject+HMEventForwarder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HMEventForwarder.m"; sourceTree = "<group>"; };
+		E60AD59522699A3D0024DB13 /* UIViewController+PopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PopView.h"; sourceTree = "<group>"; };
+		E60AD59622699A3D0024DB13 /* UIViewController+PopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PopView.m"; sourceTree = "<group>"; };
+		E60AD59822699AE30024DB13 /* PopFatherView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopFatherView.h; sourceTree = "<group>"; };
+		E60AD59922699AE30024DB13 /* PopFatherView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopFatherView.m; sourceTree = "<group>"; };
 		E61261FD219E655A00B80CA8 /* PictureBrowserHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureBrowserHeader.h; sourceTree = "<group>"; };
 		E61261FE219E657400B80CA8 /* PictureBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureBrowser.h; sourceTree = "<group>"; };
 		E61261FF219E657400B80CA8 /* PictureBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureBrowser.m; sourceTree = "<group>"; };
@@ -433,6 +445,10 @@
 			children = (
 				E6747E2D21A55DDD0058B8BB /* NSObject+Crash.h */,
 				E6747E2E21A55DDD0058B8BB /* NSObject+Crash.m */,
+				E60AD58F2269776D0024DB13 /* NSObject+Router.h */,
+				E60AD5902269776D0024DB13 /* NSObject+Router.m */,
+				E60AD592226977970024DB13 /* NSObject+HMEventForwarder.h */,
+				E60AD593226977970024DB13 /* NSObject+HMEventForwarder.m */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -444,6 +460,8 @@
 				E6277C4C20946AE700B75AB1 /* UIViewController+Cloudox.m */,
 				E606BC0721C7A24E0066EB72 /* UIViewController+Extention.h */,
 				E606BC0821C7A24E0066EB72 /* UIViewController+Extention.m */,
+				E60AD59522699A3D0024DB13 /* UIViewController+PopView.h */,
+				E60AD59622699A3D0024DB13 /* UIViewController+PopView.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -589,6 +607,8 @@
 				E6BBBB32206CCFC80007130E /* BaseNavVC.m */,
 				E6BBBB34206CCFDE0007130E /* BaseTabbarVC.h */,
 				E6BBBB35206CCFDE0007130E /* BaseTabbarVC.m */,
+				E60AD59822699AE30024DB13 /* PopFatherView.h */,
+				E60AD59922699AE30024DB13 /* PopFatherView.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -834,6 +854,7 @@
 			files = (
 				E6747E3321A55E980058B8BB /* VCManager.m in Sources */,
 				05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */,
+				E60AD59A22699AE30024DB13 /* PopFatherView.m in Sources */,
 				E6DF706120736D24006C7262 /* UITool.m in Sources */,
 				E6DF707320737C49006C7262 /* UIView+Coordinate.m in Sources */,
 				E6D417122080AF5200303490 /* MeHeaderView.m in Sources */,
@@ -858,6 +879,7 @@
 				E6126206219E6AA900B80CA8 /* PictureBrowserCell.m in Sources */,
 				E6277C4E20946AE700B75AB1 /* UIViewController+Cloudox.m in Sources */,
 				E6BBBB50206CD9AA0007130E /* UserAgent.m in Sources */,
+				E60AD5912269776D0024DB13 /* NSObject+Router.m in Sources */,
 				E612620C219E700900B80CA8 /* PictureDisplayView.m in Sources */,
 				E6BBBB49206CD0950007130E /* LoginVC.m in Sources */,
 				E63D3C4B212FF66700A5DDFA /* HMVIDCompetitionInfoModel.m in Sources */,
@@ -874,6 +896,7 @@
 				E6277C4F20946AE700B75AB1 /* UINavigationController+Cloudox.m in Sources */,
 				E61F30AC213296E800AF13F1 /* GradientSegment.m in Sources */,
 				E6DF707020737449006C7262 /* PhysicsVC.m in Sources */,
+				E60AD59722699A3D0024DB13 /* UIViewController+PopView.m in Sources */,
 				E63DC02D212EB32B00EA4C76 /* TestVC.m in Sources */,
 				E63DC030212EB34000EA4C76 /* CompetitionInfoView.m in Sources */,
 				E61C48CA219533AA00A5E284 /* GradientView.m in Sources */,
@@ -883,6 +906,7 @@
 				E6BBBB30206CCF940007130E /* BaseVC.m in Sources */,
 				E6EF4C0D21A3EE9900B02AA3 /* UIView+ExtendTouchRect.m in Sources */,
 				E6126212219E71F500B80CA8 /* PictureDisplayViewCell.m in Sources */,
+				E60AD594226977970024DB13 /* NSObject+HMEventForwarder.m in Sources */,
 				E6BBBB3F206CD0220007130E /* MeVC.m in Sources */,
 				E6E02696210702EC000FDF48 /* GPUImageVC.m in Sources */,
 				E6126209219E6D2F00B80CA8 /* PictureBrowserModel.m in Sources */,

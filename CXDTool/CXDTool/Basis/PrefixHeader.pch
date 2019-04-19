@@ -33,6 +33,8 @@
 #import "VCManager.h"
 
 // category
+#import "NSObject+Router.h"
+#import "NSObject+HMEventForwarder.h"
 #import "UIFont+Extension.h"
 #import "UIView+Coordinate.h"
 #import "UIViewController+Extention.h"

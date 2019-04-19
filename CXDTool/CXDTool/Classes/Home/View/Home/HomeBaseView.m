@@ -10,13 +10,6 @@
 
 @implementation HomeBaseView
 
-- (instancetype)init {
-    if (self = [super init]) {
-        _delegateRespondsTo.homePublicDelegate = [self respondsToSelector:@selector(controller:vcEvent:message:)];
-    }
-    return self;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         _delegateRespondsTo.homePublicDelegate = [self respondsToSelector:@selector(controller:vcEvent:message:)];
