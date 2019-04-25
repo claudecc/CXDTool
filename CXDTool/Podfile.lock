@@ -21,7 +21,7 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
-  - TYAttributedLabel (2.6.6)
+  - TYAttributedLabel (2.6.2)
 
 DEPENDENCIES:
   - AFNetworking
@@ -32,16 +32,6 @@ DEPENDENCIES:
   - SDWebImage
   - TYAttributedLabel (~> 2.6.2)
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - AFNetworking
-    - GPUImage
-    - Masonry
-    - MJExtension
-    - MJRefresh
-    - SDWebImage
-    - TYAttributedLabel
-
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
@@ -49,8 +39,8 @@ SPEC CHECKSUMS:
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  TYAttributedLabel: cb8fc910d97eb5224936d4f692a78e042af691b2
+  TYAttributedLabel: 1c1f1e7604043ba584e005d4fd3aee8a1a7a2020
 
 PODFILE CHECKSUM: 46e0e24ce36e28962dddbab57ab7b86d49b2ced0
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.2.1
