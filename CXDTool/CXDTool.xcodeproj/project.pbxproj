@@ -40,6 +40,7 @@
 		E63DC02D212EB32B00EA4C76 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC02C212EB32B00EA4C76 /* TestVC.m */; };
 		E63DC030212EB34000EA4C76 /* CompetitionInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC02F212EB34000EA4C76 /* CompetitionInfoView.m */; };
 		E63DC033212EB34C00EA4C76 /* CompetitionCommentatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */; };
+		E65944EA2285543B006ADE1E /* TestThreadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E65944E92285543B006ADE1E /* TestThreadTool.m */; };
 		E65F7C31214B4BB500392D04 /* HMConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E65F7C30214B4BB500392D04 /* HMConsoleView.m */; };
 		E66BA0CF21A655CC00694B77 /* TabbarControllerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E66BA0CE21A655CC00694B77 /* TabbarControllerAnimation.m */; };
 		E6747E2F21A55DDD0058B8BB /* NSObject+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = E6747E2E21A55DDD0058B8BB /* NSObject+Crash.m */; };
@@ -141,6 +142,8 @@
 		E63DC02F212EB34000EA4C76 /* CompetitionInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompetitionInfoView.m; sourceTree = "<group>"; };
 		E63DC031212EB34C00EA4C76 /* CompetitionCommentatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompetitionCommentatorView.h; sourceTree = "<group>"; };
 		E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompetitionCommentatorView.m; sourceTree = "<group>"; };
+		E65944E82285543B006ADE1E /* TestThreadTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestThreadTool.h; sourceTree = "<group>"; };
+		E65944E92285543B006ADE1E /* TestThreadTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestThreadTool.m; sourceTree = "<group>"; };
 		E65F7C2F214B4BB500392D04 /* HMConsoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMConsoleView.h; sourceTree = "<group>"; };
 		E65F7C30214B4BB500392D04 /* HMConsoleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMConsoleView.m; sourceTree = "<group>"; };
 		E66BA0CD21A655CC00694B77 /* TabbarControllerAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarControllerAnimation.h; sourceTree = "<group>"; };
@@ -440,6 +443,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E65944E722855404006ADE1E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E65944E82285543B006ADE1E /* TestThreadTool.h */,
+				E65944E92285543B006ADE1E /* TestThreadTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		E66BA0C521A6508000694B77 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,6 +521,7 @@
 		E66BA0CB21A654BB00694B77 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				E65944E722855404006ADE1E /* Tool */,
 				E606BBF621C7545D0066EB72 /* Controller */,
 				E606BBF721C7547C0066EB72 /* View */,
 			);
@@ -907,6 +920,7 @@
 				E690AABE2195849900251220 /* UIFont+Extension.m in Sources */,
 				E63D3C4E2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.m in Sources */,
 				E6E0269921070BCF000FDF48 /* AVFoundationVC.m in Sources */,
+				E65944EA2285543B006ADE1E /* TestThreadTool.m in Sources */,
 				E6E0268F2105CE80000FDF48 /* ImageProcessingVC.m in Sources */,
 				E6DF706720737421006C7262 /* BannerVC.m in Sources */,
 				E6277C4F20946AE700B75AB1 /* UINavigationController+Cloudox.m in Sources */,

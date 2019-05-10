@@ -9,12 +9,7 @@
 #import "TestVC.h"
 #import "PictureBrowserHeader.h"
 
-static const CGFloat headH = 200;
-
-@interface TestVC ()<UITableViewDelegate,UITableViewDataSource>
-
-@property (nonatomic, assign) BOOL isSticky;
-@property (nonatomic, strong) UIView *headView;
+@interface TestVC ()
 
 @end
 
@@ -24,9 +19,6 @@ static const CGFloat headH = 200;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.isSticky = YES;
-    [self createTableview];
-    [self.view addSubview:self.headView];
     
     // 图片展示
 //    UIView *bgView = [[UIView alloc] init];
@@ -56,73 +48,6 @@ static const CGFloat headH = 200;
 //    }
 //    pictureDisplayView.pictureArray = pictureArray;
     
-    
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 10;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 30;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 30)];
-    label.text = [NSString stringWithFormat:@"第%ld组",(long)section];
-    return label;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellId"];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"第%ld个",(long)indexPath.row];
-    return cell;
-}
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    self.isSticky = NO;
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat y = scrollView.contentOffset.y;
-    if (y == headH) {
-        
-    }
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    
-}
-
-- (void)createTableview {
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    [self.view addSubview:tableView];
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    tableView.backgroundColor = [UIColor orangeColor];
-    tableView.contentInset = UIEdgeInsetsMake(headH, 0, 0, 0);
-    if (@available(iOS 11.0, *)) {
-        tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    }
-}
-
-- (UIView *)headView {
-    if (!_headView) {
-        _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, headH)];
-        _headView.backgroundColor = [UIColor blueColor];
-    }
-    return _headView;
 }
 
 @end

@@ -12,6 +12,10 @@
 
 @implementation UIViewController (PopView)
 
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"分类%s",__func__);
+}
+
 - (PopFatherView *)popFatherView {
     return objc_getAssociatedObject(self, _cmd);
 }
