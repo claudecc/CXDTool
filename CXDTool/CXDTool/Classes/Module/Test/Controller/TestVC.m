@@ -9,7 +9,7 @@
 #import "TestVC.h"
 #import "PictureBrowserHeader.h"
 
-@interface TestVC ()
+@interface TestVC ()<UIGestureRecognizerDelegate>
 
 @end
 

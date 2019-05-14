@@ -1,8 +1,8 @@
 //
-//  TestThreadTool.h
+//  StudyThreadTool.h
 //  CXDTool
 //
-//  Created by 蔡晓东 on 2019/5/10.
+//  Created by 蔡晓东 on 2019/5/13.
 //  Copyright © 2019 claudechoi. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TestThreadTool : NSObject
+@interface StudyThreadTool : NSObject
 
 @end
 
