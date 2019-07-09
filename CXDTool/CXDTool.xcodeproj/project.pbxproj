@@ -27,6 +27,7 @@
 		E6126209219E6D2F00B80CA8 /* PictureBrowserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6126208219E6D2F00B80CA8 /* PictureBrowserModel.m */; };
 		E612620C219E700900B80CA8 /* PictureDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E612620B219E700900B80CA8 /* PictureDisplayView.m */; };
 		E6126212219E71F500B80CA8 /* PictureDisplayViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6126211219E71F500B80CA8 /* PictureDisplayViewCell.m */; };
+		E6171A8A22D322A300AA1FBD /* InternalStorageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6171A8922D322A300AA1FBD /* InternalStorageTool.m */; };
 		E61C48CA219533AA00A5E284 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61C48C9219533AA00A5E284 /* GradientView.m */; };
 		E61F30AC213296E800AF13F1 /* GradientSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = E61F30AB213296E800AF13F1 /* GradientSegment.m */; };
 		E61F30AF21370AC600AF13F1 /* MoreTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61F30AE21370AC600AF13F1 /* MoreTaskView.m */; };
@@ -114,6 +115,8 @@
 		E612620B219E700900B80CA8 /* PictureDisplayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureDisplayView.m; sourceTree = "<group>"; };
 		E6126210219E71F500B80CA8 /* PictureDisplayViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureDisplayViewCell.h; sourceTree = "<group>"; };
 		E6126211219E71F500B80CA8 /* PictureDisplayViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureDisplayViewCell.m; sourceTree = "<group>"; };
+		E6171A8822D322A300AA1FBD /* InternalStorageTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InternalStorageTool.h; sourceTree = "<group>"; };
+		E6171A8922D322A300AA1FBD /* InternalStorageTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InternalStorageTool.m; sourceTree = "<group>"; };
 		E61C48C8219533AA00A5E284 /* GradientView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		E61C48C9219533AA00A5E284 /* GradientView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		E61F30AA213296E800AF13F1 /* GradientSegment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientSegment.h; sourceTree = "<group>"; };
@@ -396,6 +399,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E6171A8622D314D500AA1FBD /* LocalPersistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocalPersistence;
+			sourceTree = "<group>";
+		};
+		E6171A8722D3223000AA1FBD /* InternalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				E6171A8822D322A300AA1FBD /* InternalStorageTool.h */,
+				E6171A8922D322A300AA1FBD /* InternalStorageTool.m */,
+			);
+			path = InternalStorage;
+			sourceTree = "<group>";
+		};
 		E61C48C62195330100A5E284 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +473,8 @@
 		E65944EB22896375006ADE1E /* Study */ = {
 			isa = PBXGroup;
 			children = (
+				E6171A8722D3223000AA1FBD /* InternalStorage */,
+				E6171A8622D314D500AA1FBD /* LocalPersistence */,
 				E65944EC22896384006ADE1E /* Thread */,
 			);
 			path = Study;
@@ -897,6 +918,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6171A8A22D322A300AA1FBD /* InternalStorageTool.m in Sources */,
 				E6747E3321A55E980058B8BB /* VCManager.m in Sources */,
 				05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */,
 				E60AD59A22699AE30024DB13 /* PopFatherView.m in Sources */,
