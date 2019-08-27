@@ -22,6 +22,8 @@
 		E60AD594226977970024DB13 /* NSObject+HMEventForwarder.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AD593226977970024DB13 /* NSObject+HMEventForwarder.m */; };
 		E60AD59722699A3D0024DB13 /* UIViewController+PopView.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AD59622699A3D0024DB13 /* UIViewController+PopView.m */; };
 		E60AD59A22699AE30024DB13 /* PopFatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AD59922699AE30024DB13 /* PopFatherView.m */; };
+		E60B2A2922D78B13006942DC /* VideoHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E60B2A2822D78B13006942DC /* VideoHandler.m */; };
+		E60B2A2C22D78B2F006942DC /* VideoTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = E60B2A2B22D78B2F006942DC /* VideoTestView.m */; };
 		E6126200219E657400B80CA8 /* PictureBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E61261FF219E657400B80CA8 /* PictureBrowser.m */; };
 		E6126206219E6AA900B80CA8 /* PictureBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6126205219E6AA900B80CA8 /* PictureBrowserCell.m */; };
 		E6126209219E6D2F00B80CA8 /* PictureBrowserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6126208219E6D2F00B80CA8 /* PictureBrowserModel.m */; };
@@ -47,6 +49,7 @@
 		E6747E2F21A55DDD0058B8BB /* NSObject+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = E6747E2E21A55DDD0058B8BB /* NSObject+Crash.m */; };
 		E6747E3321A55E980058B8BB /* VCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6747E3221A55E980058B8BB /* VCManager.m */; };
 		E690AABE2195849900251220 /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AABD2195849900251220 /* UIFont+Extension.m */; };
+		E694DF78230065EC00778E26 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = E694DF77230065EC00778E26 /* DrawView.m */; };
 		E6BBBB30206CCF940007130E /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB2F206CCF940007130E /* BaseVC.m */; };
 		E6BBBB33206CCFC80007130E /* BaseNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB32206CCFC80007130E /* BaseNavVC.m */; };
 		E6BBBB36206CCFDE0007130E /* BaseTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB35206CCFDE0007130E /* BaseTabbarVC.m */; };
@@ -104,6 +107,10 @@
 		E60AD59622699A3D0024DB13 /* UIViewController+PopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PopView.m"; sourceTree = "<group>"; };
 		E60AD59822699AE30024DB13 /* PopFatherView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopFatherView.h; sourceTree = "<group>"; };
 		E60AD59922699AE30024DB13 /* PopFatherView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopFatherView.m; sourceTree = "<group>"; };
+		E60B2A2722D78B13006942DC /* VideoHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoHandler.h; sourceTree = "<group>"; };
+		E60B2A2822D78B13006942DC /* VideoHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoHandler.m; sourceTree = "<group>"; };
+		E60B2A2A22D78B2F006942DC /* VideoTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoTestView.h; sourceTree = "<group>"; };
+		E60B2A2B22D78B2F006942DC /* VideoTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoTestView.m; sourceTree = "<group>"; };
 		E61261FD219E655A00B80CA8 /* PictureBrowserHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureBrowserHeader.h; sourceTree = "<group>"; };
 		E61261FE219E657400B80CA8 /* PictureBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureBrowser.h; sourceTree = "<group>"; };
 		E61261FF219E657400B80CA8 /* PictureBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureBrowser.m; sourceTree = "<group>"; };
@@ -157,6 +164,8 @@
 		E6747E3221A55E980058B8BB /* VCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCManager.m; sourceTree = "<group>"; };
 		E690AABC2195849900251220 /* UIFont+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extension.h"; sourceTree = "<group>"; };
 		E690AABD2195849900251220 /* UIFont+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extension.m"; sourceTree = "<group>"; };
+		E694DF76230065EC00778E26 /* DrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		E694DF77230065EC00778E26 /* DrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		E6BBBB2E206CCF940007130E /* BaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
 		E6BBBB2F206CCF940007130E /* BaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		E6BBBB31206CCFC80007130E /* BaseNavVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavVC.h; sourceTree = "<group>"; };
@@ -356,6 +365,17 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		E60B2A2622D78A68006942DC /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				E60B2A2722D78B13006942DC /* VideoHandler.h */,
+				E60B2A2822D78B13006942DC /* VideoHandler.m */,
+				E60B2A2A22D78B2F006942DC /* VideoTestView.h */,
+				E60B2A2B22D78B2F006942DC /* VideoTestView.m */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		E61261F8219E624800B80CA8 /* Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,6 +493,8 @@
 		E65944EB22896375006ADE1E /* Study */ = {
 			isa = PBXGroup;
 			children = (
+				E694DF75230064B800778E26 /* Draw */,
+				E60B2A2622D78A68006942DC /* Video */,
 				E6171A8722D3223000AA1FBD /* InternalStorage */,
 				E6171A8622D314D500AA1FBD /* LocalPersistence */,
 				E65944EC22896384006ADE1E /* Thread */,
@@ -581,6 +603,15 @@
 				E6747E3221A55E980058B8BB /* VCManager.m */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		E694DF75230064B800778E26 /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				E694DF76230065EC00778E26 /* DrawView.h */,
+				E694DF77230065EC00778E26 /* DrawView.m */,
+			);
+			path = Draw;
 			sourceTree = "<group>";
 		};
 		E6BBBB25206CCDB40007130E /* Vender */ = {
@@ -966,9 +997,12 @@
 				E60AD59722699A3D0024DB13 /* UIViewController+PopView.m in Sources */,
 				E63DC02D212EB32B00EA4C76 /* TestVC.m in Sources */,
 				E63DC030212EB34000EA4C76 /* CompetitionInfoView.m in Sources */,
+				E60B2A2922D78B13006942DC /* VideoHandler.m in Sources */,
 				E61C48CA219533AA00A5E284 /* GradientView.m in Sources */,
+				E60B2A2C22D78B2F006942DC /* VideoTestView.m in Sources */,
 				E6BBBB42206CD0360007130E /* HomeVC.m in Sources */,
 				E6126200219E657400B80CA8 /* PictureBrowser.m in Sources */,
+				E694DF78230065EC00778E26 /* DrawView.m in Sources */,
 				E6DF707620737E40006C7262 /* NSString+Tool.m in Sources */,
 				E6BBBB30206CCF940007130E /* BaseVC.m in Sources */,
 				E6EF4C0D21A3EE9900B02AA3 /* UIView+ExtendTouchRect.m in Sources */,

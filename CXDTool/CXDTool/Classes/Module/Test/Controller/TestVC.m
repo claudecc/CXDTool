@@ -48,6 +48,9 @@
 //    }
 //    pictureDisplayView.pictureArray = pictureArray;
     
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 80, SCREEN_WIDTH, 200)];
+    [self.view addSubview:imageView];
+    [imageView sd_setImageWithURL:[NSURL URLWithString:@"http://i2.chinanews.com/simg/hd/2017/07/21/d89be7c135ef4f638dc704bf35a4818a.jpg"]];
 }
 
 @end

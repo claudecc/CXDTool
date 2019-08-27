@@ -38,4 +38,6 @@ NSString *SafeString(NSString *string);
 
 + (void)showToast:(NSString *)text;
 
++ (UIImage *)createImageWithColor:(UIColor *)color frame:(CGRect)rect;
+
 @end

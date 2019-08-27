@@ -24,6 +24,10 @@ static char *btnClickAction;
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIImage *naviImage = [UITool createImageWithColor:[UIColor whiteColor] frame:CGRectMake(0, 0, 1, 1)];
+    [self.navigationController.navigationBar setBackgroundImage:naviImage forBarMetrics:UIBarMetricsDefault];
+    
 }
 
 -(void)setLeftButtonWithTitle:(NSString *)title Image:(NSString *)image SelectedImage:(NSString *)selectedImage Action:(void (^)(void))btnClickBlock{
@@ -60,6 +64,25 @@ static char *btnClickAction;
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(actionBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 }
+
+- (UIImageView *)findHairlineImageViewUnder:(UIView *)view {
+    //内省
+    if ([view isKindOfClass:UIImageView.class] && view.bounds.size.height <= 1.0) {
+        
+        return (UIImageView *)view;
+    }
+    
+    for (UIView *subview in view.subviews) {
+        
+        UIImageView *imageView = [self findHairlineImageViewUnder:subview];
+        
+        if (imageView) {
+            return imageView;
+        }
+    }
+    return nil;
+}
+
 #pragma mark ---- ActionBtnClick
 - (void)actionBtnClick:(UIButton *)btn {
     void (^btnClickBlock) (void) = objc_getAssociatedObject(btn, &btnClickAction);

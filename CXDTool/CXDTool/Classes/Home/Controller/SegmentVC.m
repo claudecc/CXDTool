@@ -10,6 +10,9 @@
 
 @interface SegmentVC ()
 
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UITableView *firstTableView;
+
 @end
 
 @implementation SegmentVC
@@ -17,21 +20,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = NO;
+    }
+    
+    [self setupUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+- (void)setupUI {
+    CGFloat headerH = 150;
+    CGFloat barH = 50;
+    UIScrollView *scrollView = [UIScrollView.alloc initWithFrame:self.view.bounds];
+    [self.view addSubview:scrollView];
+    self.scrollView = scrollView;
+    [scrollView setContentSize:CGSizeMake(self.view.width, self.view.height+headerH+barH)];
+    scrollView.showsVerticalScrollIndicator = NO;
+    
+    UIView *headerView = [UIView.alloc initWithFrame:CGRectMake(0, 0, self.view.width, headerH)];
+    [scrollView addSubview:headerView];
+    headerView.backgroundColor = UIColor.redColor;
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UIView *barView = [UIView.alloc initWithFrame:CGRectMake(0, 150, self.view.width, barH)];
+    [scrollView addSubview:barView];
+    barView.backgroundColor = UIColor.yellowColor;
+    
+    UIScrollView *horizontalScrollView = [UIScrollView.alloc initWithFrame:CGRectMake(0, 200, self.view.width, self.view.height)];
+    [scrollView addSubview:horizontalScrollView];
+    
+    for (NSInteger i = 0; i < 3; i++) {
+        UITableView *tableView = [UITableView.alloc initWithFrame:CGRectMake(i*self.view.width, 0, self.view.width, self.view.height) style:UITableViewStylePlain];
+        [horizontalScrollView addSubview:tableView];
+        if (i == 0) {
+            self.firstTableView = tableView;
+        }
+    }
+    
 }
-*/
 
 @end
