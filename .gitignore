@@ -8,9 +8,6 @@ Pods/
 build/
 DerivedData/
 
-# ijkplayer
-CXDTool/Vender/ijkplayer/
-
 #Various settings
 *.pbxuser
 !default.pbxuser

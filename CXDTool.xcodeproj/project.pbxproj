@@ -33,6 +33,7 @@
 		E61C48CA219533AA00A5E284 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61C48C9219533AA00A5E284 /* GradientView.m */; };
 		E61F30AC213296E800AF13F1 /* GradientSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = E61F30AB213296E800AF13F1 /* GradientSegment.m */; };
 		E61F30AF21370AC600AF13F1 /* MoreTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61F30AE21370AC600AF13F1 /* MoreTaskView.m */; };
+		E61FB52E2327360B0076E120 /* XDPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FB52D2327360B0076E120 /* XDPlayerManager.m */; };
 		E6277C4E20946AE700B75AB1 /* UIViewController+Cloudox.m in Sources */ = {isa = PBXBuildFile; fileRef = E6277C4C20946AE700B75AB1 /* UIViewController+Cloudox.m */; };
 		E6277C4F20946AE700B75AB1 /* UINavigationController+Cloudox.m in Sources */ = {isa = PBXBuildFile; fileRef = E6277C4D20946AE700B75AB1 /* UINavigationController+Cloudox.m */; };
 		E63D3C42212FE1FB00A5DDFA /* HPVIDCompetitionVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E63D3C41212FE1FB00A5DDFA /* HPVIDCompetitionVideoCell.m */; };
@@ -43,15 +44,12 @@
 		E63DC02D212EB32B00EA4C76 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC02C212EB32B00EA4C76 /* TestVC.m */; };
 		E63DC030212EB34000EA4C76 /* CompetitionInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC02F212EB34000EA4C76 /* CompetitionInfoView.m */; };
 		E63DC033212EB34C00EA4C76 /* CompetitionCommentatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */; };
+		E64F2A35232738FC00742343 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64F2A34232738FC00742343 /* IJKMediaFramework.framework */; };
 		E65944EF228963F0006ADE1E /* StudyThreadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E65944EE228963F0006ADE1E /* StudyThreadTool.m */; };
 		E65F7C31214B4BB500392D04 /* HMConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E65F7C30214B4BB500392D04 /* HMConsoleView.m */; };
 		E66BA0CF21A655CC00694B77 /* TabbarControllerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E66BA0CE21A655CC00694B77 /* TabbarControllerAnimation.m */; };
 		E6747E2F21A55DDD0058B8BB /* NSObject+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = E6747E2E21A55DDD0058B8BB /* NSObject+Crash.m */; };
 		E6747E3321A55E980058B8BB /* VCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6747E3221A55E980058B8BB /* VCManager.m */; };
-		E67DBA792326288A0093B53D /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E67DBA78232628860093B53D /* libstdc++.tbd */; };
-		E67DBA7A232628940093B53D /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BBBC59232623FC002025DA /* libstdc++.6.tbd */; };
-		E67DBA7C2326289F0093B53D /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E67DBA7B2326289C0093B53D /* libstdc++.6.0.9.tbd */; };
-		E67DBA7E23262FAF0093B53D /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67DBA7D23262FAC0093B53D /* IJKMediaFramework.framework */; };
 		E690AABE2195849900251220 /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AABD2195849900251220 /* UIFont+Extension.m */; };
 		E694DF78230065EC00778E26 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = E694DF77230065EC00778E26 /* DrawView.m */; };
 		E694DF8D23261EC100778E26 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694DF8C23261EC100778E26 /* AudioToolbox.framework */; };
@@ -67,6 +65,8 @@
 		E694DFA123261F1D00778E26 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694DFA023261F1D00778E26 /* QuartzCore.framework */; };
 		E694DFA323261F2700778E26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694DFA223261F2700778E26 /* UIKit.framework */; };
 		E694DFA523261F3200778E26 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694DFA423261F3100778E26 /* VideoToolbox.framework */; };
+		E6B61D912327312E00209544 /* XDPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B61D902327312E00209544 /* XDPlayer.m */; };
+		E6B61D92232733B700209544 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BBBC59232623FC002025DA /* libstdc++.6.tbd */; };
 		E6BBBB30206CCF940007130E /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB2F206CCF940007130E /* BaseVC.m */; };
 		E6BBBB33206CCFC80007130E /* BaseNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB32206CCFC80007130E /* BaseNavVC.m */; };
 		E6BBBB36206CCFDE0007130E /* BaseTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB35206CCFDE0007130E /* BaseTabbarVC.m */; };
@@ -147,6 +147,8 @@
 		E61F30AB213296E800AF13F1 /* GradientSegment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientSegment.m; sourceTree = "<group>"; };
 		E61F30AD21370AC600AF13F1 /* MoreTaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreTaskView.h; sourceTree = "<group>"; };
 		E61F30AE21370AC600AF13F1 /* MoreTaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreTaskView.m; sourceTree = "<group>"; };
+		E61FB52C2327360B0076E120 /* XDPlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDPlayerManager.h; sourceTree = "<group>"; };
+		E61FB52D2327360B0076E120 /* XDPlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDPlayerManager.m; sourceTree = "<group>"; };
 		E6277C48209451AE00B75AB1 /* BasicMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicMacro.h; sourceTree = "<group>"; };
 		E6277C49209451C100B75AB1 /* ColorMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorMacro.h; sourceTree = "<group>"; };
 		E6277C4A20946AE700B75AB1 /* UINavigationController+Cloudox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Cloudox.h"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		E63DC02F212EB34000EA4C76 /* CompetitionInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompetitionInfoView.m; sourceTree = "<group>"; };
 		E63DC031212EB34C00EA4C76 /* CompetitionCommentatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompetitionCommentatorView.h; sourceTree = "<group>"; };
 		E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompetitionCommentatorView.m; sourceTree = "<group>"; };
+		E64F2A34232738FC00742343 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = IJKMediaFramework.framework; path = "../../../../../Documents/iOS相关/bilibili/IJKMediaFramework.framework"; sourceTree = "<group>"; };
 		E65944ED228963F0006ADE1E /* StudyThreadTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyThreadTool.h; sourceTree = "<group>"; };
 		E65944EE228963F0006ADE1E /* StudyThreadTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyThreadTool.m; sourceTree = "<group>"; };
 		E65F7C2F214B4BB500392D04 /* HMConsoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMConsoleView.h; sourceTree = "<group>"; };
@@ -181,7 +184,6 @@
 		E6747E3221A55E980058B8BB /* VCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCManager.m; sourceTree = "<group>"; };
 		E67DBA78232628860093B53D /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		E67DBA7B2326289C0093B53D /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
-		E67DBA7D23262FAC0093B53D /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		E690AABC2195849900251220 /* UIFont+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extension.h"; sourceTree = "<group>"; };
 		E690AABD2195849900251220 /* UIFont+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extension.m"; sourceTree = "<group>"; };
 		E694DF76230065EC00778E26 /* DrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
@@ -200,6 +202,8 @@
 		E694DFA223261F2700778E26 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E694DFA423261F3100778E26 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		E694DFA62326237A00778E26 /* Xcode10.2.1.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Xcode10.2.1.app; path = ../../../../Applications/Xcode10.2.1.app; sourceTree = "<group>"; };
+		E6B61D8F2327312E00209544 /* XDPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDPlayer.h; sourceTree = "<group>"; };
+		E6B61D902327312E00209544 /* XDPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDPlayer.m; sourceTree = "<group>"; };
 		E6BBBB2E206CCF940007130E /* BaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
 		E6BBBB2F206CCF940007130E /* BaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		E6BBBB31206CCFC80007130E /* BaseNavVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavVC.h; sourceTree = "<group>"; };
@@ -257,11 +261,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E67DBA7C2326289F0093B53D /* libstdc++.6.0.9.tbd in Frameworks */,
-				E67DBA7A232628940093B53D /* libstdc++.6.tbd in Frameworks */,
-				E67DBA792326288A0093B53D /* libstdc++.tbd in Frameworks */,
+				E6B61D92232733B700209544 /* libstdc++.6.tbd in Frameworks */,
 				E694DFA523261F3200778E26 /* VideoToolbox.framework in Frameworks */,
 				E694DFA323261F2700778E26 /* UIKit.framework in Frameworks */,
+				E64F2A35232738FC00742343 /* IJKMediaFramework.framework in Frameworks */,
 				E694DFA123261F1D00778E26 /* QuartzCore.framework in Frameworks */,
 				E694DF9F23261F1400778E26 /* OpenGLES.framework in Frameworks */,
 				E694DF9D23261F0A00778E26 /* MobileCoreServices.framework in Frameworks */,
@@ -272,7 +275,6 @@
 				E694DF9323261EE000778E26 /* CoreMedia.framework in Frameworks */,
 				E694DF9123261ED700778E26 /* CoreGraphics.framework in Frameworks */,
 				E694DF8F23261ECD00778E26 /* AVFoundation.framework in Frameworks */,
-				E67DBA7E23262FAF0093B53D /* IJKMediaFramework.framework in Frameworks */,
 				E694DF8D23261EC100778E26 /* AudioToolbox.framework in Frameworks */,
 				CE05545BFB0388E5D1585722 /* libPods-CXDTool.a in Frameworks */,
 			);
@@ -450,6 +452,7 @@
 		E61261F8219E624800B80CA8 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				E6B61D8E232730C600209544 /* Player */,
 				E66BA0CB21A654BB00694B77 /* Test */,
 				E61261F9219E625A00B80CA8 /* PictureBrowser */,
 			);
@@ -688,9 +691,20 @@
 		E694DF8723261E1800778E26 /* ijkplayer */ = {
 			isa = PBXGroup;
 			children = (
-				E67DBA7D23262FAC0093B53D /* IJKMediaFramework.framework */,
+				E64F2A34232738FC00742343 /* IJKMediaFramework.framework */,
 			);
 			path = ijkplayer;
+			sourceTree = "<group>";
+		};
+		E6B61D8E232730C600209544 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				E6B61D8F2327312E00209544 /* XDPlayer.h */,
+				E6B61D902327312E00209544 /* XDPlayer.m */,
+				E61FB52C2327360B0076E120 /* XDPlayerManager.h */,
+				E61FB52D2327360B0076E120 /* XDPlayerManager.m */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		E6BBBB25206CCDB40007130E /* Vender */ = {
@@ -1059,6 +1073,7 @@
 				E61F30AC213296E800AF13F1 /* GradientSegment.m in Sources */,
 				E6DF707020737449006C7262 /* PhysicsVC.m in Sources */,
 				E60AD59722699A3D0024DB13 /* UIViewController+PopView.m in Sources */,
+				E6B61D912327312E00209544 /* XDPlayer.m in Sources */,
 				E63DC02D212EB32B00EA4C76 /* TestVC.m in Sources */,
 				E63DC030212EB34000EA4C76 /* CompetitionInfoView.m in Sources */,
 				E60B2A2922D78B13006942DC /* VideoHandler.m in Sources */,
@@ -1074,6 +1089,7 @@
 				E65944EF228963F0006ADE1E /* StudyThreadTool.m in Sources */,
 				E60AD594226977970024DB13 /* NSObject+HMEventForwarder.m in Sources */,
 				E6BBBB3F206CD0220007130E /* MeVC.m in Sources */,
+				E61FB52E2327360B0076E120 /* XDPlayerManager.m in Sources */,
 				E6E02696210702EC000FDF48 /* GPUImageVC.m in Sources */,
 				E6126209219E6D2F00B80CA8 /* PictureBrowserModel.m in Sources */,
 			);
