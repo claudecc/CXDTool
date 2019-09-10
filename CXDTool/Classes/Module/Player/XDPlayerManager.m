@@ -7,6 +7,7 @@
 //
 
 #import "XDPlayerManager.h"
+#import <IJKMediaFramework/IJKMediaFramework.h>
 
 @implementation XDPlayerManager
 

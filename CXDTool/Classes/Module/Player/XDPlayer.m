@@ -7,15 +7,53 @@
 //
 
 #import "XDPlayer.h"
+#import <IJKMediaFramework/IJKMediaFramework.h>
+
+@interface XDPlayer ()
+
+@property (nonatomic, strong) IJKFFMoviePlayerController *player;
+
+@end
 
 @implementation XDPlayer
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self initialUI];
+    }
+    return self;
 }
-*/
+
+- (void)initialUI {
+    NSURL *url = [NSURL URLWithString:@""];
+
+    IJKFFMoviePlayerController *player = [IJKFFMoviePlayerController.alloc initWithContentURL:url withOptions:nil];
+    self.player = player;
+    [self addSubview:player.view];
+    [player.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self);
+    }];
+
+    [player prepareToPlay];
+    [player play];
+}
+
+- (void)pause {
+    if (self.player) {
+        [self.player pause];
+    }
+}
+
+- (void)stop {
+    if (self.player) {
+        [self.player stop];
+    }
+}
+
+- (void)shutdown {
+    if (self.player) {
+        [self.player shutdown];
+    }
+}
 
 @end

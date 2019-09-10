@@ -10,6 +10,7 @@
 		05DF6F8220512A880010AC13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F8120512A880010AC13 /* AppDelegate.m */; };
 		05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F8920512A880010AC13 /* CXDTool.xcdatamodeld */; };
 		05DF6F9320512A880010AC13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F9220512A880010AC13 /* main.m */; };
+		05F9427723274AB900F638AB /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F9427623274AA900F638AB /* IJKMediaFramework.framework */; };
 		CE05545BFB0388E5D1585722 /* libPods-CXDTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */; };
 		E6030E1121C89D5E002F036D /* NoteFile in Resources */ = {isa = PBXBuildFile; fileRef = E6030E1021C89D5E002F036D /* NoteFile */; };
 		E6030E1421C8D6DB002F036D /* HomeBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6030E1321C8D6DB002F036D /* HomeBaseView.m */; };
@@ -98,6 +99,7 @@
 		05DF6F8A20512A880010AC13 /* CXDTool.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CXDTool.xcdatamodel; sourceTree = "<group>"; };
 		05DF6F9120512A880010AC13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05DF6F9220512A880010AC13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		05F9427623274AA900F638AB /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		3509219F06C3F1CD719CD6FF /* Pods-CXDTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.debug.xcconfig"; sourceTree = "<group>"; };
 		812DAC7F557D61DAF2D5EBB3 /* Pods-CXDTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.release.xcconfig"; sourceTree = "<group>"; };
 		E6030E1021C89D5E002F036D /* NoteFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = NoteFile; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05F9427723274AB900F638AB /* IJKMediaFramework.framework in Frameworks */,
 				E6B61D92232733B700209544 /* libstdc++.6.tbd in Frameworks */,
 				E694DFA523261F3200778E26 /* VideoToolbox.framework in Frameworks */,
 				E694DFA323261F2700778E26 /* UIKit.framework in Frameworks */,
@@ -688,6 +691,7 @@
 		E694DF8723261E1800778E26 /* ijkplayer */ = {
 			isa = PBXGroup;
 			children = (
+				05F9427623274AA900F638AB /* IJKMediaFramework.framework */,
 			);
 			path = ijkplayer;
 			sourceTree = "<group>";
@@ -1214,6 +1218,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CXDTool/Vender/ijkplayer",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CXDTool/Basis/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CXDTool/Basis/Info.plist";
@@ -1237,6 +1245,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CXDTool/Vender/ijkplayer",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CXDTool/Basis/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CXDTool/Basis/Info.plist";
