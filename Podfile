@@ -15,5 +15,6 @@ target 'CXDTool' do
   pod 'MJExtension'
   pod 'GPUImage'
   pod 'TYAttributedLabel', '~>2.6.2'
-
+  pod 'Realm'
+  
 end

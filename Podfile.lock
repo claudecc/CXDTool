@@ -18,6 +18,9 @@ PODS:
   - Masonry (1.0.2)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
+  - Realm (3.17.1):
+    - Realm/Headers (= 3.17.1)
+  - Realm/Headers (3.17.1)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -29,6 +32,7 @@ DEPENDENCIES:
   - Masonry
   - MJExtension
   - MJRefresh
+  - Realm
   - SDWebImage
   - TYAttributedLabel (~> 2.6.2)
 
@@ -39,6 +43,7 @@ SPEC REPOS:
     - Masonry
     - MJExtension
     - MJRefresh
+    - Realm
     - SDWebImage
     - TYAttributedLabel
 
@@ -48,9 +53,10 @@ SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  Realm: c204f1a890f07dea43b14132a6aad118c054b8f2
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   TYAttributedLabel: 1c1f1e7604043ba584e005d4fd3aee8a1a7a2020
 
-PODFILE CHECKSUM: 4f2e938f2f7f81851a72901e4b86d78e1421f982
+PODFILE CHECKSUM: 0e70d0d155b21620a781966643b740df2c8067ce
 
 COCOAPODS: 1.7.5

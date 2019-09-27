@@ -10,7 +10,6 @@
 		05DF6F8220512A880010AC13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F8120512A880010AC13 /* AppDelegate.m */; };
 		05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F8920512A880010AC13 /* CXDTool.xcdatamodeld */; };
 		05DF6F9320512A880010AC13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F9220512A880010AC13 /* main.m */; };
-		05F9427723274AB900F638AB /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F9427623274AA900F638AB /* IJKMediaFramework.framework */; };
 		CE05545BFB0388E5D1585722 /* libPods-CXDTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */; };
 		E6030E1121C89D5E002F036D /* NoteFile in Resources */ = {isa = PBXBuildFile; fileRef = E6030E1021C89D5E002F036D /* NoteFile */; };
 		E6030E1421C8D6DB002F036D /* HomeBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6030E1321C8D6DB002F036D /* HomeBaseView.m */; };
@@ -46,7 +45,10 @@
 		E63DC030212EB34000EA4C76 /* CompetitionInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC02F212EB34000EA4C76 /* CompetitionInfoView.m */; };
 		E63DC033212EB34C00EA4C76 /* CompetitionCommentatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */; };
 		E65944EF228963F0006ADE1E /* StudyThreadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E65944EE228963F0006ADE1E /* StudyThreadTool.m */; };
+		E65B5CCA233CCD3F00FC0C4A /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E65B5CC9233CCD3F00FC0C4A /* IJKMediaFramework.framework */; };
 		E65F7C31214B4BB500392D04 /* HMConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E65F7C30214B4BB500392D04 /* HMConsoleView.m */; };
+		E6629907233A814A00D9193C /* PushFlowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6629906233A814A00D9193C /* PushFlowManager.m */; };
+		E6629908233B69B300D9193C /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BBBC59232623FC002025DA /* libstdc++.6.tbd */; };
 		E66BA0CF21A655CC00694B77 /* TabbarControllerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E66BA0CE21A655CC00694B77 /* TabbarControllerAnimation.m */; };
 		E6747E2F21A55DDD0058B8BB /* NSObject+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = E6747E2E21A55DDD0058B8BB /* NSObject+Crash.m */; };
 		E6747E3321A55E980058B8BB /* VCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6747E3221A55E980058B8BB /* VCManager.m */; };
@@ -66,7 +68,6 @@
 		E694DFA323261F2700778E26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694DFA223261F2700778E26 /* UIKit.framework */; };
 		E694DFA523261F3200778E26 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694DFA423261F3100778E26 /* VideoToolbox.framework */; };
 		E6B61D912327312E00209544 /* XDPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B61D902327312E00209544 /* XDPlayer.m */; };
-		E6B61D92232733B700209544 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BBBC59232623FC002025DA /* libstdc++.6.tbd */; };
 		E6BBBB30206CCF940007130E /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB2F206CCF940007130E /* BaseVC.m */; };
 		E6BBBB33206CCFC80007130E /* BaseNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB32206CCFC80007130E /* BaseNavVC.m */; };
 		E6BBBB36206CCFDE0007130E /* BaseTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BBBB35206CCFDE0007130E /* BaseTabbarVC.m */; };
@@ -99,7 +100,6 @@
 		05DF6F8A20512A880010AC13 /* CXDTool.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CXDTool.xcdatamodel; sourceTree = "<group>"; };
 		05DF6F9120512A880010AC13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05DF6F9220512A880010AC13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		05F9427623274AA900F638AB /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		3509219F06C3F1CD719CD6FF /* Pods-CXDTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.debug.xcconfig"; sourceTree = "<group>"; };
 		812DAC7F557D61DAF2D5EBB3 /* Pods-CXDTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.release.xcconfig"; sourceTree = "<group>"; };
 		E6030E1021C89D5E002F036D /* NoteFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = NoteFile; sourceTree = "<group>"; };
@@ -174,8 +174,11 @@
 		E63DC032212EB34C00EA4C76 /* CompetitionCommentatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompetitionCommentatorView.m; sourceTree = "<group>"; };
 		E65944ED228963F0006ADE1E /* StudyThreadTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyThreadTool.h; sourceTree = "<group>"; };
 		E65944EE228963F0006ADE1E /* StudyThreadTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyThreadTool.m; sourceTree = "<group>"; };
+		E65B5CC9233CCD3F00FC0C4A /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		E65F7C2F214B4BB500392D04 /* HMConsoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMConsoleView.h; sourceTree = "<group>"; };
 		E65F7C30214B4BB500392D04 /* HMConsoleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMConsoleView.m; sourceTree = "<group>"; };
+		E6629905233A814A00D9193C /* PushFlowManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushFlowManager.h; sourceTree = "<group>"; };
+		E6629906233A814A00D9193C /* PushFlowManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushFlowManager.m; sourceTree = "<group>"; };
 		E66BA0CD21A655CC00694B77 /* TabbarControllerAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarControllerAnimation.h; sourceTree = "<group>"; };
 		E66BA0CE21A655CC00694B77 /* TabbarControllerAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabbarControllerAnimation.m; sourceTree = "<group>"; };
 		E6747E2D21A55DDD0058B8BB /* NSObject+Crash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Crash.h"; sourceTree = "<group>"; };
@@ -261,10 +264,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05F9427723274AB900F638AB /* IJKMediaFramework.framework in Frameworks */,
-				E6B61D92232733B700209544 /* libstdc++.6.tbd in Frameworks */,
+				E6629908233B69B300D9193C /* libstdc++.6.tbd in Frameworks */,
 				E694DFA523261F3200778E26 /* VideoToolbox.framework in Frameworks */,
 				E694DFA323261F2700778E26 /* UIKit.framework in Frameworks */,
+				E65B5CCA233CCD3F00FC0C4A /* IJKMediaFramework.framework in Frameworks */,
 				E694DFA123261F1D00778E26 /* QuartzCore.framework in Frameworks */,
 				E694DF9F23261F1400778E26 /* OpenGLES.framework in Frameworks */,
 				E694DF9D23261F0A00778E26 /* MobileCoreServices.framework in Frameworks */,
@@ -452,6 +455,7 @@
 		E61261F8219E624800B80CA8 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				E6629904233A808300D9193C /* PushFlow */,
 				E6B61D8E232730C600209544 /* Player */,
 				E66BA0CB21A654BB00694B77 /* Test */,
 				E61261F9219E625A00B80CA8 /* PictureBrowser */,
@@ -585,6 +589,15 @@
 			path = Thread;
 			sourceTree = "<group>";
 		};
+		E6629904233A808300D9193C /* PushFlow */ = {
+			isa = PBXGroup;
+			children = (
+				E6629905233A814A00D9193C /* PushFlowManager.h */,
+				E6629906233A814A00D9193C /* PushFlowManager.m */,
+			);
+			path = PushFlow;
+			sourceTree = "<group>";
+		};
 		E66BA0C521A6508000694B77 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -691,7 +704,7 @@
 		E694DF8723261E1800778E26 /* ijkplayer */ = {
 			isa = PBXGroup;
 			children = (
-				05F9427623274AA900F638AB /* IJKMediaFramework.framework */,
+				E65B5CC9233CCD3F00FC0C4A /* IJKMediaFramework.framework */,
 			);
 			path = ijkplayer;
 			sourceTree = "<group>";
@@ -1086,6 +1099,7 @@
 				E6BBBB30206CCF940007130E /* BaseVC.m in Sources */,
 				E6EF4C0D21A3EE9900B02AA3 /* UIView+ExtendTouchRect.m in Sources */,
 				E6126212219E71F500B80CA8 /* PictureDisplayViewCell.m in Sources */,
+				E6629907233A814A00D9193C /* PushFlowManager.m in Sources */,
 				E65944EF228963F0006ADE1E /* StudyThreadTool.m in Sources */,
 				E60AD594226977970024DB13 /* NSObject+HMEventForwarder.m in Sources */,
 				E6BBBB3F206CD0220007130E /* MeVC.m in Sources */,
@@ -1217,7 +1231,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KR5AULFCNL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CXDTool/Vender/ijkplayer",
@@ -1244,7 +1258,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KR5AULFCNL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CXDTool/Vender/ijkplayer",
