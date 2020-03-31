@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0584451E242C5F1B003379CF /* XDRacTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0584451D242C5F1B003379CF /* XDRacTool.m */; };
+		0585C95B243186F900051847 /* UIView+XDSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0585C959243186F900051847 /* UIView+XDSignal.m */; };
 		05DF6F8220512A880010AC13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F8120512A880010AC13 /* AppDelegate.m */; };
 		05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F8920512A880010AC13 /* CXDTool.xcdatamodeld */; };
 		05DF6F9320512A880010AC13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF6F9220512A880010AC13 /* main.m */; };
-		CE05545BFB0388E5D1585722 /* libPods-CXDTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */; };
+		DD1CA8EB50E73271179525E8 /* Pods_CXDTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6369E9FB17039753B6756F47 /* Pods_CXDTool.framework */; };
 		E6030E1121C89D5E002F036D /* NoteFile in Resources */ = {isa = PBXBuildFile; fileRef = E6030E1021C89D5E002F036D /* NoteFile */; };
 		E6030E1421C8D6DB002F036D /* HomeBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6030E1321C8D6DB002F036D /* HomeBaseView.m */; };
 		E6030E1821C8EAB0002F036D /* HomeEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6030E1721C8EAB0002F036D /* HomeEventManager.m */; };
@@ -48,7 +50,6 @@
 		E65B5CCA233CCD3F00FC0C4A /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E65B5CC9233CCD3F00FC0C4A /* IJKMediaFramework.framework */; };
 		E65F7C31214B4BB500392D04 /* HMConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E65F7C30214B4BB500392D04 /* HMConsoleView.m */; };
 		E6629907233A814A00D9193C /* PushFlowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6629906233A814A00D9193C /* PushFlowManager.m */; };
-		E6629908233B69B300D9193C /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BBBC59232623FC002025DA /* libstdc++.6.tbd */; };
 		E66BA0CF21A655CC00694B77 /* TabbarControllerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E66BA0CE21A655CC00694B77 /* TabbarControllerAnimation.m */; };
 		E6747E2F21A55DDD0058B8BB /* NSObject+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = E6747E2E21A55DDD0058B8BB /* NSObject+Crash.m */; };
 		E6747E3321A55E980058B8BB /* VCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6747E3221A55E980058B8BB /* VCManager.m */; };
@@ -59,8 +60,6 @@
 		E694DF9123261ED700778E26 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694DF9023261ED700778E26 /* CoreGraphics.framework */; };
 		E694DF9323261EE000778E26 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694DF9223261EE000778E26 /* CoreMedia.framework */; };
 		E694DF9523261EE700778E26 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694DF9423261EE700778E26 /* CoreVideo.framework */; };
-		E694DF9723261EF200778E26 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E694DF9623261EF200778E26 /* libbz2.tbd */; };
-		E694DF9923261EFA00778E26 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E694DF9823261EFA00778E26 /* libz.tbd */; };
 		E694DF9B23261F0200778E26 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694DF9A23261F0200778E26 /* MediaPlayer.framework */; };
 		E694DF9D23261F0A00778E26 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694DF9C23261F0A00778E26 /* MobileCoreServices.framework */; };
 		E694DF9F23261F1400778E26 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694DF9E23261F1400778E26 /* OpenGLES.framework */; };
@@ -94,6 +93,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0584451C242C5F1B003379CF /* XDRacTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDRacTool.h; sourceTree = "<group>"; };
+		0584451D242C5F1B003379CF /* XDRacTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDRacTool.m; sourceTree = "<group>"; };
+		0585C959243186F900051847 /* UIView+XDSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XDSignal.m"; sourceTree = "<group>"; };
+		0585C95A243186F900051847 /* UIView+XDSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XDSignal.h"; sourceTree = "<group>"; };
 		05DF6F7D20512A880010AC13 /* CXDTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXDTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DF6F8020512A880010AC13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		05DF6F8120512A880010AC13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 		05DF6F9120512A880010AC13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05DF6F9220512A880010AC13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3509219F06C3F1CD719CD6FF /* Pods-CXDTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.debug.xcconfig"; sourceTree = "<group>"; };
+		6369E9FB17039753B6756F47 /* Pods_CXDTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CXDTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		812DAC7F557D61DAF2D5EBB3 /* Pods-CXDTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXDTool/Pods-CXDTool.release.xcconfig"; sourceTree = "<group>"; };
 		E6030E1021C89D5E002F036D /* NoteFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = NoteFile; sourceTree = "<group>"; };
 		E6030E1221C8D6DB002F036D /* HomeBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeBaseView.h; sourceTree = "<group>"; };
@@ -256,7 +260,6 @@
 		E6EF4C0B21A3EE9900B02AA3 /* UIView+ExtendTouchRect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ExtendTouchRect.h"; sourceTree = "<group>"; };
 		E6EF4C0C21A3EE9900B02AA3 /* UIView+ExtendTouchRect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ExtendTouchRect.m"; sourceTree = "<group>"; };
 		E6F34EFF21A2627E00611669 /* NSToolMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSToolMacro.h; sourceTree = "<group>"; };
-		ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CXDTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,7 +267,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6629908233B69B300D9193C /* libstdc++.6.tbd in Frameworks */,
 				E694DFA523261F3200778E26 /* VideoToolbox.framework in Frameworks */,
 				E694DFA323261F2700778E26 /* UIKit.framework in Frameworks */,
 				E65B5CCA233CCD3F00FC0C4A /* IJKMediaFramework.framework in Frameworks */,
@@ -272,14 +274,12 @@
 				E694DF9F23261F1400778E26 /* OpenGLES.framework in Frameworks */,
 				E694DF9D23261F0A00778E26 /* MobileCoreServices.framework in Frameworks */,
 				E694DF9B23261F0200778E26 /* MediaPlayer.framework in Frameworks */,
-				E694DF9923261EFA00778E26 /* libz.tbd in Frameworks */,
-				E694DF9723261EF200778E26 /* libbz2.tbd in Frameworks */,
 				E694DF9523261EE700778E26 /* CoreVideo.framework in Frameworks */,
 				E694DF9323261EE000778E26 /* CoreMedia.framework in Frameworks */,
 				E694DF9123261ED700778E26 /* CoreGraphics.framework in Frameworks */,
 				E694DF8F23261ECD00778E26 /* AVFoundation.framework in Frameworks */,
 				E694DF8D23261EC100778E26 /* AudioToolbox.framework in Frameworks */,
-				CE05545BFB0388E5D1585722 /* libPods-CXDTool.a in Frameworks */,
+				DD1CA8EB50E73271179525E8 /* Pods_CXDTool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +299,15 @@
 				E6030E1021C89D5E002F036D /* NoteFile */,
 			);
 			path = Basis;
+			sourceTree = "<group>";
+		};
+		0584451B242C5E9C003379CF /* RAC */ = {
+			isa = PBXGroup;
+			children = (
+				0584451C242C5F1B003379CF /* XDRacTool.h */,
+				0584451D242C5F1B003379CF /* XDRacTool.m */,
+			);
+			path = RAC;
 			sourceTree = "<group>";
 		};
 		05DF6F7420512A880010AC13 = {
@@ -386,7 +395,7 @@
 				E694DF9023261ED700778E26 /* CoreGraphics.framework */,
 				E694DF8E23261ECC00778E26 /* AVFoundation.framework */,
 				E694DF8C23261EC100778E26 /* AudioToolbox.framework */,
-				ED91B6A8D01BA57CC840C2FA /* libPods-CXDTool.a */,
+				6369E9FB17039753B6756F47 /* Pods_CXDTool.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -571,6 +580,7 @@
 		E65944EB22896375006ADE1E /* Study */ = {
 			isa = PBXGroup;
 			children = (
+				0584451B242C5E9C003379CF /* RAC */,
 				E694DF75230064B800778E26 /* Draw */,
 				E60B2A2622D78A68006942DC /* Video */,
 				E6171A8722D3223000AA1FBD /* InternalStorage */,
@@ -642,6 +652,8 @@
 				E63D3C4D2130152E00A5DDFA /* UIView+LayoutSubviewsCallback.m */,
 				E6EF4C0B21A3EE9900B02AA3 /* UIView+ExtendTouchRect.h */,
 				E6EF4C0C21A3EE9900B02AA3 /* UIView+ExtendTouchRect.m */,
+				0585C95A243186F900051847 /* UIView+XDSignal.h */,
+				0585C959243186F900051847 /* UIView+XDSignal.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -930,7 +942,7 @@
 				05DF6F7920512A880010AC13 /* Sources */,
 				05DF6F7A20512A880010AC13 /* Frameworks */,
 				05DF6F7B20512A880010AC13 /* Resources */,
-				CA38E116B98B16D2E0F64EEF /* [CP] Copy Pods Resources */,
+				23C06430BA863FD954D3BFCE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -947,6 +959,7 @@
 		05DF6F7520512A880010AC13 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XD;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = claudechoi;
 				TargetAttributes = {
@@ -987,32 +1000,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CA38E116B98B16D2E0F64EEF /* [CP] Copy Pods Resources */ = {
+		23C06430BA863FD954D3BFCE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CXDTool/Pods-CXDTool-resources.sh",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-CXDTool/Pods-CXDTool-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TYAttributedLabel/TYAttributedLabel.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TYAttributedLabel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CXDTool/Pods-CXDTool-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CXDTool/Pods-CXDTool-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F589A6557382D0DB750E4349 /* [CP] Check Pods Manifest.lock */ = {
@@ -1042,9 +1061,11 @@
 			files = (
 				E6171A8A22D322A300AA1FBD /* InternalStorageTool.m in Sources */,
 				E6747E3321A55E980058B8BB /* VCManager.m in Sources */,
+				0584451E242C5F1B003379CF /* XDRacTool.m in Sources */,
 				05DF6F8B20512A880010AC13 /* CXDTool.xcdatamodeld in Sources */,
 				E60AD59A22699AE30024DB13 /* PopFatherView.m in Sources */,
 				E6DF706120736D24006C7262 /* UITool.m in Sources */,
+				0585C95B243186F900051847 /* UIView+XDSignal.m in Sources */,
 				E6DF707320737C49006C7262 /* UIView+Coordinate.m in Sources */,
 				E6D417122080AF5200303490 /* MeHeaderView.m in Sources */,
 				E65F7C31214B4BB500392D04 /* HMConsoleView.m in Sources */,

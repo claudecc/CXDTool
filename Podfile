@@ -3,6 +3,8 @@ platform :ios, '9.0'
 
 inhibit_all_warnings!
 
+use_frameworks!
+
 target 'CXDTool' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
@@ -15,6 +17,7 @@ target 'CXDTool' do
   pod 'MJExtension'
   pod 'GPUImage'
   pod 'TYAttributedLabel', '~>2.6.2'
+  pod 'ReactiveObjC'
   pod 'Realm'
   
 end

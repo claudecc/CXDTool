@@ -18,6 +18,7 @@ PODS:
   - Masonry (1.0.2)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
+  - ReactiveObjC (3.1.1)
   - Realm (3.17.1):
     - Realm/Headers (= 3.17.1)
   - Realm/Headers (3.17.1)
@@ -32,12 +33,13 @@ DEPENDENCIES:
   - Masonry
   - MJExtension
   - MJRefresh
+  - ReactiveObjC
   - Realm
   - SDWebImage
   - TYAttributedLabel (~> 2.6.2)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - GPUImage
     - Masonry
@@ -46,6 +48,8 @@ SPEC REPOS:
     - Realm
     - SDWebImage
     - TYAttributedLabel
+  trunk:
+    - ReactiveObjC
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -53,10 +57,11 @@ SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   Realm: c204f1a890f07dea43b14132a6aad118c054b8f2
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   TYAttributedLabel: 1c1f1e7604043ba584e005d4fd3aee8a1a7a2020
 
-PODFILE CHECKSUM: 0e70d0d155b21620a781966643b740df2c8067ce
+PODFILE CHECKSUM: 50852ed7a097d9cf05c56be03db43b2d70e1c322
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4
